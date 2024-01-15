@@ -9,19 +9,13 @@ theme:
   favicon: assets/logo.png
   custom_dir: custom_theme_overrides
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      accent: deep purple
+      scheme: default # light-mode
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue grey
-      accent: light blue
+      scheme: slate # dark-mode
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -40,6 +34,7 @@ theme:
     repo: fontawesome/brands/github
 copyright: Made with ❤️ by NAV
 extra:
+  generator: false
   search:
     language: "en"
   social:
@@ -65,7 +60,7 @@ extra:
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by
-            using our <a href="https://github.com/nais/doc/issues/new">feedback form</a> or contact us in <a href="https://nav-it.slack.com/archives/C5KUST8N6">#nais channel</a>.
+            using our <a href="https://github.com/nais/doc/issues/new">feedback form</a> or contact us on Slack</a>.
 extra_javascript:
   - amplitude_javascript/events.js
 extra_css:
@@ -74,22 +69,9 @@ extra_css:
 plugins:
   - search:
       lang: en
-  - git-committers:
-      enabled: false # !ENV [CI, false]
-      repository: nais/doc
-      branch: main
   - git-revision-date-localized:
-      enabled: !ENV [CI, false]
       enable_creation_date: true
       type: timeago
-  - redirects:
-      redirect_maps:
-        "security/auth/idporten/sidecar.md": "security/auth/idporten.md"
-        "security/auth/azure-ad/access-policy.md": "security/auth/azure-ad/configuration.md#access-policy"
-        "security/auth/azure-ad/concepts.md": "security/auth/azure-ad/README.md#concepts"
-        "appendix/wonderwall.md": "addons/wonderwall.md"
-        "security/apigateway/apigateway.md": "security/apigateway/README.md"
-        "addons/unleash-next.md": "addons/unleash.md"
 markdown_extensions:
   - toc:
       permalink: True
@@ -124,23 +106,48 @@ markdown_extensions:
       custom_checkbox: true
 nav:
   - Home: README.md
-  - Tutorials:
-      - x: basics/application.md
-      - y: basics/teams.md
-      - z: basics/access.md
-  - How-to:
-      - database:
-          - x: how-to/database/postgres.md
-          - y: how-to/database/mongodb.md
-          - z: how-to/database/redis.md
-      - x: clusters/README.md
-      - y: clusters/gcp.md
-      - z: clusters/on-premises.md
-  - Reference:
-      - x: nais-application/example.md
-      - y: nais-application/example.md
-      - z: nais-application/access-policy.md
-  - Explanation:
-      - x: naisjob/README.md
-      - y: naisjob/example.md
-      - z: naisjob/reference.md
+  - Tutorials: 
+      - Overview: tutorial/README.md
+  - How-to guides:
+      - Overview: how-to/README.md
+      - Build and deploy:
+        - Using GitHub Actions: how-to/build-and-deploy/github-actions.md
+      - Metrics:
+        - Overview: how-to/metrics/README.md
+        - Expose metrics: how-to/metrics/expose.md
+        - Query metrics: how-to/metrics/query.md
+      - Alerts:
+        - Overview: how-to/alerts/README.md
+        - Create an alert: how-to/alerts/create.md
+      - Logging:
+        - Overview: how-to/logging/README.md
+        - Access logs: how-to/logging/access.md
+        - Application logs: how-to/logging/application.md
+      - Postgres:
+        - Create a database: how-to/postgres/create.md
+        - Restoring a backup: how-to/postgres/backup-restore.md
+      - Kafka:
+        - Overview: how-to/kafka/README.md
+        - Create a topic: how-to/kafka/create-topic.md
+        - Consume from a topic: how-to/kafka/consume-topic.md
+        - Produce to a topic: how-to/kafka/produce-topic.md
+      - OpenSearch:
+        - Overview: how-to/opensearch/README.md
+        - Create a instance: how-to/opensearch/create.md
+        - Access the instance: how-to/opensearch/access.md
+      - BigQuery:
+        - Overview: how-to/bigquery/README.md
+        - Create a dataset: how-to/bigquery/create-dataset.md
+      - Bucket:
+        - Overview: how-to/bucket/README.md
+        - Create a bucket: how-to/bucket/create.md
+        - Access a bucket: how-to/bucket/access.md
+      - Secrets:
+        - Overview: how-to/secrets/README.md
+        - Create a secret: how-to/secrets/create.md
+        - Access a secret: how-to/secrets/access.md
+
+  - References:
+      - Overview: reference/README.md
+  - Explanations:
+      - Overview: explanation/README.md
