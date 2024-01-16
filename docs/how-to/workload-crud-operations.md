@@ -4,7 +4,7 @@ This guide shows you how to perform CRUD-operations on your workload.
 
 ## 0. Prerequisites
 - [Command-line access to the cluster](command-line-access.md)
-- [Member of a team](../explanation/team.md)
+- [Member of a NAIS team](../explanation/team.md)
 - [Container image uploaded to the OCI registry](../manually-upload-image.md)
 - [Workload spec](../explanation/workloads.md)
 

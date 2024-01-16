@@ -2,6 +2,7 @@ nav:
   - Home: README.md
   - Tutorials:
       - Overview: tutorial/README.md
+      - Hello NAIS: tutorial/hello-nais.md
   - How-to guides:
       - Overview: how-to/README.md
       - Command line access: how-to/command-line-access.md
