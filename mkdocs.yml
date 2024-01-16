@@ -8,7 +8,7 @@ nav:
       - Command line access: how-to/command-line-access.md
       - CI/CD:
           - Overview: how-to/cicd/README.md
-          - Using GitHub Actions: how-to/cicd/github-action.md
+          - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       # - Metrics:
       #     - Overview: how-to/metrics/README.md

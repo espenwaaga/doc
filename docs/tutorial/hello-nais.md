@@ -2,7 +2,6 @@
 
 This tutorial will take you through the process of getting a simple Kotlin application up and running on NAIS. No previous experience with NAIS is required.
 
-
 ## 0. Prerequisites
 
 - You have a GitHub account connected to your GitHub organization (e.g. `navikt`)
@@ -11,13 +10,14 @@ This tutorial will take you through the process of getting a simple Kotlin appli
 - [GitHub CLI installed](https://cli.github.com/)
 - [JDK =>v17 installed](https://adoptium.net)
 
-??? note "Conventions"
+!!! note "Conventions"
 
     Throughout this guide, we will use the following conventions:
     
     - `<my-app>` - The name of your NAIS application (e.g. `joannas-first`)
-    - `<my-org>` - Your GitHub organization (e.g. `navikt`)
     - `<my-team>` - The name of your NAIS team (e.g. `onboarding`)
+    - `<github-org>` - Your GitHub organization (e.g. `navikt`)
+    - `<target-cluster>` - The name of the cluster you want to deploy to (e.g. `dev`)
     
     **NB!** Choose names with *lowercase* letters, numbers and dashes only. 
 
@@ -28,7 +28,7 @@ Create your own repo using the [nais/getting-started](https://github.com/nais/ge
 You create a new repository through either the [GitHub UI](https://github.com/new?template_name=getting-started&template_owner=nais) or through the GitHub CLI:
 
 ```bash
-gh repo create <my-org>/<my-repo> --template nais/getting-started --private --clone
+gh repo create <github-org>/<my-repo> --template nais/getting-started --private --clone
 ```
 ```bash
 cd <my-app>
@@ -42,26 +42,15 @@ Go to your repository and click on `Settings` -> `Collaborators and teams` -> `A
 
 Select your team, and grant them the `Write` role.
 
-## 3. Authorize the repository for deployment
-
-Visit [Console](https://console.{{tenant}}.cloud.nais.io). Select your team, and visit the `Repositories` tab. 
-
-This ensures that the proper permissions are set up by the time you're doing the steps that require them.
-Normally, these are automatically synchronized every 15 minutes. If you don't see your repository here, force synchronization by clicking the `Refresh` button.
-
-## 4. Familiarize yourself with the files used
+## 3. Familiarize yourself with the repository
 
 Check out the files in your repository to see what they contain.
 
-`nais.yaml` (TODO) is where you configure your application. For a full list of available configuration options, see the [Application spec](../reference/application-spec.md)-reference.
-
 `Dockerfile` describes the steps needed to build your docker image.
 
-`.github/workflows/main.yaml` is the GitHub Actions workflow that will build and deploy your application to NAIS. You can read more about the GitHub Actions workflow in the [GitHub Actions documentation](https://docs.github.com/en/actions).
+`.github/workflows/main.yaml` is the GitHub Actions workflow that will be used to build and deploy your application to NAIS. This file currently only contain steps to build the JAR-file. The rest of the steps will be added later in the tutorial. 
 
-## 5. Check that your application is working
-
-Before proceeding, let's make sure that your application is working. Run the following command to start your application:
+You can also verify that the application is working by running the following command:
 
 ```bash
 ./gradlew run
@@ -69,21 +58,28 @@ Before proceeding, let's make sure that your application is working. Run the fol
 
 Visit [http://localhost:8080](http://localhost:8080) to see your application running.
 
-## 6. Edit the application spec
+## 4. Create the NAIS Application yaml file
 
-Open the `nais.yaml` file. It should look something like this:
+Create a file called `app.yaml` in a `.nais`-folder.
 
-```yaml title="nais.yaml" hl_lines="6 10" linenums="1"
+```bash
+mkdir .nais
+touch .nais/app.yaml
+```
+
+Add the following content to the file, and insert the appropriate values in the placeholders on the highlighted lines:
+
+```yaml title="nais.yaml" hl_lines="5 6 7 10" 
 apiVersion: nais.io/v1alpha1
 kind: Application
 metadata:
   labels:
-    team: onboarding
+    team: <my-team>
   name: <my-app>
-  namespace: onboarding
+  namespace: <my-team>
 spec:
   ingresses:
-    - https://<my-app>.intern.dev.nav.no
+    - https://<my-app>.external.<target-cluster>@@TENANT@@.internal.cloud.nais.io
   image: {{image}}
   port: 8080
   ttl: 3h
@@ -93,20 +89,24 @@ spec:
   resources:
     requests:
       cpu: 50m
-      memory: 32Mi
+      memory: 32Mi 
 ```
 
-For the highlighted lines (line 6 and 10):
+This file describes your application to the NAIS platform so that it can run it correctly and provision the resources it needs.
+For a full list of available configuration options, see the [Application spec](../reference/application-spec.md)-reference.
 
-Replace all occurrences of `<my-app>` with the name of your application, for example:
+## 5. Add the NAIS build and deploy actions to your workflow
 
-```yaml
-metadata:
-  name: joannas-first
-spec:
-  ingresses:
-    - https://joannas-first.intern.dev.nav.no
-```
+For this step, we will use the description in the [Build and deploy with Github Actions](../how-to/cicd/github-action.md) guide.
+
+Since we already have a workflow file, we will only add the missing steps provided in the guide.
+
+## 6. Authorize the repository for deployment
+
+Visit [Console](https://console.{{tenant}}.cloud.nais.io). Select your team, and visit the `Repositories` tab. 
+
+This ensures that the proper permissions are set up by the time you're doing the steps that require them.
+Normally, these are automatically synchronized every 15 minutes. If you don't see your repository here, force synchronization by clicking the `Refresh` button.
 
 ## 7. Commit and push your changes
 
@@ -114,7 +114,7 @@ Now that you have made some changes to your repository, it's time to commit and 
 
 ```bash
 git add .
-git commit -m "<Change-message>"
+git commit -m "Add nais app.yaml and add build and deploy steps to workflow"
 git push origin main
 ```
 
@@ -139,7 +139,7 @@ and click on the `Actions` tab.
 When the workflow is finished, you can visit the application on the following URL:
 
 ```
-https://<my-app>.intern.dev.nav.no
+https://<my-app>.external.<target-cluster>.$$TENANT$$.internal.cloud.nais.io
 ```
 
 ## 10. Cleanup
@@ -147,5 +147,5 @@ https://<my-app>.intern.dev.nav.no
 When you are finished with this guide you can delete your repository:
 
 ```bash
-gh repo delete <my-org>/<my-app>
+gh repo delete <github-org>/<my-app>
 ```

@@ -18,6 +18,9 @@ This how-to guide shows you how to build and deploy your application using [Gith
 
 Create a new file in your repository under `.github/workflows/` called `main.yml` with the following content:
 
+!!! note 
+    If you require a more advanced workflow, or already have one. Just copy the relevant parts from the example below.
+
 ```yaml
 name: Build and deploy
 on:
@@ -50,7 +53,5 @@ jobs:
 
 This example workflow is a minimal example that builds, signs, and pushes your container image to the image registry.
 It then deploys the [nais.yaml](TODO), injecting the image tag from the previous step.
-
-If you already have a workflow and/or require more advanced configuration - just copy the relevant parts from the example above.
 
 When this file is pushed to the `main` branch, the workflow will be triggered and you are all set.
