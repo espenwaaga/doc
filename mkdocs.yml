@@ -45,6 +45,13 @@ nav:
 
   - References:
       - Overview: reference/README.md
+      - Application spec: reference/application-spec.md
+      - Application example: reference/application-example.md
+      - Naisjob spec: reference/naisjob-spec.md
+      - Naisjob example: reference/naisjob-example.md
+      - Kafka topic spec: reference/kafka-topic-spec.md
+      - Kafka topic example: reference/topic-example.md
+ 
   - Explanations:
       - Overview: explanation/README.md
 site_name: NAIS
