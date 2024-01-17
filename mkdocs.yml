@@ -2,7 +2,9 @@ nav:
   - Home: README.md
   - Tutorials:
       - Overview: tutorial/README.md
-      - Hello NAIS: tutorial/hello-nais.md
+      - Hello NAIS Part 1: tutorial/hello-nais/hello-nais-1.md
+      - Hello NAIS Part 2: tutorial/hello-nais/hello-nais-2.md
+      - Hello NAIS Part 3: tutorial/hello-nais/hello-nais-3.md
   - How-to guides:
       - Overview: how-to/README.md
       - Command line access: how-to/command-line-access.md
@@ -53,7 +55,7 @@ nav:
       - Naisjob example: reference/naisjob-example.md
       - Kafka topic spec: reference/kafka-topic-spec.md
       - Kafka topic example: reference/kafka-topic-example.md
- 
+
   - Explanations:
       - Overview: explanation/README.md
 site_name: NAIS
