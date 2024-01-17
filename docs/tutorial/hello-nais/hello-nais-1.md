@@ -69,9 +69,10 @@ touch .nais/app.yaml
 
 Add the following content to the file, and insert the appropriate values in the placeholders on the highlighted lines:
 
-```yaml title="nais.yaml" hl_lines="5 6 7 10" 
+```yaml title="app.yaml" hl_lines="5 6 7 10" 
 apiVersion: nais.io/v1alpha1
-kind: Application
+kind: Applicatio
+
 metadata:
   labels:
     team: <my-team>
