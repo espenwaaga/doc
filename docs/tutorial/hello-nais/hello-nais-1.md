@@ -8,7 +8,6 @@ This tutorial will take you through the process of getting a simple Kotlin appli
 - [naisdevice installed](../how-to/naisdevice/install.md)
 - [Member of a NAIS team](../explanation/team.md)
 - [GitHub CLI installed](https://cli.github.com/)
-- [JDK =>v17 installed](https://adoptium.net)
 
 ???+ note "Conventions"
 
@@ -80,7 +79,9 @@ metadata:
   namespace: <my-team>
 spec:
   ingresses:
-    - https://<my-app>.external.<target-cluster>@@TENANT@@.internal.cloud.nais.io
+    - https://<my-app>.<target-cluster>@@TENANT@@.internal.cloud.nais.io
+    - https://naisly.dev-gcp.nav.cloud.nais.io
+  image: {{image}}
   image: {{image}}
   port: 8080
   ttl: 3h
