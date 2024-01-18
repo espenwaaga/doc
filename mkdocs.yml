@@ -2,10 +2,11 @@ nav:
   - Home: README.md
   - Tutorials:
       - Overview: tutorial/README.md
-      - Part 1 - Create application: tutorial/hello-nais/hello-nais-1.md
-      - Part 2 - Make it NAIS: tutorial/hello-nais/hello-nais-2.md
-      - Part 3 - Deploy to NAIS: tutorial/hello-nais/hello-nais-3.md
-      - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
+      - Hello Nais:
+          - Part 1 - Create application: tutorial/hello-nais/hello-nais-1.md
+          - Part 2 - Make it NAIS: tutorial/hello-nais/hello-nais-2.md
+          - Part 3 - Ship it: tutorial/hello-nais/hello-nais-3.md
+          - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
   - How-to guides:
       - Overview: how-to/README.md
       - Command line access: how-to/command-line-access.md
