@@ -15,11 +15,20 @@ nav:
           - Overview: how-to/cicd/README.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
-      - Metrics:
-          - Overview: how-to/metrics/README.md
-          - Expose metrics: how-to/metrics/expose.md
-          - Push metrics: how-to/metrics/push.md
-          - Grafana from infoscreen: how-to/metrics/grafana-from-infoscreen.md
+      - Observability:
+          - Overview: observability/README.md
+          - Metrics:
+              - Overview: how-to/observability/metrics/README.md
+              - Expose metrics: how-to/observability/metrics/expose.md
+              - Push metrics: how-to/observability/metrics/push.md
+              - Grafana from infoscreen: how-to/observability/metrics/grafana-from-infoscreen.md
+          - Tracing:
+              - Overview: how-to/observability/tracing/README.md
+          - Alerts:
+              - Overview: how-to/observability/alerts/README.md
+          - Logging:
+              - Overview: how-to/observability/logging/README.md
+
       # - Alerts:
       #     - Overview: how-to/alerts/README.md
       #     - Create an alert: how-to/alerts/create.md
