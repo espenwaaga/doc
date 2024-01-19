@@ -19,7 +19,7 @@ Select your operating system below.
     1. When the tap is added, you are ready to install naisdevice, by typing or pasting the following in terminal and press `<Enter>`.
 
         ```bash
-        brew install naisdevice-tenant
+        brew install naisdevice
         ```
 
     1. You will be asked for your local device account's password to finish the installation.
@@ -55,7 +55,7 @@ Select your operating system below.
     1. Install the naisdevice package:
 
     ```
-    sudo apt install naisdevice-tenant
+    sudo apt install naisdevice
     ```
 
 === "Windows"
@@ -75,7 +75,7 @@ Select your operating system below.
     1. When the bucket is added, you are ready to install naisdevice, by typing the following in the command line:
 
     ```powershell
-    scoop install naisdevice-tenant
+    scoop install naisdevice
     ```
 
     (you will be asked for administrator access to run the installer)
@@ -85,7 +85,7 @@ Select your operating system below.
 
     ## Manual installation
 
-    1. [Download and install naisdevice-tenant.exe](https://github.com/nais/device/releases/latest)
+    1. [Download and install naisdevice.exe](https://github.com/nais/device/releases/latest)
     (you will be asked for administrator access when you run the installer)
     1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](install.md#connecting-to-nais-clusters)
     1. Start _naisdevice_ from the _Start menu_
