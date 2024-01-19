@@ -1,4 +1,6 @@
-# Running Grafana from a big screen (TODO: nav only)
+# Access Grafana from a big screen
+
+(TODO: nav only)
 
 This how-to shows you how to run Grafana from a big screen.
 
@@ -11,18 +13,18 @@ You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C
 ## 2. Access Grafana
 
 === "using browser extension"
-    To add the service account credentials to the header of your requests, you can use the [Modify Header Value](https://mybrowseraddon.com/modify-header-value.html) browser extension available for Chrome and Firefox.
+To add the service account credentials to the header of your requests, you can use the [Modify Header Value](https://mybrowseraddon.com/modify-header-value.html) browser extension available for Chrome and Firefox.
 
-    Set the following configuration in the extension:
+Set the following configuration in the extension:
 
-    | Field        | Value                                                 |
-    | ------------ | ----------------------------------------------------- |
-    | URL          | `https://grafana-infoskjerm.<tenant>.cloud.nais.io/*` |
-    | Domain       | ✅                                                    |
-    | Header name  | `Authorization`                                       |
-    | Add          | ✅                                                    |
-    | Header value | `Bearer <service-account-token>`                      |
-    | State        | Active                                                |
+| Field | Value |
+| --- | --- |
+| URL          | `https://grafana-infoskjerm.@@TENANT@@.cloud.nais.io/*` |
+| Domain       | ✅ |
+| Header name  | `Authorization`|
+| Add          | ✅ |
+| Header value | `Bearer <service-account-token>`|
+| State        | Active |
 
 === "using token manually"
 
@@ -35,4 +37,3 @@ You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C
     !!! note
 
         Maske sure you spell the `Authorization` header name correctly and that the value `Bearer` starts with a capital B followed by the token. Replace `<service-account-token>` with your service account token value. If done incorrectly Grafana will reload constantly.
-

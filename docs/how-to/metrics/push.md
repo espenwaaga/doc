@@ -4,63 +4,63 @@ This how-to guide shows you how to use pushgateway for jobs which cannot be scra
 
 Prometheus has further explanations and examples [here](https://prometheus.io/docs/instrumenting/pushing/)
 
-### Example
+## 1. Add pushgateway and accessPolicy to your manifest
 
-=== "naisjob.yaml"
+???+ note ".nais/naisjob.yaml"
 
-    ```yaml
+    ```yaml hl_lines="11-18"
     apiVersion: nais.io/v1
     kind: Naisjob
     metadata:
-      labels:
-        team: myteam
-      name: myjob
-      namespace: myteam
+    labels:
+        team: <MY-TEAM>
+    name: <MY-JOB>
+    namespace: <MY-TEAM>
     spec:
-      image: europe-north1-docker.pkg.dev/[mgmt-id]/[team-name]/[image-name]:tag
-      schedule: "*/1 * * * *"
-      env:
+    image: {{image}}
+    schedule: "*/1 * * * *"
+    env:
         - name: PUSH_GATEWAY_ADDRESS
-          value: prometheus-pushgateway.nais-system:9091
-      accessPolicy:
+        value: prometheus-pushgateway.nais-system:9091
+    accessPolicy:
         outbound:
-          rules:
+        rules:
             - application: prometheus-pushgateway
-              namespace: nais-system
+            namespace: nais-system
     ```
 
-=== "PushMetrics.java"
+## 2. Add metrics to your application
 
-    ```java
-    package io.prometheus.client.it.pushgateway;
+```java
+package io.prometheus.client.it.pushgateway;
 
-    import io.prometheus.client.CollectorRegistry;
-    import io.prometheus.client.Gauge;
-    import io.prometheus.client.exporter.BasicAuthHttpConnectionFactory;
-    import io.prometheus.client.exporter.PushGateway;
+import io.prometheus.client.CollectorRegistry;
+import io.prometheus.client.Gauge;
+import io.prometheus.client.exporter.BasicAuthHttpConnectionFactory;
+import io.prometheus.client.exporter.PushGateway;
 
-    public class ExampleBatchJob {
-        public static void main(String[] args) throws Exception {
-            String jobName = "my_batch_job";
-            String pushGatewayAddress = System.getenv("PUSH_GATEWAY_ADDRESS");
+public class ExampleBatchJob {
+    public static void main(String[] args) throws Exception {
+        String jobName = "my_batch_job";
+        String pushGatewayAddress = System.getenv("PUSH_GATEWAY_ADDRESS");
 
-            CollectorRegistry registry = new CollectorRegistry();
-            Gauge duration = Gauge.build()
-                    .name("my_batch_job_duration_seconds")
-                    .help("Duration of my batch job in seconds.")
+        CollectorRegistry registry = new CollectorRegistry();
+        Gauge duration = Gauge.build()
+                .name("my_batch_job_duration_seconds")
+                .help("Duration of my batch job in seconds.")
+                .register(registry);
+        Gauge.Timer durationTimer = duration.startTimer();
+        try {
+            Gauge lastSuccess = Gauge.build()
+                    .name("my_batch_job_last_success")
+                    .help("Last time my batch job succeeded, in unixtime.")
                     .register(registry);
-            Gauge.Timer durationTimer = duration.startTimer();
-            try {
-                Gauge lastSuccess = Gauge.build()
-                        .name("my_batch_job_last_success")
-                        .help("Last time my batch job succeeded, in unixtime.")
-                        .register(registry);
-                lastSuccess.setToCurrentTime();
-            } finally {
-                durationTimer.setDuration();
-                PushGateway pg = new PushGateway(pushGatewayAddress);
-                pg.pushAdd(registry, jobName);
-            }
+            lastSuccess.setToCurrentTime();
+        } finally {
+            durationTimer.setDuration();
+            PushGateway pg = new PushGateway(pushGatewayAddress);
+            pg.pushAdd(registry, jobName);
         }
     }
-    ```
+}
+```
