@@ -22,19 +22,6 @@ graph LR
 
 All applications that have Prometheus scraping enabled will show up in the [default Grafana dashboard](https://grafana.nais.io/d/000000283/nais-app-dashbord), or create their own.
 
-## Prometheus Environments
-
-**GCP**
-
- * [prometheus.dev-gcp.nav.cloud.nais.io](https://prometheus.dev-gcp.nav.cloud.nais.io)
- * [prometheus.prod-gcp.nav.cloud.nais.io](https://prometheus.prod-gcp.nav.cloud.nais.io)
-
-**On-prem**
-
- * [prometheus.dev-fss.nav.cloud.nais.io](https://prometheus.dev-fss.nav.cloud.nais.io)
- * [prometheus.prod-fss.nav.cloud.nais.io](https://prometheus.prod-fss.nav.cloud.nais.io) :octicons-shield-lock-16:
-
-:octicons-shield-lock-16: requires `onprem-k8s-prod` gateway in `naisdevice`.
 
 ## Get started
 

@@ -1,7 +1,8 @@
 # How to push metrics
 
 This how-to guide shows you how to use pushgateway for jobs which cannot be scraped.
-Further details can be found [here](https://prometheus.io/docs/instrumenting/pushing/)
+
+Prometheus has further explanations and examples [here](https://prometheus.io/docs/instrumenting/pushing/)
 
 ### Example
 

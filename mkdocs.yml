@@ -18,7 +18,7 @@ nav:
           - Overview: how-to/metrics/README.md
           - Expose metrics: how-to/metrics/expose.md
           - Push metrics: how-to/metrics/push.md
-          - Query metrics: how-to/metrics/query.md
+          - Grafana from infoscreen: how-to/metrics/grafana-from-infoscreen.md
       # - Alerts:
       #     - Overview: how-to/alerts/README.md
       #     - Create an alert: how-to/alerts/create.md
@@ -58,9 +58,11 @@ nav:
       - Naisjob example: reference/naisjob-example.md
       - Kafka topic spec: reference/kafka-topic-spec.md
       - Kafka topic example: reference/kafka-topic-example.md
+      - Metrics: reference/metrics.md
 
   - Explanations:
       - Overview: explanation/README.md
+      - Metrics: explanation/metrics.md
 site_name: NAIS
 repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
