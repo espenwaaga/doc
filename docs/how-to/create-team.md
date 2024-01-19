@@ -7,7 +7,7 @@ This how-to guide shows you how to create a NAIS team.
 - A GitHub Account with access to your org. (eg. navikt) 
 - A Slack channel that can receive alerts concerning your apps and workloads
 
-### 1. Authorize your Github repository for deployment
+### 1. Create your team
 
 1. Open [NAIS Teams](https://teams.nav.cloud.nais.io/) in your browser and autenticate with your credentials.
 2. Click on "Create" 
