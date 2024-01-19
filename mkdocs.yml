@@ -64,7 +64,7 @@ nav:
       - Overview: explanation/README.md
       - NAIS Teams: explanation/nais-teams.md
 site_name: NAIS
-repo_url: h ttps://github.com/nais/doc
+repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
 edit_uri: edit/main/docs/
 theme:
