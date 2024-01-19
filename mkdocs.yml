@@ -17,7 +17,7 @@ nav:
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       - Observability:
-          - Overview: observability/README.md
+          - Overview: how-to/observability/README.md
           - Metrics:
               - Overview: how-to/observability/metrics/README.md
               - Expose metrics: how-to/observability/metrics/expose.md
@@ -28,6 +28,7 @@ nav:
               - Enable tracing: how-to/observability/tracing/enable-tracing.md
           - Alerts:
               - Overview: how-to/observability/alerts/README.md
+              - Create alerts: how-to/observability/alerts/create.md
           - Logging:
               - Overview: how-to/observability/logging/README.md
       - Storage: 
@@ -55,30 +56,30 @@ nav:
           - Tracing: explanation/observability/tracing.md
       - NAIS Teams: explanation/nais-teams.md
 
-      # Various how-to guides - moved here temporarily for ease of navigation
-      # - Postgres:
-      #     - Create a database: how-to/postgres/create.md
-      #     - Restoring a backup: how-to/postgres/backup-restore.md
-      # - Kafka:
-      #     - Overview: how-to/kafka/README.md
-      #     - Create a topic: how-to/kafka/create-topic.md
-      #     - Consume from a topic: how-to/kafka/consume-topic.md
-      #     - Produce to a topic: how-to/kafka/produce-topic.md
-      # - OpenSearch:
-      #     - Overview: how-to/opensearch/README.md
-      #     - Create a instance: how-to/opensearch/create.md
-      #     - Access the instance: how-to/opensearch/access.md
-      # - BigQuery:
-      #     - Overview: how-to/bigquery/README.md
-      #     - Create a dataset: how-to/bigquery/create-dataset.md
-      # - Bucket:
-      #     - Overview: how-to/bucket/README.md
-      #     - Create a bucket: how-to/bucket/create.md
-      #     - Access a bucket: how-to/bucket/access.md
-      # - Secrets:
-      #     - Overview: how-to/secrets/README.md
-      #     - Create a secret: how-to/secrets/create.md
-      #     - Access a secret: how-to/secrets/access.md
+        # Various how-to guides - moved here temporarily for ease of navigation
+        # - Postgres:
+        #     - Create a database: how-to/postgres/create.md
+        #     - Restoring a backup: how-to/postgres/backup-restore.md
+        # - Kafka:
+        #     - Overview: how-to/kafka/README.md
+        #     - Create a topic: how-to/kafka/create-topic.md
+        #     - Consume from a topic: how-to/kafka/consume-topic.md
+        #     - Produce to a topic: how-to/kafka/produce-topic.md
+        # - OpenSearch:
+        #     - Overview: how-to/opensearch/README.md
+        #     - Create a instance: how-to/opensearch/create.md
+        #     - Access the instance: how-to/opensearch/access.md
+        # - BigQuery:
+        #     - Overview: how-to/bigquery/README.md
+        #     - Create a dataset: how-to/bigquery/create-dataset.md
+        # - Bucket:
+        #     - Overview: how-to/bucket/README.md
+        #     - Create a bucket: how-to/bucket/create.md
+        #     - Access a bucket: how-to/bucket/access.md
+        # - Secrets:
+        #     - Overview: how-to/secrets/README.md
+        #     - Create a secret: how-to/secrets/create.md
+        #     - Access a secret: how-to/secrets/access.md
 
   - References:
       - Overview: reference/README.md

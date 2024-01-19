@@ -4,4 +4,4 @@ hide:
   - feedback
   - footer
 ---
-Alerts
+Observability
