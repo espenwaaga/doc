@@ -7,8 +7,8 @@ We have standardized on the [OpenMetrics][openmetrics] format for metrics. This 
 We use Prometheus to fetch metric endpoints from your application (in Prometheus terminology we call this scraping), and Grafana for visualizing your application's metrics. You enable Prometheus metrics collection from your application in your [NAIS manifest][nais-manifest-prometheus].
 
 ??? info "Prometheus cluster configuration"
-    To see the current configuration for a prometheus instance in your cluster, e.g. `scrape_interval`, go to
-    `https://prometheus.<cluster>.@@TENANT**.cloud.nais.io/config`
+To see the current configuration for a prometheus instance in your cluster, e.g. `scrape_interval`, go to
+`https://prometheus.<cluster>.@@TENANT@@.cloud.nais.io/config`
 
 ```mermaid
 graph LR
@@ -26,22 +26,22 @@ All applications that have Prometheus scraping enabled will show up in the [defa
 
 For metric names we use the internet-standard [Prometheus naming conventions](https://prometheus.io/docs/practices/naming/):
 
-* Metric names should have a (single-word) application prefix relevant to the domain the metric belongs to.
-* Metric names should be nouns in **snake_case**; do not use verbs.
-* Metric names should have units to make interpreting your metrics queries straightforward.
-* Metric names should represent the same logical thing-being-measured across different labels (e.g. the number of HTTP requests, not the number of GET requests, the number of POST requests, etc.)
+- Metric names should have a (single-word) application prefix relevant to the domain the metric belongs to.
+- Metric names should be nouns in **snake_case**; do not use verbs.
+- Metric names should have units to make interpreting your metrics queries straightforward.
+- Metric names should represent the same logical thing-being-measured across different labels (e.g. the number of HTTP requests, not the number of GET requests, the number of POST requests, etc.)
 
 ## Label naming
 
 Use labels to differentiate the characteristics of the thing that is being measured:
 
-* `api_http_requests_total` - differentiate request types by adding an `operation` label: `operation="create|update|delete"`
-* `api_request_duration_seconds` - differentiate request stages by adding a `stage` label: `stage="extract|transform|load"`
+- `api_http_requests_total` - differentiate request types by adding an `operation` label: `operation="create|update|delete"`
+- `api_request_duration_seconds` - differentiate request stages by adding a `stage` label: `stage="extract|transform|load"`
 
 Do not put the label names in the metric name, as this introduces redundancy and will cause confusion if the respective labels are aggregated away.
 
 !!! warning
-    CAUTION: Remember that every unique combination of key-value label pairs represents a new time series, which can dramatically increase the amount of data stored. Do not use labels to store dimensions with high cardinality (many different label values), such as user IDs, email addresses, or other unbounded sets of values.
+CAUTION: Remember that every unique combination of key-value label pairs represents a new time series, which can dramatically increase the amount of data stored. Do not use labels to store dimensions with high cardinality (many different label values), such as user IDs, email addresses, or other unbounded sets of values.
 
 ## Metric types
 
