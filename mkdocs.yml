@@ -30,6 +30,9 @@ nav:
               - Overview: how-to/observability/logging/README.md
       - Storage: 
           - Overview: how-to/storage/README.md
+          - Create a bucket: how-to/storage/create.md
+          - Backup of bucket: how-to/storage/backup.md
+          - Delete a bucket: how-to/storage/delete.md
 
       # - Alerts:
       #     - Overview: how-to/alerts/README.md
