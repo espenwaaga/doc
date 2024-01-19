@@ -14,10 +14,11 @@ nav:
           - Overview: how-to/cicd/README.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
-      # - Metrics:
-      #     - Overview: how-to/metrics/README.md
-      #     - Expose metrics: how-to/metrics/expose.md
-      #     - Query metrics: how-to/metrics/query.md
+      - Metrics:
+          - Overview: how-to/metrics/README.md
+          - Expose metrics: how-to/metrics/expose.md
+          - Push metrics: how-to/metrics/push.md
+          - Query metrics: how-to/metrics/query.md
       # - Alerts:
       #     - Overview: how-to/alerts/README.md
       #     - Create an alert: how-to/alerts/create.md
