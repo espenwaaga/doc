@@ -9,10 +9,10 @@ nav:
           - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
   - How-to guides:
       - Overview: how-to/README.md
+      - NAIS team: how-to/create-team.md
       - Command line access: how-to/command-line-access.md
       - CI/CD:
           - Overview: how-to/cicd/README.md
-          - NAIS team: how-to/create-team.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       - Metrics:
