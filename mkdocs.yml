@@ -12,6 +12,7 @@ nav:
       - Command line access: how-to/command-line-access.md
       - CI/CD:
           - Overview: how-to/cicd/README.md
+          - NAIS team: how-to/create-team.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       - Metrics:
@@ -61,8 +62,9 @@ nav:
 
   - Explanations:
       - Overview: explanation/README.md
+      - NAIS Teams: explanation/nais-teams.md
 site_name: NAIS
-repo_url: https://github.com/nais/doc
+repo_url: h ttps://github.com/nais/doc
 site_url: https://doc.nais.io/
 edit_uri: edit/main/docs/
 theme:
