@@ -7,6 +7,7 @@ nav:
           - Part 2 - Make it NAIS: tutorial/hello-nais/hello-nais-2.md
           - Part 3 - Ship it: tutorial/hello-nais/hello-nais-3.md
           - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
+
   - How-to guides:
       - Overview: how-to/README.md
       - NAIS team: how-to/create-team.md
@@ -24,6 +25,7 @@ nav:
               - Grafana from infoscreen: how-to/observability/metrics/grafana-from-infoscreen.md
           - Tracing:
               - Overview: how-to/observability/tracing/README.md
+              - Enable tracing: how-to/observability/tracing/enable-tracing.md
           - Alerts:
               - Overview: how-to/observability/alerts/README.md
           - Logging:
@@ -34,13 +36,26 @@ nav:
           - Backup of bucket: how-to/storage/backup.md
           - Delete a bucket: how-to/storage/delete.md
 
-      # - Alerts:
-      #     - Overview: how-to/alerts/README.md
-      #     - Create an alert: how-to/alerts/create.md
-      # - Logging:
-      #     - Overview: how-to/logging/README.md
-      #     - Access logs: how-to/logging/access.md
-      #     - Application logs: how-to/logging/application.md
+  - References:
+      - Overview: reference/README.md
+      - Application spec: reference/application-spec.md
+      - Application example: reference/application-example.md
+      - Naisjob spec: reference/naisjob-spec.md
+      - Naisjob example: reference/naisjob-example.md
+      - Kafka topic spec: reference/kafka-topic-spec.md
+      - Kafka topic example: reference/kafka-topic-example.md
+      - Metrics: reference/metrics.md
+      - Tracing: reference/tracing.md
+
+  - Explanations:
+      - Overview: explanation/README.md
+      - Observability:
+          - Overview: explanation/observability/README.md
+          - Metrics: explanation/observability/metrics.md
+          - Tracing: explanation/observability/tracing.md
+      - NAIS Teams: explanation/nais-teams.md
+
+      # Various how-to guides - moved here temporarily for ease of navigation
       # - Postgres:
       #     - Create a database: how-to/postgres/create.md
       #     - Restoring a backup: how-to/postgres/backup-restore.md
@@ -79,7 +94,6 @@ nav:
       - Overview: explanation/README.md
       - NAIS Teams: explanation/nais-teams.md
       - Metrics: explanation/metrics.md
-      - naisdevice: explanation/what-is-naisdevice.md
 site_name: NAIS
 repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
