@@ -6,7 +6,7 @@ Bucket names must be globally unique across the entire Google infrastructure. If
 
 ## 2. Add the bucket to the NAIS application manifest
 
-You create a Google Cloud Storage bucket through the NAIS application manifest. `retentionPeriodDays` and `lifecycleCondition` are for neccessary for [backup](../../reference/bucket-backup.md).
+You create a Google Cloud Storage bucket through the NAIS application manifest. 
 
 ```yaml
 apiVersion: nais.io/v1alpha1
@@ -26,10 +26,11 @@ spec:
           numNewerVersions: 2
           withState: ANY
 ```
+`retentionPeriodDays` and `lifecycleCondition` are for neccessary for [backup](../../reference/bucket-backup.md).
 
 ## 3. Enable automatic deletion
 
-To avoid incurring unnecessary costs, set your bucket to be automatically deleted. This cascades application deletion to the bucket unless it contains files. A bucket that contains files won't be deleted even if the application is.
+To avoid incurring unnecessary costs, set your bucket to be automatically deleted. This cascades application deletion to the bucket - unless it contains files. 
 
 Add `cascadingDelete` and set it to `true` in your NAIS application spesification. 
 
