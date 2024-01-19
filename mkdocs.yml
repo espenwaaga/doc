@@ -7,8 +7,15 @@ nav:
           - Part 2 - Make it NAIS: tutorial/hello-nais/hello-nais-2.md
           - Part 3 - Ship it: tutorial/hello-nais/hello-nais-3.md
           - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
+
   - How-to guides:
       - Overview: how-to/README.md
+      - naisdevice:
+          - Install naisdevice: how-to/naisdevice/install-naisdevice.md
+          - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+          - Update naisdevice: how-to/naisdevice/update-naisdevice.md
+          - Troubleshoot naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+
       - NAIS team: how-to/create-team.md
       - Command line access: how-to/command-line-access.md
       - CI/CD:
@@ -16,7 +23,7 @@ nav:
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       - Observability:
-          - Overview: observability/README.md
+          - Overview: how-to/observability/README.md
           - Metrics:
               - Overview: how-to/observability/metrics/README.md
               - Expose metrics: how-to/observability/metrics/expose.md
@@ -24,8 +31,10 @@ nav:
               - Grafana from infoscreen: how-to/observability/metrics/grafana-from-infoscreen.md
           - Tracing:
               - Overview: how-to/observability/tracing/README.md
+              - Enable tracing: how-to/observability/tracing/enable-tracing.md
           - Alerts:
               - Overview: how-to/observability/alerts/README.md
+              - Create alerts: how-to/observability/alerts/create.md
           - Logging:
               - Overview: how-to/observability/logging/README.md
       - Storage: 
@@ -34,36 +43,49 @@ nav:
           - Backup of bucket: how-to/storage/backup.md
           - Delete a bucket: how-to/storage/delete.md
 
-      # - Alerts:
-      #     - Overview: how-to/alerts/README.md
-      #     - Create an alert: how-to/alerts/create.md
-      # - Logging:
-      #     - Overview: how-to/logging/README.md
-      #     - Access logs: how-to/logging/access.md
-      #     - Application logs: how-to/logging/application.md
-      # - Postgres:
-      #     - Create a database: how-to/postgres/create.md
-      #     - Restoring a backup: how-to/postgres/backup-restore.md
-      # - Kafka:
-      #     - Overview: how-to/kafka/README.md
-      #     - Create a topic: how-to/kafka/create-topic.md
-      #     - Consume from a topic: how-to/kafka/consume-topic.md
-      #     - Produce to a topic: how-to/kafka/produce-topic.md
-      # - OpenSearch:
-      #     - Overview: how-to/opensearch/README.md
-      #     - Create a instance: how-to/opensearch/create.md
-      #     - Access the instance: how-to/opensearch/access.md
-      # - BigQuery:
-      #     - Overview: how-to/bigquery/README.md
-      #     - Create a dataset: how-to/bigquery/create-dataset.md
-      # - Bucket:
-      #     - Overview: how-to/bucket/README.md
-      #     - Create a bucket: how-to/bucket/create.md
-      #     - Access a bucket: how-to/bucket/access.md
-      # - Secrets:
-      #     - Overview: how-to/secrets/README.md
-      #     - Create a secret: how-to/secrets/create.md
-      #     - Access a secret: how-to/secrets/access.md
+  - References:
+      - Overview: reference/README.md
+      - Application spec: reference/application-spec.md
+      - Application example: reference/application-example.md
+      - Naisjob spec: reference/naisjob-spec.md
+      - Naisjob example: reference/naisjob-example.md
+      - Kafka topic spec: reference/kafka-topic-spec.md
+      - Kafka topic example: reference/kafka-topic-example.md
+      - Metrics: reference/metrics.md
+      - Tracing: reference/tracing.md
+
+  - Explanations:
+      - Overview: explanation/README.md
+      - Observability:
+          - Overview: explanation/observability/README.md
+          - Metrics: explanation/observability/metrics.md
+          - Tracing: explanation/observability/tracing.md
+      - NAIS Teams: explanation/nais-teams.md
+
+        # Various how-to guides - moved here temporarily for ease of navigation
+        # - Postgres:
+        #     - Create a database: how-to/postgres/create.md
+        #     - Restoring a backup: how-to/postgres/backup-restore.md
+        # - Kafka:
+        #     - Overview: how-to/kafka/README.md
+        #     - Create a topic: how-to/kafka/create-topic.md
+        #     - Consume from a topic: how-to/kafka/consume-topic.md
+        #     - Produce to a topic: how-to/kafka/produce-topic.md
+        # - OpenSearch:
+        #     - Overview: how-to/opensearch/README.md
+        #     - Create a instance: how-to/opensearch/create.md
+        #     - Access the instance: how-to/opensearch/access.md
+        # - BigQuery:
+        #     - Overview: how-to/bigquery/README.md
+        #     - Create a dataset: how-to/bigquery/create-dataset.md
+        # - Bucket:
+        #     - Overview: how-to/bucket/README.md
+        #     - Create a bucket: how-to/bucket/create.md
+        #     - Access a bucket: how-to/bucket/access.md
+        # - Secrets:
+        #     - Overview: how-to/secrets/README.md
+        #     - Create a secret: how-to/secrets/create.md
+        #     - Access a secret: how-to/secrets/access.md
 
   - References:
       - Overview: reference/README.md
@@ -79,7 +101,6 @@ nav:
       - Overview: explanation/README.md
       - NAIS Teams: explanation/nais-teams.md
       - Metrics: explanation/metrics.md
-      - naisdevice: explanation/what-is-naisdevice.md
 site_name: NAIS
 repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
