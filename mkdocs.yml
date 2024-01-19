@@ -10,6 +10,12 @@ nav:
 
   - How-to guides:
       - Overview: how-to/README.md
+      - naisdevice:
+          - Install naisdevice: how-to/naisdevice/install-naisdevice.md
+          - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+          - Update naisdevice: how-to/naisdevice/update-naisdevice.md
+          - Troubleshoot naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+
       - NAIS team: how-to/create-team.md
       - Command line access: how-to/command-line-access.md
       - CI/CD:
