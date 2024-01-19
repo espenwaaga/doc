@@ -28,6 +28,8 @@ nav:
               - Overview: how-to/observability/alerts/README.md
           - Logging:
               - Overview: how-to/observability/logging/README.md
+      - Storage: 
+          - Overview: how-to/storage/README.md
 
       # - Alerts:
       #     - Overview: how-to/alerts/README.md
