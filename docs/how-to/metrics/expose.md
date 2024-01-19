@@ -1,19 +1,21 @@
 # How to expose metrics
 
 Bellow we have a few samples to get you started. For more in-depth examples and reference, check out the documentation for your specific client.
+You find further explanations on metrics [here](/explanation/metrics).
 
 ## 1. Enable metrics in [manifest](TODO:reference-et-eller-annet)
 
 ```yaml
 spec:
-    prometheus:
-    enabled: true  # default: false. Pod will now be scraped for metrics by Prometheus.
-    path: /metrics # Path where prometheus metrics are served.
+  prometheus:
+  enabled: true # default: false. Pod will now be scraped for metrics by Prometheus.
+  path: /metrics # Path where prometheus metrics are served.
 ```
+
 ## 2. Add metric to your application
 
 ??? info "Client libraries"
-    There are a number of client libraries available depending on what programming language you are using. You can use these to simplify the communication with Prometheus.
+There are a number of client libraries available depending on what programming language you are using. You can use these to simplify the communication with Prometheus.
 
     * [Prometheus Java client][prometheus-client-java]
     * [Prometheus Python client][prometheus-client-python]
@@ -75,7 +77,6 @@ Most of the client libraries (see list above), includes libraries for generating
       log.Fatal(http.ListenAndServe(":8080", nil))
     }
     ```
-
 
 ## 3. Example metrics
 
