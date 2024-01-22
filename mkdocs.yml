@@ -37,7 +37,7 @@ nav:
               - Create alerts: how-to/observability/alerts/create.md
           - Logging:
               - Overview: how-to/observability/logging/README.md
-      - Storage: 
+      - Storage:
           - Overview: how-to/storage/README.md
           - Create a bucket: how-to/storage/create.md
           - Delete a bucket: how-to/storage/delete.md
@@ -60,6 +60,7 @@ nav:
           - Overview: explanation/observability/README.md
           - Metrics: explanation/observability/metrics.md
           - Tracing: explanation/observability/tracing.md
+          - Alerts: explanation/observability/alerts.md
       - NAIS Teams: explanation/nais-teams.md
 
         # Various how-to guides - moved here temporarily for ease of navigation
@@ -87,20 +88,6 @@ nav:
         #     - Create a secret: how-to/secrets/create.md
         #     - Access a secret: how-to/secrets/access.md
 
-  - References:
-      - Overview: reference/README.md
-      - Application spec: reference/application-spec.md
-      - Application example: reference/application-example.md
-      - Naisjob spec: reference/naisjob-spec.md
-      - Naisjob example: reference/naisjob-example.md
-      - Kafka topic spec: reference/kafka-topic-spec.md
-      - Kafka topic example: reference/kafka-topic-example.md
-      - Metrics: reference/metrics.md
-
-  - Explanations:
-      - Overview: explanation/README.md
-      - NAIS Teams: explanation/nais-teams.md
-      - Metrics: explanation/metrics.md
 site_name: NAIS
 repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
