@@ -16,7 +16,7 @@ hide:
 
     [:octicons-arrow-right-24: Tutorials](tutorial/README.md)
 
--   :octicons-repo-24:{ .lg .middle } **How-to guides**
+- :octicons-repo-24:{ .lg .middle } **How-to guides**
 
     ---
 
@@ -24,7 +24,15 @@ hide:
 
     [:octicons-arrow-right-24: How-to guides](how-to/README.md)
 
--   :octicons-code-square-24:{ .lg .middle } **Reference**
+- :octicons-light-bulb-24:{ .lg .middle } **Explanation**
+
+    ---
+
+    Big-picture explanations of higher-level concepts. Most useful when you want to understand how NAIS works.
+
+    [:octicons-arrow-right-24: Explanations](explanation/README.md)
+
+- :octicons-code-square-24:{ .lg .middle } **Reference**
 
     ---
 
@@ -32,12 +40,4 @@ hide:
 
     [:octicons-arrow-right-24: Reference](reference/README.md)
 
--   :octicons-light-bulb-24:{ .lg .middle } **Explanation**
-
-    ---
-
-    Big-picture explanations of higher-level concepts. Most useful when you want to understand how NAIS works.
-
-    [:octicons-arrow-right-24: Explanations](explanation/README.md)
 </div>
-
