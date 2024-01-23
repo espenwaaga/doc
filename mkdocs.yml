@@ -37,8 +37,11 @@ nav:
               - Create alerts: how-to/observability/alerts/create.md
               - Customize alerts: how-to/observability/alerts/custom.md
               - Recording rules: how-to/observability/alerts/recording.md
-          - Logging:
-              - Overview: how-to/observability/logging/README.md
+          - Logs:
+              - Overview: how-to/observability/logs/README.md
+              - Enable logging: how-to/observability/logs/enable.md
+              - Secure logs: how-to/observability/logs/secure-logs.md
+              - Ship logs with curl: how-to/observability/logs/manual.md
       - Storage:
           - Overview: how-to/storage/README.md
           - Create a bucket: how-to/storage/create.md
@@ -63,6 +66,7 @@ nav:
           - Metrics: explanation/observability/metrics.md
           - Tracing: explanation/observability/tracing.md
           - Alerts: explanation/observability/alerts.md
+          - Logs: explanation/observability/logs.md
       - NAIS Teams: explanation/nais-teams.md
 
         # Various how-to guides - moved here temporarily for ease of navigation

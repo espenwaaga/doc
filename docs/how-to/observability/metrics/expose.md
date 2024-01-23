@@ -4,7 +4,7 @@ This guide will show you how to expose metrics from your application, and how to
 
 See further [explanations on metrics] (/explanation/metrics) for more details
 
-## 1. Enable metrics in [manifest](TODO:reference-et-eller-annet)
+## 1. Enable metrics in [manifest](../../../reference/application-spec.md)
 
 ```yaml
 spec:
@@ -15,21 +15,16 @@ spec:
 
 ## 2. Add metric to your application
 
-??? info "Client libraries"
-There are a number of client libraries available depending on what programming language you are using. You can use these to simplify the communication with Prometheus.
+??? info "Links to various client libraries"
 
-    * [Prometheus Java client][prometheus-client-java]
-    * [Prometheus Python client][prometheus-client-python]
-    * [Prometheus Go client][prometheus-client-go]
-    * [Prometheus Node.js client][prometheus-client-node]
+    There are a number of client libraries available depending on what programming language you are using. You can use these to simplify the communication with Prometheus.
 
-    You can find a comprehensive list of [client libraries here][prometheus-clients-all].
+    * [Prometheus Java client](https://github.com/prometheus/client_java)
+    * [Prometheus Python client](https://github.com/prometheus/client_python)
+    * [Prometheus Go client](https://github.com/prometheus/client_golang)
+    * [Prometheus Node.js client](https://github.com/siimon/prom-client)
 
-    [prometheus-client-java]: https://github.com/prometheus/client_java
-    [prometheus-client-python]: https://github.com/prometheus/client_python
-    [prometheus-client-go]: https://github.com/prometheus/client_golang
-    [prometheus-client-node]: https://github.com/siimon/prom-client
-    [prometheus-clients-all]: https://prometheus.io/docs/instrumenting/clientlibs/
+    You can find a [comprehensive list of client libraries](https://prometheus.io/docs/instrumenting/clientlibs/) here
 
 ### Default metrics
 
@@ -79,7 +74,7 @@ Most of the client libraries (see list above), includes libraries for generating
     }
     ```
 
-## 3. Example metrics
+## 3. Add custom metrics (optional)
 
 === "Counter.java"
 
