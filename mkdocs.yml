@@ -62,6 +62,8 @@ nav:
 
   - Explanations:
       - Overview: explanation/README.md
+      - Leader Election: explanation/leader-election.md
+      - Backup: explanation/backup.md
       - Observability:
           - Overview: explanation/observability/README.md
           - Metrics: explanation/observability/metrics.md
