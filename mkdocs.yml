@@ -35,6 +35,8 @@ nav:
           - Alerts:
               - Overview: how-to/observability/alerts/README.md
               - Create alerts: how-to/observability/alerts/create.md
+              - Customize alerts: how-to/observability/alerts/custom.md
+              - Recording rules: how-to/observability/alerts/recording.md
           - Logging:
               - Overview: how-to/observability/logging/README.md
       - Storage:

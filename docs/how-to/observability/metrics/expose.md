@@ -2,7 +2,7 @@
 
 This guide will show you how to expose metrics from your application, and how to configure Prometheus to scrape them.
 
-You find further explanations on metrics [here](/explanation/metrics).
+See further [explanations on metrics] (/explanation/metrics) for more details
 
 ## 1. Enable metrics in [manifest](TODO:reference-et-eller-annet)
 
