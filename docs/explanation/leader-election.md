@@ -7,18 +7,14 @@ This is done by asking the [elector container](https://github.com/nais/elector) 
 The leader election configuration does not control which pod the external service requests will be routed to.
 
 ## Elector sidecar
-When you [enable leader election](../how-to/leader-election.md), NAIS will inject anelector container as a sidecar into your pod.
+When you [enable leader election](../how-to/leader-election.md), NAIS will inject an elector container as a sidecar into your pod.
 
 When you have the `elector` container running in your pod,
 you can make a HTTP GET to the URL set in environment variable `$ELECTOR_PATH` to see which pod is the leader.
 This will return a JSON object with the name of the leader,
 which you can now compare with your hostname.
 
-## Issues
-
-We changed leader election implementation in January 2022.
-The old implementation had some issues, which we have attempted to address.
-In doing so, we have made other trade-offs, which results in these issues:
+## Caveats
 
 * A leader is elected for life. 
   When a leader is elected, it will continue to be the sole leader until the pod is deleted from the cluster.
@@ -29,6 +25,5 @@ In doing so, we have made other trade-offs, which results in these issues:
 * Participants in an election need to poll the `$ELECTOR_PATH` to be informed of changes in leadership.
   There is no push mechanism in place to inform your application about changes.
   This means your application needs to check at reasonable intervals for changes in leadership.
-  (This was also the case in the old implementation).
   NB: `$ELECTOR_PATH` is the raw ip string without the protocol i.e localhost:4040 so be aware
   of this and make sure to specify this in your http-client.
