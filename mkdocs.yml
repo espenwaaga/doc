@@ -10,6 +10,7 @@ nav:
 
   - How-to guides:
       - Overview: how-to/README.md
+      - Leader Election: how-to/leader-election.md
       - naisdevice:
           - Install naisdevice: how-to/naisdevice/install-naisdevice.md
           - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
