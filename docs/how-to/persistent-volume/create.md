@@ -1,38 +1,39 @@
 # Create a persistent volume storage
 
-An example app <MY-APP> with a volume of `1Gi`:
+An example volume `<MY-APP>` with a volume of `1Gi`:
+???+ note ".nais/statefulset.yaml"
 
-```yaml
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: <MY-APP>
-spec:
-  serviceName: <MY-APP>
-  replicas: 1
-  selector:
-    matchLabels:
-      app: <MY-APP>
-  template:
+    ```yaml hl_lines="4 6 10 14 17 18 20 24 29"
+    apiVersion: apps/v1
+    kind: StatefulSet
     metadata:
-      labels:
-        app: <MY-APP>
+      name: <MY-APP>
     spec:
-      containers:
-      - name: <MY-APP>
-        image: <MY-APP>:latest
-        volumeMounts:
-        - name: <MY-APP>-storage
-          mountPath: /data
-  volumeClaimTemplates:
-  - metadata:
-      name: <MY-APP>-storage
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 1Gi
-```
+      serviceName: <MY-APP>
+      replicas: 1
+      selector:
+        matchLabels:
+          app: <MY-APP>
+      template:
+        metadata:
+          labels:
+            app: <MY-APP>
+        spec:
+          containers:
+          - name: <MY-APP>
+            image: <MY-APP>:latest
+            volumeMounts:
+            - name: <MY-APP>-storage
+              mountPath: /data
+      volumeClaimTemplates:
+      - metadata:
+          name: <MY-APP>-storage
+        spec:
+          accessModes: [ "ReadWriteOnce" ]
+          resources:
+            requests:
+              storage: 1Gi
+    ```
 
 ## Storage classes
 
