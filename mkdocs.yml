@@ -47,7 +47,10 @@ nav:
           - Overview: how-to/storage/README.md
           - Create a bucket: how-to/storage/create.md
           - Delete a bucket: how-to/storage/delete.md
-
+      - Persistent Volume Storage: how-to/persistent-volume/README.md
+        - Create volume:  how-to/persistent-volume/create.md
+        - Resize volume: how-to/persistent-volume/resize.md
+        - Delete volume: how-to/persistent-volume/delete.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
