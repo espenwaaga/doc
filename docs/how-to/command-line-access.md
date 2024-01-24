@@ -4,7 +4,7 @@ This guide shows you the required command lines tools for accessing the NAIS pla
 
 ## 0. Prerequisites
 
-- [naisdevice](naisdevice/install.md) installed
+- [naisdevice](../naisdevice/install-naisdevice) installed
 - [nais-cli](cli/install.md) installed
 
 ## 1. Install gcloud
