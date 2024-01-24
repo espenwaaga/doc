@@ -12,6 +12,7 @@ nav:
       - Overview: how-to/README.md
       - Leader Election: how-to/leader-election.md
       - naisdevice:
+          - Install Kolide: how-to/naisdevice/install-kolide.md
           - Install naisdevice: how-to/naisdevice/install-naisdevice.md
           - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
           - Update naisdevice: how-to/naisdevice/update-naisdevice.md
