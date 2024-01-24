@@ -51,6 +51,10 @@ nav:
           - Create volume: how-to/persistent-volume/create.md
           - Resize volume: how-to/persistent-volume/resize.md
           - Delete volume: how-to/persistent-volume/delete.md
+      - Database:
+          - MongoDB:
+              - Create a MongoDB instance: how-to/database/mongodb/create.md
+              - Backup MongoDB: how-to/database/mongodb/backup.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
@@ -76,7 +80,7 @@ nav:
           - Logs: explanation/observability/logs.md
       - NAIS Teams: explanation/nais-teams.md
       - Persistent Volume Storage: explanation/persistent-volume-storage.md
-
+      - MongoDB Bash job for backup: explanation/mongodb-bash.md
         # Various how-to guides - moved here temporarily for ease of navigation
         # - Postgres:
         #     - Create a database: how-to/postgres/create.md
