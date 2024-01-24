@@ -53,8 +53,14 @@ nav:
           - Delete volume: how-to/persistent-volume/delete.md
       - Database:
           - MongoDB:
-              - Create a MongoDB instance: how-to/database/mongodb/create.md
-              - Backup MongoDB: how-to/database/mongodb/backup.md
+              - Create: how-to/database/mongodb/create.md
+              - Backup: how-to/database/mongodb/backup.md
+          - InfluxDB:
+              - Create: how-to/database/influxdb/create.md
+              - Access: how-tp/database/influxdb/access.md
+          - BigQuery:
+              - Create: how-to/database/bigquery/create.md
+              - Connect: how-to/database/bigquery/connect.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
@@ -83,6 +89,7 @@ nav:
       - Database:
           - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
           - InfluxDB: explanation/database/influxdb.md
+          - BigQuery: explanation/database/bigquery.md
         # Various how-to guides - moved here temporarily for ease of navigation
         # - Postgres:
         #     - Create a database: how-to/postgres/create.md
