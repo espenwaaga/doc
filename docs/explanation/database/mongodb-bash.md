@@ -1,6 +1,7 @@
 # MongoDB bash job for backup
-
+<TODO: Why / what context is this relevant?>
 The following bash script will create a gzipped dump of my-mongodb-0, which then will be uploaded to the GCP storage bucket of your choice. In production, the buckets will be archived on-premises as well. 
+
 ``` shell 
 #!/usr/bin/env bash
 
