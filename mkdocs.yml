@@ -33,6 +33,8 @@ nav:
               - Manage Access: how-to/persistence/kafka/manage-acl.md
               - Access Topic: how-to/persistence/kafka/access.md
               - Access Topic from outside NAIS: how-to/persistence/kafka/access-from-legacy.md
+              - Schema operations: how-to/persistence/kafka/schema-operations.md
+              - Monitoring topics: how-to/persistence/kafka/monitoring.md
               - Internal Topic: how-to/persistence/kafka/internal.md
       - Observability:
           - Overview: how-to/observability/README.md

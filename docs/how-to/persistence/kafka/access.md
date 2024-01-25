@@ -38,6 +38,7 @@ We use SSL, so ignore the SASL-SSL examples:
 - [Go](https://docs.aiven.io/docs/products/kafka/howto/connect-with-go.html)
 
 For all available fields and configuration options, see the [kafka reference](../../../reference/kafka.md).
+We recommend following the [application design guidelines](../../../explanation/kafka.md#application-design-guidelines) for how to configure your application.
 
 ## 3. Apply the application
 === "Automatically"

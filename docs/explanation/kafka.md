@@ -1,4 +1,4 @@
-# Using Kafka in an application
+# About Kafka
 
 ## What happens on deploy?
 
@@ -11,57 +11,6 @@ These credentials are then inserted into the requested secret and used in the de
 
 If there is a problem generating the secret, this might fail your deployment.
 In this case, Aivenator will update the `status` part of the resource, with further information about the problem.
-
-## Using Kafka Streams with internal topics
-
-!!! info
-    This feature is only available in GCP clusters.
-
-
-In some configurations of kafka streams your application needs to create internal topics. To allow
-your app to make internal topics, you need to set
-[.spec.kafka.streams](../../nais-application/application.md#kafkastreams) to `true` in your application
-spec (nais.yaml)
-
-When you do this you **must** configure Kafka Streams by setting the property `application.id` to a value that starts
-with the value of the env var `KAFKA_STREAMS_APPLICATION_ID`, which will be injected into your pod automatically.
-
-## Accessing topics from an application on legacy infrastructure
-
-If you have an application on legacy infrastructure (outside NAIS clusters), you can still access topics with a few more manual steps.
-
-The first step is to add your application to the topic ACLs, the same way as for applications in NAIS clusters (see [the previous section](#accessing-topics-from-an-application)).
-Use your team name, and a suitable name for the application, following NAIS naming conventions.
-
-To create a credentials for your application, you need to manually create the `AivenApplication` resource that would normally be created by Naiserator.
-
-=== "aivenapp.yaml"
-    ```yaml
-    ---
-    apiVersion: aiven.nais.io/v1
-    kind: AivenApplication
-    metadata:
-      name: legacyapplication
-      namespace: myteam
-    spec:
-      kafka:
-        pool: nav-dev
-      secretName: unique-name
-      protected: true
-    ```
-
-Since Aivenator automatically deletes secrets that are not in use by any pod, you need to set the `protected` flag to `true`.
-This ensures that the secret will not be deleted by any automated process.
-
-After the `AivenApplication` resources has been created, Aivenator will create the secret, using the name specified.
-The secretName must be a valid [DNS label](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names), and must be unique within the namespace.
-Using `kubectl`, extract the secret and make the values available to your legacy application.
-
-When you no longer have a need for the credentials created in this way, delete the `AivenApplication` resource, and make sure the secret is also deleted.
-
-If you migrate the application to NAIS, the first deploy to NAIS will overwrite the `AivenApplication` resource.
-When this happens, it is no longer `protected`.
-In this case, it is recommended that you manually delete the protected secret when it is no longer needed.
 
 ## Application design guidelines
 
@@ -79,3 +28,157 @@ This will make sure your application is restarted when it is experiencing proble
 In other cases, failing just the readiness probe will allow your application to continue running, attempting to move forward without being killed.
 Failing readiness will be most helpful during deployment, where the old instances will keep running until the new are ready.
 If the new instances are not able to connect to Kafka, keeping the old ones until the problem is resolved will allow your application to continue working.
+
+# Working with Kafka Offsets
+
+## Retention and what it means
+
+On Aiven Kafka, we retain consumer offsets for a period of 7 days.
+This is the period recommended by Aiven and the default for Kafka.
+Due to how longer offset retention affects other parts of Kafka, we do not want to increase this period.
+
+When a consumer group stops consuming messages, its offsets will be retained for the mentioned period.
+
+How Kafka decides if a consumer group has stopped comes in two variations:
+
+### Dynamically assigned partitions
+
+This is the normal operation when using current Kafka client libraries.
+In this case, Kafka assigns partitions to the consumers as they connect, and manages group membership.
+A consumer group is considered empty when there are no connected consumers with assigned partitions.
+
+Once the group is empty, Kafka retains the offsets for 7 days.
+
+### Manually assigned partitions
+
+When using the [`assign`][assign] API you are responsible for keeping track of consumers.
+In this scenario, Kafka uses the time of the last commit to determine offset retention.
+
+Offsets are kept for 7 days after the last commit.
+
+!!! warning
+    This means that when using manual assignment on a topic with long periods of inactivity (more than 7 days between messages),
+    you might lose offsets even if your consumer is running and committing offsets as it should.
+
+## Do you even need offsets?
+
+Some scenarios don't actually need to track offsets, and can consider disabling the feature for a slight performance gain.
+In these situations, you can set `enable.auto.commit=false`, and simply not commit offsets.
+
+There are two main variations of this scenario:
+
+1. Always reading the entire topic from start to end. Set `auto.offset.reset=earliest`.
+2. Only caring about fresh messages arriving after the consumer connects. Set `auto.offset.reset=latest`.
+
+## Autocommit: When/Why/Why not?
+
+When starting out with Kafka, it is common to use the autocommit feature available in the client libraries.
+This makes it easy to get started, and often provides good enough semantics.
+
+When you use autocommit, the client will automatically commit the last received offsets at a set interval, configured using `auto.commit.interval.ms`.
+The implementation ensures that you get "at-least-once" semantics, where the worst case scenario is to reprocess messages received in the interval between last commit and the consumer stopping.
+One downside with this mechanism is that you have little control over when offsets are committed.
+
+Autocommit is done before a `poll` to the server, which means that your consumer needs to ensure that has completed processing of a message before the next call to `poll`.
+If your consumer processes messages in other threads, you probably need to manage offsets explicitly and not rely on autocommit.
+
+### Managing offsets explicitly
+
+The KafkaConsumer exposes two APIs for committing offsets.
+[Asynchronous commits using `commitAsync`][commitAsync] and [synchronous commits using `commitSync`][commitSync].
+
+From the [Confluent documentation][offset-management]:
+
+> Each call to the commit API results in an offset commit request being sent to the broker. Using the synchronous API, the consumer is blocked until that request returns successfully. This may reduce overall throughput since the consumer might otherwise be able to process records while that commit is pending.
+>
+> ---
+>
+> A second option is to use asynchronous commits. Instead of waiting for the request to complete, the consumer can send the request and return immediately by using asynchronous commits.
+>
+> ---
+>
+> In general, asynchronous commits should be considered less safe than synchronous commits.
+
+
+## Saving offsets elsewhere
+
+The consumer application need not use Kafka's built-in offset storage, it can store offsets in a store of its own choosing.
+The primary use case for this is allowing the application to store both the offset and the results of the consumption in the same system in a way that both the results and offsets are stored atomically.
+Another use case is when you have consumers that receive messages very rarely, where consumer inactivity and other incidents might lead to lost offsets because of shorter retention.
+
+In some cases it might even be beneficial to store offsets in alternative storage even if your messages are not.
+This will avoid issues with offsets passing beyond the retention threshold, in case of recurring errors or networking issues.
+
+When storing offsets outside Kafka, your consumer needs to pay attention to rebalance events, to ensure correct offset management.
+In these cases it might be easier to also [manage partition assignment explicitly](#manually-assigned-partitions).
+
+Before storing offsets outside Kafka, consult the [Kafka documentation][rebalance] on the topic.
+
+## What to do when you lose your offsets
+
+Shit happens, and you may experience lost offsets even if you've done everything right.
+In these cases, having a good plan for recovery can be crucial.
+Depending on your application, there are several paths to recovery, some more complicated than others.
+
+In the best of cases, you can simply start your consumer from either `earliest` or `latest` offsets and process normally.
+If you can accept reprocessing everything, set `auto.offset.reset=earliest`.
+If you can accept missing a few messages, set `auto.offset.reset=latest`.
+If neither of those are the case, your path becomes more complicated, and it is probably best to set `auto.offset.reset=none`.
+
+If you need to assess or manually handle the situation before continuing, setting `auto.offset.reset` to `none` will make your application fail immediately after offsets are lost.
+Trying to recover from lost offsets are considerably more complicated after your consumer has been doing the wrong thing for an hour.
+
+If you don't want to start at either end, but have a reasonable estimate of where your consumer stopped, you can use the [`seek`][seek] API to jump to the wanted offset before starting your consumer.
+
+You can also update consumer offsets using the Kafka command-line tool `kafka-consumer-groups.sh`.
+Aiven has written a short [article][aiven-offset-help] about its usage, that is a great place to start.
+In order to use it you need credentials giving you access to the topic, which you can get using the [nais cli](../../cli/commands/aiven.md).
+
+For other strategies, post a message in [#kafka](https://nav-it.slack.com/archives/C73B9LC86) on slack, and ask for help.
+Several teams have plans and tools for recovery that they can share.
+
+### Getting estimates for last offset
+
+Finding a good estimate for where your last offset was can be tricky.
+
+One place to go is Prometheus.
+In our clusters, we have kafka-lag-exporter running.
+This tracks various offset-related metrics, one of which is the last seen offset for a consumer group.
+
+You can use this query to get offsets for a consumer group:
+
+[max(kafka_consumergroup_group_offset{group="spedisjon-v1"}) by (topic, partition)](https://prometheus.dev-gcp.nav.cloud.nais.io/graph?g0.expr=max(kafka_consumergroup_group_offset%7Bgroup%3D%22spedisjon-v1%22%7D)%20by%20(topic%2C%20partition)&g0.tab=1&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1h)
+
+
+<!-- Long links moved here for better text flow -->
+[assign]: https://kafka.apache.org/28/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html#assign(java.util.Collection)
+[commitAsync]: https://kafka.apache.org/28/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitAsync()
+[commitSync]: https://kafka.apache.org/28/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html#commitSync()
+[offset-management]: https://docs.confluent.io/platform/current/clients/consumer.html#offset-management
+[rebalance]: https://kafka.apache.org/28/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html#rebalancecallback
+[seek]: https://kafka.apache.org/28/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html#seek(org.apache.kafka.common.TopicPartition,long)
+[aiven-offset-help]: https://developer.aiven.io/docs/products/kafka/howto/viewing-resetting-offset
+
+
+# FAQ/Troubleshooting
+
+## Why do I have to specify a pool name if there is only `nav-dev` and `nav-prod`?
+
+Custom pools might be added in the future, so this is done to avoid changing that part of the API.
+
+## I can't produce/consume on my topic, with an error message like "topic not found". What's wrong?
+
+You need to use the _fully qualified name_; check the `.status.fullyQualifiedName` field in your Topic resource.
+
+## I can't produce/consume on my topic, with an error message like "not authorized". What's wrong?
+
+Make sure you added the application to `.spec.acl` in your `topic.yaml`.
+
+## I get the error _MountVolume.SetUp failed for volume "kafka-credentials" : secret ... not found_
+
+Check the status of the `AivenApplication` resource created by Naiserator to look for errors.
+
+## Are Schemas backed up?
+
+Aiven makes backups of configuration and schemas every 3 hours, but no topic data is backed up by default.
+See the [Aiven documentation](https://docs.aiven.io/docs/products/kafka/concepts/configuration-backup) for more details.
