@@ -21,7 +21,7 @@ In the rest of this documentation, we use Application, but everything holds true
 
 It is not possible to share Redis instances between teams.
 
-In order to use Redis in your application, you add a [`redis` section](https://doc.nais.io/nais-application/application/#redis) to your `Application` resource (often called `nais.yaml`):
+In order to use Redis in your application, you add a [`redis` section](reference/application-spec#redis) to your `Application` resource (often called `nais.yaml`):
 
 ```yaml
 spec:

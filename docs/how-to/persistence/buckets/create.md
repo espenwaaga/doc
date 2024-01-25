@@ -26,7 +26,7 @@ spec:
           numNewerVersions: 2
           withState: ANY
 ```
-`retentionPeriodDays` and `lifecycleCondition` are for neccessary for [backup](../../reference/bucket-backup.md).
+`retentionPeriodDays` and `lifecycleCondition` are for neccessary for [backup](../../../reference/bucket-backup.md).
 
 ## 3. Enable automatic deletion
 
