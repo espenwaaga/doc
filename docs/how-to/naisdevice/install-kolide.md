@@ -1,4 +1,4 @@
-### Install Kolide agent
+### How to Install Kolide agent
 
 The Kolide agent will be added to your Slack app, and let you know when there are recommended updates or security issues you need to address - and how to address them. Slack apps are located in the bottom left corner of your Slack app.
 

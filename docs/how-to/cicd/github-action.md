@@ -1,10 +1,10 @@
-# Build and deploy with Github Actions
+# Howto build and deploy with Github Actions
 
 This how-to guide shows you how to build and deploy your application using [Github Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions) and the NAIS deploy action.
 
 ## Prerequisites
 
-- You're part of a [NAIS team](TODO)
+- You're part of a [NAIS team](../create-team.md)
 - A Github repository where the NAIS team has access
 - The repository contains a valid [nais.yaml](TODO)
 

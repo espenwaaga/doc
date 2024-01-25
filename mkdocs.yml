@@ -23,6 +23,7 @@ nav:
           - Overview: how-to/cicd/README.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
+      - Redis: how-to/redis.md
       - Observability:
           - Overview: how-to/observability/README.md
           - Metrics:
