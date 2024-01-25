@@ -23,7 +23,6 @@ nav:
           - Overview: how-to/cicd/README.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
-      - Redis: how-to/redis.md
       - Persistence:
           - Overview: how-to/persistence/README.md
           - Buckets:
@@ -36,6 +35,7 @@ nav:
               - Resize volume: how-to/persistence/persistent-volume/resize.md
               - Delete volume: how-to/persistence/persistent-volume/delete.md
           - Database:
+              - Redis: how-to/persistence/database/redis.md
               - MongoDB:
                   - Create: how-to/persistence/database/mongodb/create.md
                   - Backup: how-to/persistence/database/mongodb/backup.md
