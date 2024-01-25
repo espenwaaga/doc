@@ -1,3 +1,9 @@
+# Set up redis for your workloads
+
+## 0. Prerequisites
+- [Member of a NAIS team](../explanation/team.md)
+- 
+
 ---
 description: >-
   Redis is an open source (BSD licensed) in-memory data structure store used as
