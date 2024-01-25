@@ -40,14 +40,14 @@ jobs:
         uses: nais/docker-build-push@v0
         id: docker-build-push
         with:
-          team: myteam # Replace
+          team: <MY-TEAM> # Replace
           identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} # Provided as Organization Secret
           project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }} # Provided as Organization Variable
       - name: Deploy to NAIS
         uses: nais/deploy/actions/deploy@v2
         env:
-          CLUSTER: target-cluster # Replace
-          RESOURCE: nais.yaml
+          CLUSTER: <MY-CLUSTER> # Replace
+          RESOURCE: nais.yaml #, topic.yaml, statefulset.yaml, etc.
           VAR: image=${{ steps.docker-build-push.outputs.image }}
 ```
 
