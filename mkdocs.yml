@@ -24,6 +24,16 @@ nav:
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
       - Workload CRUD-operations: how-to/workload-crud-operations.md
       - Redis: how-to/redis.md
+      - Persistence:
+          - Overview: how-to/persistence/README.md
+          - Kafka:
+              - Overview: how-to/persistence/kafka/README.md
+              - Create Topic: how-to/persistence/kafka/create.md
+              - Delete Topic: how-to/persistence/kafka/delete.md
+              - Manage Access: how-to/persistence/kafka/manage-acl.md
+              - Access Topic: how-to/persistence/kafka/access.md
+              - Access Topic from outside NAIS: how-to/persistence/kafka/access-from-legacy.md
+              - Internal Topic: how-to/persistence/kafka/internal.md
       - Observability:
           - Overview: how-to/observability/README.md
           - Metrics:
@@ -48,7 +58,7 @@ nav:
           - Overview: how-to/storage/README.md
           - Create a bucket: how-to/storage/create.md
           - Delete a bucket: how-to/storage/delete.md
-      - Persistent Volume Storage: 
+      - Persistent Volume Storage:
           - Overview: how-to/persistent-volume/README.md
           - Create volume: how-to/persistent-volume/create.md
           - Resize volume: how-to/persistent-volume/resize.md
@@ -87,6 +97,7 @@ nav:
           - Alerts: explanation/observability/alerts.md
           - Logs: explanation/observability/logs.md
       - NAIS Teams: explanation/nais-teams.md
+      - Kafka: explanation/kafka.md
       - Persistent Volume Storage: explanation/persistent-volume-storage.md
       - Database:
           - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
