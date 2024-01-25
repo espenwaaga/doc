@@ -26,6 +26,25 @@ nav:
       - Redis: how-to/redis.md
       - Persistence:
           - Overview: how-to/persistence/README.md
+          - Buckets:
+              - Overview: how-to/persistence/buckets/README.md
+              - Create a bucket: how-to/persistence/buckets/create.md
+              - Delete a bucket: how-to/persistence/buckets/delete.md
+          - Persistent Volume Storage:
+              - Overview: how-to/persistence/persistent-volume/README.md
+              - Create volume: how-to/persistence/persistent-volume/create.md
+              - Resize volume: how-to/persistence/persistent-volume/resize.md
+              - Delete volume: how-to/persistence/persistent-volume/delete.md
+          - Database:
+              - MongoDB:
+                  - Create: how-to/persistence/database/mongodb/create.md
+                  - Backup: how-to/persistence/database/mongodb/backup.md
+              - InfluxDB:
+                  - Create: how-to/persistence/database/influxdb/create.md
+                  - Access: how-tp/persistence/database/influxdb/access.md
+              - BigQuery:
+                  - Create: how-to/persistence/database/bigquery/create.md
+                  - Connect: how-to/persistence/database/bigquery/connect.md
           - Kafka:
               - Overview: how-to/persistence/kafka/README.md
               - Create Topic: how-to/persistence/kafka/create.md
@@ -56,25 +75,6 @@ nav:
               - Enable logging: how-to/observability/logs/enable.md
               - Secure logs: how-to/observability/logs/secure-logs.md
               - Ship logs with curl: how-to/observability/logs/manual.md
-      - Storage:
-          - Overview: how-to/storage/README.md
-          - Create a bucket: how-to/storage/create.md
-          - Delete a bucket: how-to/storage/delete.md
-      - Persistent Volume Storage:
-          - Overview: how-to/persistent-volume/README.md
-          - Create volume: how-to/persistent-volume/create.md
-          - Resize volume: how-to/persistent-volume/resize.md
-          - Delete volume: how-to/persistent-volume/delete.md
-      - Database:
-          - MongoDB:
-              - Create: how-to/database/mongodb/create.md
-              - Backup: how-to/database/mongodb/backup.md
-          - InfluxDB:
-              - Create: how-to/database/influxdb/create.md
-              - Access: how-tp/database/influxdb/access.md
-          - BigQuery:
-              - Create: how-to/database/bigquery/create.md
-              - Connect: how-to/database/bigquery/connect.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
@@ -86,7 +86,7 @@ nav:
       - Metrics: reference/metrics.md
       - Tracing: reference/tracing.md
       - Backup of bucket: reference/bucket-backup.md
-      - Persistent Volume Storage: reference/persistent-volume-storage.md
+      - Persistent Volume Storage: reference/persistence/persistent-volume-storage.md
 
   - Explanations:
       - Overview: explanation/README.md
@@ -100,11 +100,11 @@ nav:
           - Logs: explanation/observability/logs.md
       - NAIS Teams: explanation/nais-teams.md
       - Kafka: explanation/kafka.md
-      - Persistent Volume Storage: explanation/persistent-volume-storage.md
+      - Persistent Volume Storage: explanation/persistence/persistent-volume-storage.md
       - Database:
-          - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
-          - InfluxDB: explanation/database/influxdb.md
-          - BigQuery: explanation/database/bigquery.md
+          - MongoDB Bash job for backup: explanation/persistence/database/mongodb-bash.md
+          - InfluxDB: explanation/persistence/database/influxdb.md
+          - BigQuery: explanation/persistence/database/bigquery.md
         # Various how-to guides - moved here temporarily for ease of navigation
         # - Postgres:
         #     - Create a database: how-to/postgres/create.md
