@@ -1,4 +1,4 @@
-# Teams
+# Teams (TODO: Much todo!)
 
 Access to NAIS is handled by [nais teams][nais-teams] (not to be confused by the video meeting tool Microsoft Teams).
 This is a self service portal to create and manage teams and team members and creates corresponding resources in Kubernetes, GitHub and Google Cloud.
@@ -36,7 +36,7 @@ team-c-ns --> team-c-project
 
 [nais-teams]: https://teams.nav.cloud.nais.io
 
-To access NAIS teams, you must be using a [naisdevice](../device/README.md) and logging on with your `@nav.no` user account.
+To access NAIS teams, you must be using a [naisdevice](TODO) and logging on with your `@nav.no` user account.
 
 Nais teams will create the following resources for each team:
 
@@ -52,9 +52,9 @@ The following resources will be generated for the new team:
 
 * An Azure AD security group (no Office365 integration, nor e-mail address).
 * A [GitHub team](https://github.com/orgs/navikt/teams) is created.
-* Deploy keys are created, and can be obtained in the teams settings part of [console](https://console.nav.cloud.nais.io).
+* Deploy keys are created, and can be obtained in the teams settings part of [console](https://console.@@TENANT@@.cloud.nais.io).
 * GCP users are provisioned, and users can log in to the [Google Cloud Console](https://console.cloud.google.com/) using their NAV e-mail address.
-* Two GCP projects are provisioned, one for development and one for production. See `https://console.cloud.google.com/home/dashboard?project=<(dev|prod)-yourteamname>`.
+* Two GCP projects are provisioned, one for development and one for production. See `https://console.cloud.google.com/home/dashboard?project=<(TODO: ENV)-yourteamname>`.
 * Namespaces are provisioned in all Kubernetes clusters.
 
 ## Adding a team member
@@ -81,15 +81,15 @@ Once the second owner has confirmed the deletion all resources associated with t
 
 ## Access to API keys
 
-In order to access _team API keys_, go to [console](https://console.nav.cloud.nais.io), then go to _settings_ under the specific team.
+In order to access _team API keys_, go to [console](https://console.@@TENANT@@.cloud.nais.io), then go to _settings_ under the specific team.
 
 ## Rotate API key
 
-If you need to rotate the api keys then you can go to [console](https://console.nav.cloud.nais.io) and click on the "Rotate key" button, a pop-up will ask you to confirm the rotation.
+If you need to rotate the api keys then you can go to [console](https://console.@@TENANT@@.cloud.nais.io) and click on the "Rotate key" button, a pop-up will ask you to confirm the rotation.
 
 ## Team namespaces
 
-Team namespaces are supported in both on-prem and in GCP. Refer to the [team namespaces documentation](../clusters/team-namespaces.md) for details.
+Team namespaces are supported in both on-prem and in GCP. Refer to the [team namespaces documentation](TODO) for details.
 
 ## GCP Team projects
 
@@ -139,7 +139,7 @@ There is more information over at [Google Cloud Docs](https://cloud.google.com/i
 #### Examples
 
 !!! Info "Access to Postgres"
-    We have a separate guide for how to give your self temporary access to a Postgres database. Head on over to [persistence/postgres](../persistence/postgres.md#granting-temporary-personal-access).
+    We have a separate guide for how to give your self temporary access to a Postgres database. Head on over to [persistence/postgres](TODO).
 
 Underneath we have outlined two typical use cases for when you need to give your self or someone else access.
 Do get a better understanding of how to give and revoke access with `gcloud`, you should read [Granting, changing, and revoking access to resources

@@ -6,7 +6,7 @@ This guide shows you how to access Kafka topics from your application.
 
 You need an existing topic to access. See [Create a Kafka topic](create.md) for how to create a topic.
 
-## 1. Enable access to the relevant pool in your [manifest](../../nais-application/application.md)
+## 1. Enable access to the relevant pool in your [manifest](/reference/nais-application/application.md)
 
 ???+ note ".nais/app.yaml"
 
@@ -38,7 +38,7 @@ We use SSL, so ignore the SASL-SSL examples:
 - [Go](https://docs.aiven.io/docs/products/kafka/howto/connect-with-go.html)
 
 For all available fields and configuration options, see the [kafka reference](../../../reference/kafka.md).
-We recommend following the [application design guidelines](../../../explanation/kafka.md#application-design-guidelines) for how to configure your application.
+We recommend following the [application design guidelines](../../../explanation/kafka#application-design-guidelines) for how to configure your application.
 
 ## 3. Apply the application
 === "Automatically"

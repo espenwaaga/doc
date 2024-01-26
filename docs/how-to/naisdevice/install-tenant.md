@@ -34,7 +34,7 @@ TODO (How does this fit into templating?)
    1. Use `<Command> + <Space>` to find your `naisdevice.app` and press `<Enter>`.
    1. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
 
-1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](install.md#connecting-to-nais-clusters)
+1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: missing)
 
 ### Windows Installation
 
@@ -57,14 +57,14 @@ TODO (How does this fit into templating?)
    ```
 
    (you will be asked for administrator access to run the installer)
-1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](install.md#connecting-to-nais-clusters)
+1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: fix link)
 1. Start _naisdevice_ from the _Start menu_
 
 #### Manual installation
 
 1. [Download and install naisdevice-tenant.exe](https://github.com/nais/device/releases/latest)
    (you will be asked for administrator access when you run the installer)
-1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](install.md#connecting-to-nais-clusters)
+1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO:Fix link)
 1. Start _naisdevice_ from the _Start menu_
 
 ### Ubuntu Installation

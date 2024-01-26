@@ -1,5 +1,5 @@
 !!! info "Disclaimer"
-    We [discourage use of Aiven InfluxDB](../../explanation/database/influxdb.md) for new use cases and don't support InfluxDB as software. [BigQuery ](../../../explanation/database/bigquery.md) might be a better fit for many use cases. Questions about Aiven and provisioning can be directed to #nais on Slack.
+    We [discourage use of Aiven InfluxDB](/explanation/database/influxdb) for new use cases and don't support InfluxDB as software. [BigQuery ](/explanation/database/bigquery) might be a better fit for many use cases. Questions about Aiven and provisioning can be directed to #nais on Slack.
 
 # 1. Get an InfluxDB instance 
 

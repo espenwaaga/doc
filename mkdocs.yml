@@ -41,7 +41,7 @@ nav:
                   - Backup: how-to/persistence/database/mongodb/backup.md
               - InfluxDB:
                   - Create: how-to/persistence/database/influxdb/create.md
-                  - Access: how-tp/persistence/database/influxdb/access.md
+                  - Access: how-to/persistence/database/influxdb/access.md
               - BigQuery:
                   - Create: how-to/persistence/database/bigquery/create.md
                   - Connect: how-to/persistence/database/bigquery/connect.md
@@ -88,7 +88,7 @@ nav:
       - Metrics: reference/metrics.md
       - Tracing: reference/tracing.md
       - Backup of bucket: reference/bucket-backup.md
-      - Persistent Volume Storage: reference/persistence/persistent-volume-storage.md
+      - Persistent Volume Storage: reference/persistent-volume-storage.md
 
   - Explanations:
       - Overview: explanation/README.md
@@ -102,11 +102,11 @@ nav:
           - Logs: explanation/observability/logs.md
       - NAIS Teams: explanation/nais-teams.md
       - Kafka: explanation/kafka.md
-      - Persistent Volume Storage: explanation/persistence/persistent-volume-storage.md
+      - Persistent Volume Storage: explanation/persistent-volume-storage.md
       - Database:
-          - MongoDB Bash job for backup: explanation/persistence/database/mongodb-bash.md
-          - InfluxDB: explanation/persistence/database/influxdb.md
-          - BigQuery: explanation/persistence/database/bigquery.md
+          - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
+          - InfluxDB: explanation/database/influxdb.md
+          - BigQuery: explanation/database/bigquery.md
         # Various how-to guides - moved here temporarily for ease of navigation
         # - Postgres:
         #     - Create a database: how-to/postgres/create.md

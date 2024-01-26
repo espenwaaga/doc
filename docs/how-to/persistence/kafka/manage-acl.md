@@ -46,7 +46,7 @@ Example of varoius ACLs:
 
 ## 2. Apply the Topic resource
 === "Automatically"
-    Add the file to your application repository, alongside `nais.yaml` to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/topic.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>
