@@ -22,7 +22,7 @@ spec:
   plan: hobbyist
   project: nav-dev
 ```
-
+(TODO: NAV)
  The actual name of the OpenSearch instance will be `opensearch-<team name>-<instance name>` (where `team name` is the same as the namespace your application resides in). The resource needs to have this full name in order to be accepted.
 
 As we use Aiven's operator, [the OpenSearch resource is documented in detail](https://aiven.github.io/aiven-operator/api-reference/opensearch.html) in the Aiven documentation. Check the reference for any other fields that might be of interest.
@@ -33,7 +33,7 @@ A ServiceIntegration is used to integrate the OpenSearch instance with Prometheu
 It is pretty straight forward, with little to no configuration needed.
 
 Simple 5 steps procedure:
-
+(TODO: gix for tenant)
 1. Copy the below yaml into a file (it can be the same file as your OpenSearch instance)
 2. Replace `nav-dev` with your project name (in field `project`)
    `project` should match your nais tenant (`nav`, `ssb` or `fhi`) and the environment you are running in (ex. `dev`, `prod`), with a dash (`-`) in between.
@@ -60,7 +60,7 @@ spec:
 ```
 
 #### Prometheus Endpoint IDs
-
+(TODO: Fix for tenant)
 | Environment | Endpoint ID                          |
 |-------------|--------------------------------------|
 | nav-dev     | f20f5b48-18f4-4e2a-8e5f-4ab3edb19733 |

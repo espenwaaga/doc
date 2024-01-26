@@ -23,10 +23,10 @@ You install Kolide by following these steps:
        ```
        /msg @Kolide status
        ```
-6. If Kolide reports any issues, follow the instructions on how to remediate them. If a remediation required by Kolide makes you feel unsafe - feel free to ask in [#naisdevice Slack channel](https://nav-it.slack.com/archives/C013XV66XHB).
+6. If Kolide reports any issues, follow the instructions on how to remediate them. If a remediation required by Kolide makes you feel unsafe - feel free to ask in [#naisdevice Slack channel](https://nav-it.slack.com/archives/C013XV66XHB). (TODO)
 
 !!! warning
 
     The issues reported by Kolide _**must**_ be addressed - these remediations have been vetted by the NAIS team and should be followed. Depending on the issue, you might lose `naisdevice` connectivity if an issue is left unresolved for a sufficient length of time.
 
-    If you run into problems, you can always ask in the [Slack channel #naisdevice](https://nav-it.slack.com/archives/C013XV66XHB)
+    If you run into problems, you can always ask in the [Slack channel #naisdevice](https://nav-it.slack.com/archives/C013XV66XHB) (TODO)

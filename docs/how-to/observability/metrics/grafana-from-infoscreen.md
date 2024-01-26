@@ -8,7 +8,7 @@ This how-to shows you how to run Grafana from a big screen.
 
 In order to run Grafana from a big screen, you will need a Grafana service account.
 
-You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C5KUST8N6) channel on Slack.
+You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C5KUST8N6) channel on Slack. (TODO: how do we fix this for non-nav?)
 
 ## 2. Access Grafana
 
@@ -19,7 +19,7 @@ Set the following configuration in the extension:
 
 | Field | Value |
 | --- | --- |
-| URL          | `https://grafana-infoskjerm.@@TENANT@@.cloud.nais.io/*` |
+| URL          | `https://grafana-infoskjerm.<<TENANT>>.cloud.nais.io/*` |
 | Domain       | ✅ |
 | Header name  | `Authorization`|
 | Add          | ✅ |

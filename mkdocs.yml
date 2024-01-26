@@ -45,7 +45,7 @@ nav:
               - BigQuery:
                   - Create: how-to/persistence/database/bigquery/create.md
                   - Connect: how-to/persistence/database/bigquery/connect.md
-              - OpenSearch: 
+              - OpenSearch:
                   - Create: how-to/persistence/database/opensearch/create.md
           - Kafka:
               - Overview: how-to/persistence/kafka/README.md
@@ -168,6 +168,7 @@ theme:
     repo: fontawesome/brands/github
 copyright: Made with ❤️ by NAV
 extra:
+  TENANT: "nav"
   generator: false
   search:
     language: "en"
@@ -201,6 +202,9 @@ extra_css:
   - material_theme_stylesheet_overrides/uu.css
   - material_theme_stylesheet_overrides/grid.css
 plugins:
+  - macros:
+      j2_variable_start_string: "<<"
+      j2_variable_end_string: ">>"
   - search:
       lang: en
   - git-revision-date-localized:

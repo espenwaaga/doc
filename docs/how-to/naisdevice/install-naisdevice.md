@@ -1,4 +1,4 @@
-### Install naisdevice
+### Install naisdevice (TODO: Nav only)
 
 ## Prerequisites
 

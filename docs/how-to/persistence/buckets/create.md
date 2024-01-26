@@ -56,7 +56,7 @@ spec:
 
 ## 4. Problem solving
 
-If you have problems getting your bucket up and running, check errors in [Console](https://console.@@TENANT@@.cloud.nais.io). Navigate to your app <MY-APP> and check the Logs tab.
+If you have problems getting your bucket up and running, check errors in [Console](https://console.<<TENANT>>.cloud.nais.io). Navigate to your app <MY-APP> and check the Logs tab.
 
 Alternative:
 

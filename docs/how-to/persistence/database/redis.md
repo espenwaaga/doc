@@ -43,7 +43,7 @@ For each instance added to this list, your application will receive three enviro
 The environment variables use a fixed prefix, and the instance name uppercased as a suffix.
 
 Example for the sessions instance used above:
-
+(TODO: how do we fix this for non-nav=)
 | Key                     | Value                                                                                                                                        |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | REDIS_URI_SESSIONS      | The URI for the Redis instance, typically with a `rediss` scheme. <br/>Example:  `rediss://redis-team-sessions-nav-dev.aivencloud.com:26483` |
@@ -80,7 +80,7 @@ spec:
   plan: startup-4
   project: nav-dev
 ```
-
+(TODO: nav only)
 A minimal Redis resource only requires `plan` and `project`.
 
  * `project` should match your nais tenant (`nav`, `mtpilot`, `ssb` or `fhi`) and the environment you are running in (ex. `dev`, `prod`), with a dash (`-`) in between.

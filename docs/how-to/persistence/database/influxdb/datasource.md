@@ -2,7 +2,7 @@
 
 Let us know in [#nais](https://nav-it.slack.com/archives/C5KUST8N6) if you want your InfluxDB to be exposed in Grafana.
 This means that everyone can access your data.
-
+(TODO: Nav ONLY)
 # Access from laptop
 
 With Naisdevice you have access to the _aiven-prod_ gateway.

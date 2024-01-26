@@ -50,4 +50,4 @@
 ## OS-agnostic uninstall steps
 
 When the program has been removed from your device, let an admin know in [#naisdevice](https://nav-it.slack.com/archives/C013XV66XHB) Slack channel. 
-This is necessary so that the record of your device can be purged from our Kolide systems. Autoremoval will occur after 29 days.
+This is necessary so that the record of your device can be purged from our Kolide systems. Autoremoval will occur after 29 days. (TODO: how do we fix this for non-nav?)

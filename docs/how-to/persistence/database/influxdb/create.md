@@ -4,7 +4,7 @@
 # 1. Get an InfluxDB instance 
 
 We use a IaC-repo to provision InfluxDB instances. Head over to [aiven-iac](https://github.com/navikt/aiven-iac#influxdb) to learn how to get your own instance.
-
+(TODO: NAV ONLY)
 # 2. Retention policies
 The default database is created with a default retention policy of 30 days. You might want to adjust this by e.g. creating a new default retention policy with 1 year retention:
 

@@ -8,7 +8,7 @@ This guide shows you how to create alerts for your application.
 
 You can define alerts by using Kubernetes resources (`PrometheusRule`), as well as directly in Grafana (GUI based).
 
-You will have a separate alertmanager for each environment available at `https://alertmanager.<ENVIRONMENT>.@@TENANT@@.cloud.nais.io/`
+You will have a separate alertmanager for each environment available at `https://alertmanager.<ENVIRONMENT>.<<TENANT>>.cloud.nais.io/`
 
 ## 1. Create PrometheusRule
 
@@ -55,7 +55,7 @@ You can define alerts by creating a `PrometheusRule` resource in your teams name
     ```
 
 ## 3. Verify your alert
-You can see the alerts in the Alertmanager at `https://alertmanager.<ENVIRONMENT>.@@TENANT@@.cloud.nais.io/` and the defined rules in Prometheus at `https://prometheus.<ENVIRONMENT>.@@TENANT@@.cloud.nais.io/rules`
+You can see the alerts in the Alertmanager at `https://alertmanager.<ENVIRONMENT>.<<TENANT>>.cloud.nais.io/` and the defined rules in Prometheus at `https://prometheus.<ENVIRONMENT>.@@TENANT@@.cloud.nais.io/rules`
 
 ## 4. Disable resolved (Optional)
 
