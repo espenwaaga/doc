@@ -1,4 +1,4 @@
-### Install naisdevice 
+### Install naisdevice
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@
 
     ### Manual installation
 
-    1. [Install Kolide agent](install.md#install-kolide-agent).
+    1. [Install Kolide agent](install-kolide.md).
 
     The Kolide agent will be added to your Slack app, and let you know when there are recommended updates or security issues you need to address - and how to address them. They have been vetted by the NAIS team and should be followed to keep your device safe.
 
@@ -82,7 +82,7 @@
 
     Using Gnome DE on latest Ubuntu LTS
 
-    1. [Install Kolide agent](install.md#install-kolide-agent).
+    1. [Install Kolide agent](install-kolide.md).
     2. Add the nais PPA repo:
     ```
     NAIS_GPG_KEY="/etc/apt/keyrings/nav_nais_gar.asc"
@@ -98,7 +98,7 @@
     4. Turn on your freshly installed `naisdevice` application.
      1. Find `naisdevice` in your application menu, or use the `naisdevice` command in a terminal to start the application.
      2. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
-    5. Remember to [update your kubeconfig](install.md#connecting-to-nais-clusters).
+    5. Remember to [update your kubeconfig](./install-tenant.md#connecting-to-nais-clusters).
 
 !!! warning
 

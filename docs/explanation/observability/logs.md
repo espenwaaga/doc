@@ -115,7 +115,7 @@ Enheter i Nav som skal ha tilgang: <four digit department code>. E.g (2990 - IT-
 
 ### 2 Connect the AD group to your team in Kibana
 
-The logs your apps produces are linked with your [nais-team](../../basics/teams.md).
+The logs your apps produces are linked with your [nais-team](../nais-teams.md).
 Administrators of Kibana will create a role for your team with read rights to those logs.
 Whoever is in the AD-group (created in step 1) will get the Kibana role, and can thus read all logs produced by apps belonging to the nais-team.
 

@@ -97,7 +97,7 @@ TODO (How does this fit into templating?)
 1. Turn on your freshly installed `naisdevice` application.
    1. Find `naisdevice` in your application menu, or use the `naisdevice` command in a terminal to start the application.
    2. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
-1. Remember to [update your kubeconfig](install.md#connecting-to-nais-clusters).
+1. Remember to [update your kubeconfig](install-tenant.md#connecting-to-nais-clusters).
 
 ### Connect naisdevice through task/sys -tray icon
 
@@ -136,7 +136,7 @@ And otherwise: Just be nais.
 
 ### Connecting to NAIS clusters
 
-1. Install `nais-cli` by following the [installation instructions](install.md).
+1. Install `nais-cli` by following the [installation instructions](../cli/install.md).
 1. Install `gcloud` by following the [installation instructions](https://cloud.google.com/sdk/docs/install).
 1. Install `kubectl` by following the [installation instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 1. Login to gcloud by running `gcloud auth login --update-adc`.

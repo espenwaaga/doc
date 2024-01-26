@@ -80,7 +80,7 @@ graph LR
   Elasticsearch --> Kibana
 ```
 
-[:octicons-arrow-right-24: Configure your logs](./logs/README.md)
+[:octicons-arrow-right-24: Configure your logs](./logs.md)
 
 ## Traces
 

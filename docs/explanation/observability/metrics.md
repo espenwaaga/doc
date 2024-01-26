@@ -20,7 +20,7 @@ graph LR
 ```
 
 [openmetrics]: https://openmetrics.io/
-[nais-manifest-prometheus]: ../nais-application/application.md#prometheus
+[nais-manifest-prometheus]: ../../reference/application-spec.md#prometheus
 
 All applications that have Prometheus scraping enabled will show up in the [default Grafana dashboard](https://grafana.nais.io/d/000000283/nais-app-dashbord), or create their own.
 
@@ -66,7 +66,7 @@ You should, as a developer, that build metrics into your application have solid 
 
 NAIS clusters comes with a set of metrics that are available for all applications. Many of these relates to Kubernetes and includes metrics like CPU and memory usage, number of pods, etc. You can find a comprehensive list in the [kube-state-metrics documentation](https://github.com/kubernetes/kube-state-metrics/blob/master/docs/README.md).
 
-Our ingress controller also exposes metrics about the number of requests, response times, etc. You can find a comprehensive list in our [ingress documentation](../nais-application/ingress.md#ingress-metrics).
+Our ingress controller also exposes metrics about the number of requests, response times, etc. You can find a comprehensive list in our [ingress documentation](../../reference//ingress.md#ingress-metrics).
 
 ## Debugging metrics
 
