@@ -45,6 +45,8 @@ nav:
               - BigQuery:
                   - Create: how-to/persistence/database/bigquery/create.md
                   - Connect: how-to/persistence/database/bigquery/connect.md
+              - OpenSearch: 
+                  - Create: how-to/persistence/database/opensearch/create.md
           - Kafka:
               - Overview: how-to/persistence/kafka/README.md
               - Create Topic: how-to/persistence/kafka/create.md
