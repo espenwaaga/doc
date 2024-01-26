@@ -39,7 +39,5 @@ See the complete specification in the [Application manifest](../../../reference/
 
 !!! warning
     No access is granted by default.
-    You must explicitly [grant access to users](./user-access.md).
-    You must explicitly grant applications access by [pre-authorizing](./application-access.md) them.
-
-
+    You must explicitly [grant access to users](./access-user.md).
+    You must explicitly grant applications access by [pre-authorizing](./access-application.md) them.

@@ -4,7 +4,7 @@ This guide will show you how to grant users access to your application.
 
 ## 1. Add permitted audience
 === "All users"
-If you want to allow _all_ users in the Azure AD tenant to access your application, you must explicitly enable this:
+    If you want to allow _all_ users in the Azure AD tenant to access your application, you must explicitly enable this:
 
     ```yaml hl_lines="5"
     spec:
@@ -34,9 +34,14 @@ If you want to allow _all_ users in the Azure AD tenant to access your applicati
 
 If a user is not a _direct_ member of any of the configured groups, Azure AD will now return an error if the user attempts to sign in to your application.
 
-Consumers using the [on-behalf-of flow](onbehalfof.md) will also receive failures if the user is not a member of any of the configured groups.
+Consumers using the [on-behalf-of flow](./onbehalfof.md) will also receive failures if the user is not a member of any of the configured groups.
 
-You can also configure [more fine-grained access control](./fine-grained.md)
+You can also configure [more fine-grained access control](./access-fine-grained.md)
 
-## 2. Apply the Application resource
-TODO
+## 2. Apply the application
+=== "Automatically"
+    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+=== "Manually"
+    ```bash
+    kubectl apply -f ./nais/app.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>
+    ```

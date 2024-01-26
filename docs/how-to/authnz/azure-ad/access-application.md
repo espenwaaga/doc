@@ -26,5 +26,10 @@ spec:
 
 You can also configure [more fine-grained access control](./fine-grained.md)
 
-## 2. Apply the Application resource
-TODO
+## 2. Apply the application
+=== "Automatically"
+    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+=== "Manually"
+    ```bash
+    kubectl apply -f ./nais/app.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>
+    ```

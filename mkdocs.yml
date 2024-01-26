@@ -16,10 +16,12 @@ nav:
           - Azure AD:
               - Overview: how-to/authnz/azure-ad/README.md
               - Enable: how-to/authnz/azure-ad/enable.md
-              - Grant users access: how-to/authnz/azure-ad/user-access.md
-              - Grant applications access: how-to/authnz/azure-ad/application-access.md
+              - Grant users access: how-to/authnz/azure-ad/access-user.md
+              - Grant applications access: how-to/authnz/azure-ad/access-application.md
+              - Fine grained access control: how-to/authnz/azure-ad/access-fine-grained.md
               - Configure on-behalf-of: how-to/authnz/azure-ad/onbehalfof.md
               - Configure client credentials: how-to/authnz/azure-ad/clientcredentials.md
+              - Token validation: how-to/authnz/azure-ad/validate-token.md
       - naisdevice:
           - Install Kolide: how-to/naisdevice/install-kolide.md
           - Install naisdevice: how-to/naisdevice/install-naisdevice.md
@@ -103,8 +105,8 @@ nav:
       - Backup: explanation/backup.md
       - Auth[n|z]:
         - Overview: explanation/authnz/README.md
-      - Azure:
-        - Overview: explanation/authnz/azure/README.md
+        - Azure:
+            - Overview: explanation/authnz/azure/README.md
       - Observability:
           - Overview: explanation/observability/README.md
           - Metrics: explanation/observability/metrics.md
