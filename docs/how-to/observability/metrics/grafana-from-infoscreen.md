@@ -19,7 +19,7 @@ Set the following configuration in the extension:
 
 | Field | Value |
 | --- | --- |
-| URL          | `https://grafana-infoskjerm.<<TENANT>>.cloud.nais.io/*` |
+| URL          | `https://grafana-infoskjerm.<<tenant()>>.cloud.nais.io/*` |
 | Domain       | ✅ |
 | Header name  | `Authorization`|
 | Add          | ✅ |
@@ -28,7 +28,7 @@ Set the following configuration in the extension:
 
 === "using token manually"
 
-    Access `https://grafana-infoskjerm.@@TENANT@@.cloud.nais.io` with the sevice account credential as a Bearer token:
+    Access `https://grafana-infoskjerm.<<tenant()>>.cloud.nais.io` with the sevice account credential as a Bearer token:
 
     ```code
     Authorization: Bearer <service-account-token>

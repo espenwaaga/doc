@@ -168,7 +168,7 @@ theme:
     repo: fontawesome/brands/github
 copyright: Made with ❤️ by NAV
 extra:
-  TENANT: "nav"
+  #TENANT: "nav"
   generator: false
   search:
     language: "en"
