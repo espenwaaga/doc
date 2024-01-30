@@ -4,6 +4,6 @@ values:
   host:
     displayName: override hostname during testing
     computed:
-      template: '{{ subdomain . "console" }}'
+      template: '{{ subdomain . "doc" }}'
     config:
       type: string
