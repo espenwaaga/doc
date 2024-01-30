@@ -1,7 +1,7 @@
 .PHONY: all install local
 SHELL := bash
 
-TENANTS = nav ssb tenant
+TENANTS = nav ssb dev-nais tenant
 
 all: install local
 
