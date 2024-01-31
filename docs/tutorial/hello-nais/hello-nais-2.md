@@ -27,7 +27,7 @@ Add the following content to the file, and insert the appropriate values in the 
 
 ???+ note ".nais/app.yaml"
 
-    ```yaml hl_lines="6 7 8 11"
+    ```yaml hl_lines="6-8 11"
     apiVersion: nais.io/v1alpha1
     kind: Application
 

@@ -43,12 +43,16 @@ nav:
           - Database:
               - Redis: how-to/persistence/database/redis.md
               - MongoDB:
+                  - Overview: how-to/persistence/database/mongodb/README.md
                   - Create: how-to/persistence/database/mongodb/create.md
                   - Backup: how-to/persistence/database/mongodb/backup.md
               - InfluxDB:
+                  - Overview: how-to/persistence/database/influxdb/README.md
                   - Create: how-to/persistence/database/influxdb/create.md
                   - Access: how-to/persistence/database/influxdb/access.md
+                  - Grafana datasource: how-to/persistence/database/influxdb/datasource.md
               - BigQuery:
+                  - Overview: how-to/persistence/database/bigquery/README.md
                   - Create: how-to/persistence/database/bigquery/create.md
                   - Connect: how-to/persistence/database/bigquery/connect.md
               - OpenSearch:
@@ -70,6 +74,7 @@ nav:
               - Expose metrics: how-to/observability/metrics/expose.md
               - Push metrics: how-to/observability/metrics/push.md
               - Grafana from infoscreen: how-to/observability/metrics/grafana-from-infoscreen.md
+              - Query: how-to/observability/metrics/query.md
           - Tracing:
               - Overview: how-to/observability/tracing/README.md
               - Enable tracing: how-to/observability/tracing/enable-tracing.md
@@ -83,7 +88,6 @@ nav:
               - Enable logging: how-to/observability/logs/enable.md
               - Secure logs: how-to/observability/logs/secure-logs.md
               - Ship logs with curl: how-to/observability/logs/manual.md
-      - Write the doc: how-to/doc-author.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
