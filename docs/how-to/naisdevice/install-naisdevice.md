@@ -74,12 +74,7 @@
 
 === "Ubuntu"
 
-    !!! warning
-
-    Using Gnome DE on latest Ubuntu LTS
-
-    1. [Install Kolide agent](install-kolide.md).
-    2. Add the nais PPA repo:
+    1. Add the nais PPA repo:
     ```
     NAIS_GPG_KEY="/etc/apt/keyrings/nav_nais_gar.asc"
     curl -sfSL "https://europe-north1-apt.pkg.dev/doc/repo-signing-key.gpg" | sudo dd of="$NAIS_GPG_KEY"
@@ -87,14 +82,14 @@
     sudo apt update
     ```
 
-    3. Install the naisdevice package:
+    1. Install the naisdevice package:
     ```
     sudo apt install naisdevice
     ```
-    4. Turn on your freshly installed `naisdevice` application.
+    1. Turn on your freshly installed `naisdevice` application.
      1. Find `naisdevice` in your application menu, or use the `naisdevice` command in a terminal to start the application.
      2. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
-    5. Remember to [update your kubeconfig](./install-tenant.md#connecting-to-nais-clusters).
+    1. Remember to [update your kubeconfig](./install-tenant.md#connecting-to-nais-clusters).
 
 !!! warning
 
