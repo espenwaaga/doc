@@ -83,6 +83,7 @@ nav:
               - Enable logging: how-to/observability/logs/enable.md
               - Secure logs: how-to/observability/logs/secure-logs.md
               - Ship logs with curl: how-to/observability/logs/manual.md
+      - Write the doc: how-to/doc-author.md
   - References:
       - Overview: reference/README.md
       - Application spec: reference/application-spec.md
