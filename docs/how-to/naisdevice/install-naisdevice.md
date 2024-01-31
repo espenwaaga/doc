@@ -6,10 +6,6 @@
 
 # Installation
 
-!!! info
-
-    This install guide is for connectivity to NAV systems only. If you are not a NAV employee or not a consultant hired by NAV, install a [different version of naisdevice as described here](install-tenant.md).
-
 ## Device-specific installation steps
 
 === "macOS"
@@ -103,3 +99,7 @@
 !!! warning
 
     To make sure you are using naisdevice as securely as possible, make sure you are a member of the [Slack channel #naisdevice](https://nav-it.slack.com/archives/C013XV66XHB). Important information will be published there. This also where you find us, if you need any help.
+
+!!! note
+
+    On first time connection you will be presented with soft policies (aka. Do's & Don'ts)
