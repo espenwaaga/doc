@@ -40,23 +40,22 @@ nav:
               - Create volume: how-to/persistence/persistent-volume/create.md
               - Resize volume: how-to/persistence/persistent-volume/resize.md
               - Delete volume: how-to/persistence/persistent-volume/delete.md
-          - Database:
-              - Redis: how-to/persistence/database/redis.md
-              - MongoDB:
-                  - Overview: how-to/persistence/database/mongodb/README.md
-                  - Create: how-to/persistence/database/mongodb/create.md
-                  - Backup: how-to/persistence/database/mongodb/backup.md
-              - InfluxDB:
-                  - Overview: how-to/persistence/database/influxdb/README.md
-                  - Create: how-to/persistence/database/influxdb/create.md
-                  - Access: how-to/persistence/database/influxdb/access.md
-                  - Grafana datasource: how-to/persistence/database/influxdb/datasource.md
-              - BigQuery:
-                  - Overview: how-to/persistence/database/bigquery/README.md
-                  - Create: how-to/persistence/database/bigquery/create.md
-                  - Connect: how-to/persistence/database/bigquery/connect.md
-              - OpenSearch:
-                  - Create: how-to/persistence/database/opensearch/create.md
+          - Redis: how-to/persistence/redis.md
+          - InfluxDB:
+              - Overview: how-to/persistence/influxdb/README.md
+              - Create: how-to/persistence/influxdb/create.md
+              - Access: how-to/persistence/influxdb/access.md
+              - Grafana datasource: how-to/persistence/influxdb/datasource.md
+          - BigQuery:
+              - Overview: how-to/persistence/bigquery/README.md
+              - Create: how-to/persistence/bigquery/create.md
+              - Connect: how-to/persistence/bigquery/connect.md
+          - OpenSearch:
+              - Overview: how-to/persistence/opensearch/README.md
+              - Create: how-to/persistence/opensearch/create.md
+              - Access from application: how-to/persistence/opensearch/access-from-application.md
+              - Access from desktop: how-to/persistence/opensearch/access-from-desktop.md
+              - Observing OpenSearch: how-to/persistence/opensearch/observing.md
           - Kafka:
               - Overview: how-to/persistence/kafka/README.md
               - Create Topic: how-to/persistence/kafka/create.md
@@ -67,6 +66,7 @@ nav:
               - Schema operations: how-to/persistence/kafka/schema-operations.md
               - Monitoring topics: how-to/persistence/kafka/monitoring.md
               - Internal Topic: how-to/persistence/kafka/internal.md
+              - Remove access: how-to/persistence/kafka/remove-access.md
       - Observability:
           - Overview: how-to/observability/README.md
           - Metrics:
