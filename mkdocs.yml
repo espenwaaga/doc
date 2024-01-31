@@ -12,13 +12,19 @@ nav:
       - Overview: how-to/README.md
       - Leader Election: how-to/leader-election.md
       - naisdevice:
+          - Overview: how-to/naisdevice/README.md
+          - Install tenant: how-to/naisdevice/install-tenant.md
           - Install Kolide: how-to/naisdevice/install-kolide.md
+          - Troubleshooting: how-to/naisdevice/troubleshooting.md
           - Install naisdevice: how-to/naisdevice/install-naisdevice.md
           - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
           - Update naisdevice: how-to/naisdevice/update-naisdevice.md
           - Troubleshoot naisdevice: how-to/naisdevice/uninstall-naisdevice.md
       - NAIS team: how-to/create-team.md
       - Command line access: how-to/command-line-access.md
+      - CLI: 
+        - Install: how-to/cli/install.md
+        - Troubleshooting: how-to/cli/troubleshooting.md
       - CI/CD:
           - Overview: how-to/cicd/README.md
           - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
@@ -89,6 +95,10 @@ nav:
       - Tracing: reference/tracing.md
       - Backup of bucket: reference/bucket-backup.md
       - Persistent Volume Storage: reference/persistent-volume-storage.md
+      - Grafana: reference/grafana.md
+      - Ingresses: reference/ingress.md
+      - Kafka: reference/kafka.md
+      - Logs example: reference/logs-example.md
 
   - Explanations:
       - Overview: explanation/README.md
@@ -107,6 +117,9 @@ nav:
           - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
           - InfluxDB: explanation/database/influxdb.md
           - BigQuery: explanation/database/bigquery.md
+          - OpenSearch: explanation/database/opensearch.md
+      - naisdevice: explanation/what-is-naisdevice.md
+      - Workloads: explanation/workloads.md
         # Various how-to guides - moved here temporarily for ease of navigation
         # - Postgres:
         #     - Create a database: how-to/postgres/create.md
