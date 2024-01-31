@@ -1,3 +1,5 @@
+
+TODO:Break into reference, and how-to + add content and navigation.
 ### NAIS Doc authoring guide
 
 This guide is a highly compressed summary of the doc theory published at [Diataxis](https://diataxis.fr/)
@@ -15,4 +17,3 @@ To create contents you must determine what you are setting out to do. Are you wr
 
 * Explanation
 	* Explanation is a discusive treatment of a subject, that permits reflection. Explanation is understanding-oriented.
-
