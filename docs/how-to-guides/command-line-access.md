@@ -1,6 +1,6 @@
-# Set up command line tools for accessing NAIS clusters
+# Command line access
+This guide shows you how to set up command line tools for accessing NAIS clusters
 
-This guide shows you the required command lines tools for accessing the NAIS platform.
 
 ## 0. Prerequisites
 

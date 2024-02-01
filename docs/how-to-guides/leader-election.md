@@ -1,4 +1,4 @@
-# Leader Election
+# Enable Leader Election
 
 This guide will show you how to enable leader election for your appliaction
 
@@ -9,10 +9,9 @@ This guide will show you how to enable leader election for your appliaction
     ```yaml hl_lines="2-3"
     spec:
     leaderElection: true
-
     ```
 
-## 2. Enable leader election in your application
+## 2. Using leader election in your application
 
 === "java"
 

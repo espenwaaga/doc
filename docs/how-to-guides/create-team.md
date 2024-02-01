@@ -1,4 +1,4 @@
-# Create and manage your NAIS team
+# Create NAIS team
 
 This how-to guide shows you how to create a NAIS team.
 

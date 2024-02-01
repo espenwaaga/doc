@@ -22,7 +22,7 @@ hide:
 
     Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.
 
-    [:octicons-arrow-right-24: How-to guides](how-to/README.md)
+    [:octicons-arrow-right-24: How-to guides](how-to-guides/README.md)
 
 - :octicons-light-bulb-24:{ .lg .middle } **Explanation**
 

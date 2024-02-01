@@ -19,7 +19,7 @@ When you are finished with this guide you can delete your repository:
 
 === "GitHub CLI"
     ```bash
-    gh repo delete <github-org>/<my-app>
+    gh repo delete <GITHUB-ORG>/<MY-APP>
     ```
 
 ## 2. Delete your running application instance
