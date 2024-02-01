@@ -1,4 +1,4 @@
-## Making your application NAIS.
+# Part 2 - Make it NAIS
 
 In the previous step, we created a repository for our application.
 This part of the tutorial will show how to make your application NAIS.
