@@ -6,10 +6,6 @@
 
 # Installation
 
-!!! info
-
-    This install guide is for connectivity to NAV systems only. If you are not a NAV employee or not a consultant hired by NAV, install a [different version of naisdevice as described here](install-tenant.md).
-
 ## Device-specific installation steps
 
 === "macOS"
@@ -78,12 +74,7 @@
 
 === "Ubuntu"
 
-    !!! warning
-
-    Using Gnome DE on latest Ubuntu LTS
-
-    1. [Install Kolide agent](install-kolide.md).
-    2. Add the nais PPA repo:
+    1. Add the nais PPA repo:
     ```
     NAIS_GPG_KEY="/etc/apt/keyrings/nav_nais_gar.asc"
     curl -sfSL "https://europe-north1-apt.pkg.dev/doc/repo-signing-key.gpg" | sudo dd of="$NAIS_GPG_KEY"
@@ -91,15 +82,19 @@
     sudo apt update
     ```
 
-    3. Install the naisdevice package:
+    1. Install the naisdevice package:
     ```
     sudo apt install naisdevice
     ```
-    4. Turn on your freshly installed `naisdevice` application.
+    1. Turn on your freshly installed `naisdevice` application.
      1. Find `naisdevice` in your application menu, or use the `naisdevice` command in a terminal to start the application.
      2. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
-    5. Remember to [update your kubeconfig](./install-tenant.md#connecting-to-nais-clusters).
+    1. Remember to [update your kubeconfig](./install-tenant.md#connecting-to-nais-clusters).
 
 !!! warning
 
     To make sure you are using naisdevice as securely as possible, make sure you are a member of the [Slack channel #naisdevice](https://nav-it.slack.com/archives/C013XV66XHB). Important information will be published there. This also where you find us, if you need any help.
+
+!!! note
+
+    On first time connection you will be presented with soft policies (aka. Do's & Don'ts)
