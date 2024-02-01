@@ -7,8 +7,6 @@ hide:
 
 # NAIS Documentation
 
-hello, <<tenant()>>
-
 <div class="grid cards" markdown>
 -   :octicons-rocket-24:{ .lg .middle } **Tutorials**
 

@@ -1,3 +1,154 @@
+#nav:
+#  - Home: README.md
+#  - Tutorials:
+#      - Overview: tutorial/README.md
+#      - Hello Nais:
+#          - Part 1 - Create application: tutorial/hello-nais/hello-nais-1.md
+#          - Part 2 - Make it NAIS: tutorial/hello-nais/hello-nais-2.md
+#          - Part 3 - Ship it: tutorial/hello-nais/hello-nais-3.md
+#          - Part 4 - Clean up: tutorial/hello-nais/hello-nais-4.md
+#
+#  - How-to guides:
+#      - Overview: how-to/README.md
+#      - Leader Election: how-to/leader-election.md
+#      - naisdevice:
+#          - Overview: how-to/naisdevice/README.md
+#          - Install tenant: how-to/naisdevice/install-tenant.md
+#          - Troubleshooting: how-to/naisdevice/troubleshooting.md
+#          - Install naisdevice: how-to/naisdevice/install-naisdevice.md
+#          - Uninstall naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+#          - Update naisdevice: how-to/naisdevice/update-naisdevice.md
+#          - Troubleshoot naisdevice: how-to/naisdevice/uninstall-naisdevice.md
+#      - NAIS team: how-to/create-team.md
+#      - Command line access: how-to/command-line-access.md
+#      - CLI: 
+#        - Install: how-to/cli/install.md
+#        - Troubleshooting: how-to/cli/troubleshooting.md
+#      - CI/CD:
+#          - Overview: how-to/cicd/README.md
+#          - Build and deploy using GitHub Actions: how-to/cicd/github-action.md
+#      - Workload CRUD-operations: how-to/workload-crud-operations.md
+#      - Persistence:
+#          - Overview: how-to/persistence/README.md
+#          - Buckets:
+#              - Overview: how-to/persistence/buckets/README.md
+#              - Create a bucket: how-to/persistence/buckets/create.md
+#              - Delete a bucket: how-to/persistence/buckets/delete.md
+#          - Persistent Volume Storage:
+#              - Overview: how-to/persistence/persistent-volume/README.md
+#              - Create volume: how-to/persistence/persistent-volume/create.md
+#              - Resize volume: how-to/persistence/persistent-volume/resize.md
+#              - Delete volume: how-to/persistence/persistent-volume/delete.md
+#          - Redis: how-to/persistence/redis.md
+#          - InfluxDB:
+#              - Overview: how-to/persistence/influxdb/README.md
+#              - Create: how-to/persistence/influxdb/create.md
+#              - Access: how-to/persistence/influxdb/access.md
+#              - Grafana datasource: how-to/persistence/influxdb/datasource.md
+#          - BigQuery:
+#              - Overview: how-to/persistence/bigquery/README.md
+#              - Create: how-to/persistence/bigquery/create.md
+#              - Connect: how-to/persistence/bigquery/connect.md
+#          - OpenSearch:
+#              - Overview: how-to/persistence/opensearch/README.md
+#              - Create: how-to/persistence/opensearch/create.md
+#              - Access from application: how-to/persistence/opensearch/access-from-application.md
+#              - Access from desktop: how-to/persistence/opensearch/access-from-desktop.md
+#              - Observing OpenSearch: how-to/persistence/opensearch/observing.md
+#          - Kafka:
+#              - Overview: how-to/persistence/kafka/README.md
+#              - Create Topic: how-to/persistence/kafka/create.md
+#              - Delete Topic: how-to/persistence/kafka/delete.md
+#              - Manage Access: how-to/persistence/kafka/manage-acl.md
+#              - Access Topic: how-to/persistence/kafka/access.md
+#              - Access Topic from outside NAIS: how-to/persistence/kafka/access-from-legacy.md
+#              - Schema operations: how-to/persistence/kafka/schema-operations.md
+#              - Monitoring topics: how-to/persistence/kafka/monitoring.md
+#              - Internal Topic: how-to/persistence/kafka/internal.md
+#              - Remove access: how-to/persistence/kafka/remove-access.md
+#      - Observability:
+#          - Overview: how-to/observability/README.md
+#          - Metrics:
+#              - Overview: how-to/observability/metrics/README.md
+#              - Expose metrics: how-to/observability/metrics/expose.md
+#              - Push metrics: how-to/observability/metrics/push.md
+#              - Grafana from infoscreen: how-to/observability/metrics/grafana-from-infoscreen.md
+#              - Query: how-to/observability/metrics/query.md
+#          - Tracing:
+#              - Overview: how-to/observability/tracing/README.md
+#              - Enable tracing: how-to/observability/tracing/enable-tracing.md
+#          - Alerts:
+#              - Overview: how-to/observability/alerts/README.md
+#              - Create alerts: how-to/observability/alerts/create.md
+#              - Customize alerts: how-to/observability/alerts/custom.md
+#              - Recording rules: how-to/observability/alerts/recording.md
+#          - Logs:
+#              - Overview: how-to/observability/logs/README.md
+#              - Enable logging: how-to/observability/logs/enable.md
+#              - Secure logs: how-to/observability/logs/secure-logs.md
+#              - Ship logs with curl: how-to/observability/logs/manual.md
+#  - References:
+#      - Overview: reference/README.md
+#      - Application spec: reference/application-spec.md
+#      - Application example: reference/application-example.md
+#      - Naisjob spec: reference/naisjob-spec.md
+#      - Naisjob example: reference/naisjob-example.md
+#      - Kafka topic spec: reference/kafka-topic-spec.md
+#      - Kafka topic example: reference/kafka-topic-example.md
+#      - Metrics: reference/metrics.md
+#      - Tracing: reference/tracing.md
+#      - Backup of bucket: reference/bucket-backup.md
+#      - Persistent Volume Storage: reference/persistent-volume-storage.md
+#      - Grafana: reference/grafana.md
+#      - Ingresses: reference/ingress.md
+#      - Kafka: reference/kafka.md
+#      - Logs example: reference/logs-example.md
+#
+#  - Explanations:
+#      - Overview: explanation/README.md
+#      - Leader Election: explanation/leader-election.md
+#      - Backup: explanation/backup.md
+#      - Observability:
+#          - Overview: explanation/observability/README.md
+#          - Metrics: explanation/observability/metrics.md
+#          - Tracing: explanation/observability/tracing.md
+#          - Alerts: explanation/observability/alerts.md
+#          - Logs: explanation/observability/logs.md
+#      - NAIS Teams: explanation/nais-teams.md
+#      - Kafka: explanation/kafka.md
+#      - Persistent Volume Storage: explanation/persistent-volume-storage.md
+#      - Database:
+#          - MongoDB Bash job for backup: explanation/database/mongodb-bash.md
+#          - InfluxDB: explanation/database/influxdb.md
+#          - BigQuery: explanation/database/bigquery.md
+#          - OpenSearch: explanation/database/opensearch.md
+#      - naisdevice: explanation/what-is-naisdevice.md
+#      - Workloads: explanation/workloads.md
+#        # Various how-to guides - moved here temporarily for ease of navigation
+#        # - Postgres:
+#        #     - Create a database: how-to/postgres/create.md
+#        #     - Restoring a backup: how-to/postgres/backup-restore.md
+#        # - Kafka:
+#        #     - Overview: how-to/kafka/README.md
+#        #     - Create a topic: how-to/kafka/create-topic.md
+#        #     - Consume from a topic: how-to/kafka/consume-topic.md
+#        #     - Produce to a topic: how-to/kafka/produce-topic.md
+#        # - OpenSearch:
+#        #     - Overview: how-to/opensearch/README.md
+#        #     - Create a instance: how-to/opensearch/create.md
+#        #     - Access the instance: how-to/opensearch/access.md
+#        # - BigQuery:
+#        #     - Overview: how-to/bigquery/README.md
+#        #     - Create a dataset: how-to/bigquery/create-dataset.md
+#        # - Bucket:
+#        #     - Overview: how-to/bucket/README.md
+#        #     - Create a bucket: how-to/bucket/create.md
+#        #     - Access a bucket: how-to/bucket/access.md
+#        # - Secrets:
+#        #     - Overview: how-to/secrets/README.md
+#        #     - Create a secret: how-to/secrets/create.md
+#        #     - Access a secret: how-to/secrets/access.md
+
 site_name: NAIS
 repo_url: https://github.com/nais/doc
 site_url: https://doc.nais.io/
@@ -75,6 +226,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
+      strict: false
 markdown_extensions:
   - toc:
       permalink: True
