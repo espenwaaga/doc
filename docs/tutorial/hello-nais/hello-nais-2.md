@@ -38,7 +38,7 @@ Add the following content to the file, and insert the appropriate values in the 
       namespace: <MY-TEAM>
     spec:
       ingresses:
-        - https://<MY-APP>.<TARGET-CLUSTER>@@TENANT@@.cloud.nais.io
+        - https://<MY-APP>.<TARGET-CLUSTER>.<<tenant()>>.cloud.nais.io
       image: {{image}}
       image: {{image}}
       port: 8080

@@ -5,18 +5,18 @@ This tutorial will take you through the process of getting a simple node applica
 ## Prerequisites
 
 - You have a GitHub account connected to your GitHub organization (e.g. `navikt`)
-- [naisdevice installed](../../how-to/naisdevice/install-naisdevice.md)
-- [Member of a NAIS team](TODO: missing explanation)
+- [naisdevice installed](../../how-to-guides/naisdevice/install-naisdevice.md)
+- [Member of a NAIS team](../../explanation/nais-teams.md)
 - [GitHub CLI installed](https://cli.github.com/)
 
-??? note "Conventions"
+???+ note "Conventions"
 
     Throughout this guide, we will use the following conventions:
 
     - `<MY-APP>` - The name of your NAIS application (e.g. `joannas-first`)
     - `<MY-TEAM>` - The name of your NAIS team (e.g. `onboarding`)
-    - `<GITHUB-ORG>` - Your GitHub organization (e.g. `navikt`) TODO: can we template this?
-    - `<TARGET-CLUSTER>` - The name of the cluster you want to deploy to (e.g. `dev`) TODO: Can we tamplate this?
+    - `<GITHUB-ORG>` - Your GitHub organization (e.g. `navikt`)
+    - `<TARGET-CLUSTER>` - The name of the cluster you want to deploy to (e.g. `dev`)
 
     **NB!** Choose names with *lowercase* letters, numbers and dashes only.
 

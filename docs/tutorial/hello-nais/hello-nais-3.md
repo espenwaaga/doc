@@ -37,7 +37,7 @@ When pushed, the GitHub Actions workflow will automatically start. You can obser
     ```
 
 ## 4. Visit your application
-On successful completion, we can view our application at `https://<MY-APP>.<TARGET-CLUSTER>.@@TENANT@@.cloud.nais.io`
+On successful completion, we can view our application at `https://<MY-APP>.<TARGET-CLUSTER>.<<tenant()>>.cloud.nais.io`
 
 Congratulations! You have now successfully deployed your first application to NAIS!
 The next and most important step is to clean up after ourselves.
