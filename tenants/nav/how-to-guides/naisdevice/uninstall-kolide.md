@@ -1,32 +1,21 @@
-# Uninstall
+# Uninstall Kolide
 
 === "macOS"
     1. Stop and remove Kolide and the related launch mechanisms
-    ```zsh
+    ```bash
     sudo /bin/launchctl unload /Library/LaunchDaemons/com.kolide-k2.launcher.plist
     sudo /bin/rm -f /Library/LaunchDaemons/com.kolide-k2.launcher.plist
     ```
     2. Delete files, configuration and binaries
-    ```zsh
+    ```bash
     sudo /bin/rm -rf /usr/local/kolide-k2
     sudo /bin/rm -rf /etc/kolide-k2
     sudo /bin/rm -rf /var/kolide-k2
-    ```
-    3. Uninstall the naisdevice Homebrew cask
-    ```bash
-    brew uninstall --force naisdevice
     ```
 
 === "Windows"
     1. Uninstall _Kolide_ from Apps & Features 
     2. (Optionally) Uninstall _WireGuard_ from Apps & Features
-    3. Uninstall naisdevice
-    * Installed with Scoop
-     ```powershell
-     scoop uninstall naisdevice
-     ```
-    * Installed manually
-     * Uninstall _naisdevice_ from Apps & Features
 
 === "Ubuntu"
     1. Stop and remove Kolide and the related launch mechanisms
@@ -41,10 +30,6 @@
     3. Delete Kolide files & caches
     ```bash
     sudo rm -r /{etc,var}/kolide-k2
-    ```
-    4. Uninstall the naisdevice deb package
-    ```bash
-    sudo apt remove naisdevice
     ```
 
 ## OS-agnostic uninstall steps

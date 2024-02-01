@@ -1,6 +1,7 @@
-# How to push metrics
+# Pushing metrics
 
-This how-to guide shows you how to use pushgateway for jobs which cannot be scraped.
+This how-to guide shows you how to push metrics from your application using the Prometheus Pushgateway.
+This is typically used in NAIS jobs, which by it's nature often is short-lived and cannot effectively be scraped by Prometheus.
 
 Prometheus has further explanations and examples [here](https://prometheus.io/docs/instrumenting/pushing/)
 
@@ -29,7 +30,7 @@ Prometheus has further explanations and examples [here](https://prometheus.io/do
             namespace: nais-system
     ```
 
-## 2. Add metrics to your application
+## 2. Send metrics to your application
 
 ```java
 package io.prometheus.client.it.pushgateway;

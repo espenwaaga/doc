@@ -1,4 +1,4 @@
-# Alerts
+# Create
 
 This guide shows you how to create alerts for your application.
 

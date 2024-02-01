@@ -1,4 +1,4 @@
-# Customizing
+# Customizing alerts
 
 This guide will show you how to customize the alerting for your team.
 

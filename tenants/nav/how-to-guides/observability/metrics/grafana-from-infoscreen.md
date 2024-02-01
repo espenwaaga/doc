@@ -1,14 +1,12 @@
-# Access Grafana from a big screen
+# Show Grafana on info-screen
 
-(TODO: nav only)
-
-This how-to shows you how to run Grafana from a big screen.
+This how-to shows you how to show Grafana on a info-screen.
 
 ## 1. Get service account
 
 In order to run Grafana from a big screen, you will need a Grafana service account.
 
-You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C5KUST8N6) channel on Slack. (TODO: how do we fix this for non-nav?)
+You get this by contacting us in the [#nais](https://nav-it.slack.com/archives/C5KUST8N6) channel on Slack.
 
 ## 2. Access Grafana
 

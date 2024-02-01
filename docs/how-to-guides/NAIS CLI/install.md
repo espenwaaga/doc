@@ -1,4 +1,4 @@
-# Install the nais CLI
+# Install
 
 === "macOS Installation"
 

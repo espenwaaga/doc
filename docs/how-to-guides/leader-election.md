@@ -2,7 +2,7 @@
 
 This guide will show you how to enable leader election for your appliaction
 
-## 1. Enable leader election in [manifest](../reference/application-spec.md)
+## 0. Enable leader election in [manifest](../reference/application-spec.md)
 
 ???+ note ".nais/app.yaml"
 
@@ -11,7 +11,7 @@ This guide will show you how to enable leader election for your appliaction
     leaderElection: true
     ```
 
-## 2. Using leader election in your application
+## 1. Using leader election in your application
 
 === "java"
 

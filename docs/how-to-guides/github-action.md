@@ -1,4 +1,4 @@
-# Howto build and deploy with Github Actions
+# Build and deploy with Github Actions
 
 This how-to guide shows you how to build and deploy your application using [Github Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions) and the NAIS deploy action.
 

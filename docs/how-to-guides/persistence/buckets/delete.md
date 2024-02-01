@@ -28,3 +28,7 @@ spec:
 ## 2. Delete your application
 
 Delete your application resource.
+
+```bash
+kubectl delete application <MY-APP>
+```

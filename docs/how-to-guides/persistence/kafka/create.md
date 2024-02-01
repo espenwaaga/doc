@@ -1,7 +1,7 @@
 # Create a Kafka topic
 This guide will show you how to create a Kafka topic
 
-## 1. Creating topics
+## 0. Creating topics
 
 ???+ note ".nais/topic.yaml"
     ```yaml hl_lines="4-5 7 9 11-14"
@@ -21,10 +21,10 @@ This guide will show you how to create a Kafka topic
     ```
 See the [Kafka topic reference](../../../reference/kafka-topic-spec.md) for a complete list of available options.
 
-## 2. Grant access to the topic for other applications (optional)
+## 1. Grant access to the topic for other applications (optional)
 See [manage access](manage-acl.md) for how to grant access to your topic.
 
-## 3. Apply the Topic resource
+## 2. Apply the Topic resource
 === "Automatically"
     Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
 === "Manually"

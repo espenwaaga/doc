@@ -1,4 +1,4 @@
-# Secure logs (TODO: nav only)
+# Secure logs
 
 This guide will show you how to enable shipping of secure logs for your application
 
