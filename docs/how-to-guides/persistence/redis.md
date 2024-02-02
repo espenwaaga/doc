@@ -1,36 +1,26 @@
-# Set up redis for your workloads
+# Redis
+This guide will show you hwo to install and use redis in your application
+
+(TODO: split this howto into explantion and howtos for creating and using redis)
 
 ## 0. Prerequisites
 - [Member of a NAIS team](../explanation/team.md)
-- 
 
----
-description: >-
-  Redis is an open source (BSD licensed) in-memory data structure store used as
-  a database, cache and message broker.
----
+!!! warning
+  It is not possible to share Redis instances between teams.
 
-# Redis
+## 1. Enable redis in your [manifest](../../reference/application-spec.md#redis)
 
-!!! warning "Availability"
-    Using Aiven Redis is only available in GCP clusters.
+???+ note ".nais/app.yaml"
+    ```yaml
+    spec:
+      redis:
+        - instance: sessions
+          access: readwrite
+        - instance: lookup
+          access: read
+    ```
 
-Redis is available as an add-on to your Application or Naisjob.
-Applications/Naisjobs owned by a team may share a Redis instance, and an Application/Naisjob may use multiple Redis instances at the same time.
-In the rest of this documentation, we use Application, but everything holds true for Naisjob as well.
-
-It is not possible to share Redis instances between teams.
-
-In order to use Redis in your application, you add a [`redis` section](reference/application-spec#redis) to your `Application` resource (often called `nais.yaml`):
-
-```yaml
-spec:
-  redis:
-    - instance: sessions
-      access: readwrite
-    - instance: lookup
-      access: read
-```
 
 The above snippet will allow your application to use the `sessions` Redis instance, and provide the application with credentials for a read/write user.
 In addition, the application will get credentials for a read-only user for the `lookup` instance.

@@ -4,9 +4,9 @@ This how-to guide shows you how to build and deploy your application using [Gith
 
 ## Prerequisites
 
-- You're part of a [NAIS team](../create-team.md)
+- You're part of a [NAIS team](./create-team.md)
 - A Github repository where the NAIS team has access
-- The repository contains a valid [nais.yaml](TODO)
+- The repository contains a valid [workload manifest](../explanation/workloads.md)
 
 ### 1. Authorize your Github repository for deployment
 
@@ -16,42 +16,42 @@ This how-to guide shows you how to build and deploy your application using [Gith
 
 ### 2. Create a Github workflow
 
-Create a new file in your repository under `.github/workflows/` called `main.yml` with the following content:
-
 !!! note 
     If you require a more advanced workflow, or already have one. Just copy the relevant parts from the example below.
 
-```yaml
-name: Build and deploy
-on:
-  push:
-    branches:
-      - main
-jobs:
-  build_and_deploy:
-    name: Build, push and deploy
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: Push docker image to GAR
-        uses: nais/docker-build-push@v0
-        id: docker-build-push
-        with:
-          team: <MY-TEAM> # Replace
-          identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} # Provided as Organization Secret
-          project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }} # Provided as Organization Variable
-      - name: Deploy to NAIS
-        uses: nais/deploy/actions/deploy@v2
-        env:
-          CLUSTER: <MY-CLUSTER> # Replace
-          RESOURCE: nais.yaml #, topic.yaml, statefulset.yaml, etc.
-          VAR: image=${{ steps.docker-build-push.outputs.image }}
-```
+!!! note "./github/workflows/main.yml"
+
+    ```yaml hl_lines="19 25-26"
+    name: Build and deploy
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build_and_deploy:
+        name: Build, push and deploy
+        runs-on: ubuntu-latest
+        permissions:
+          contents: read
+          id-token: write
+        steps:
+          - uses: actions/checkout@v4
+          - name: Push docker image to GAR
+            uses: nais/docker-build-push@v0
+            id: docker-build-push
+            with:
+              team: <MY-TEAM> # Replace
+              identity_provider: ${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} # Provided as Organization Secret
+              project_id: ${{ vars.NAIS_MANAGEMENT_PROJECT_ID }} # Provided as Organization Variable
+          - name: Deploy to NAIS
+            uses: nais/deploy/actions/deploy@v2
+            env:
+              CLUSTER: <MY-CLUSTER> # Replace
+              RESOURCE: .nais/app.yaml #, topic.yaml, statefulset.yaml, etc.
+              VAR: image=${{ steps.docker-build-push.outputs.image }}
+    ```
 
 This example workflow is a minimal example that builds, signs, and pushes your container image to the image registry.
-It then deploys the [nais.yaml](TODO), injecting the image tag from the previous step.
+It then deploys the [app.yaml](../reference/application-spec.md), injecting the image tag from the previous step.
 
 When this file is pushed to the `main` branch, the workflow will be triggered and you are all set.

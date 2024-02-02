@@ -8,7 +8,7 @@ This guide shows you how to create alerts for your application.
 
 You can define alerts by using Kubernetes resources (`PrometheusRule`), as well as directly in Grafana (GUI based).
 
-You will have a separate alertmanager for each environment available at `https://alertmanager.<ENVIRONMENT>.<<tenant()>>.cloud.nais.io/`
+You will have a separate alertmanager for each environment available at `https://alertmanager.<MY-ENV>.<<tenant()>>.cloud.nais.io/`
 
 ## 1. Create PrometheusRule
 
@@ -18,8 +18,7 @@ You can define alerts by creating a `PrometheusRule` resource in your teams name
 
 ???+ note ".nais/alert.yaml"
 
-    ```yaml
-    ---
+    ```yaml hl_lines="4-5 7 10 23"
     apiVersion: monitoring.coreos.com/v1
     kind: PrometheusRule
     metadata:
@@ -48,14 +47,14 @@ You can define alerts by creating a `PrometheusRule` resource in your teams name
 
 ## 2. Activate the alert
 === "Automatically"
-    Add the file to your application repository, alongside `nais.yaml` to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository, alongside `nais.yaml` to deploy with [NAIS github action](../../github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/alert.yaml
     ```
 
 ## 3. Verify your alert
-You can see the alerts in the Alertmanager at `https://alertmanager.<ENVIRONMENT>.<<tenant()>>.cloud.nais.io/` and the defined rules in Prometheus at `https://prometheus.<ENVIRONMENT>.<<tenant()>>.cloud.nais.io/rules`
+You can see the alerts in the Alertmanager at `https://alertmanager.<MY-ENV>.<<tenant()>>.cloud.nais.io/` and the defined rules in Prometheus at `https://prometheus.<MY-ENV>.<<tenant()>>.cloud.nais.io/rules`
 
 ## 4. Disable resolved (Optional)
 
@@ -63,7 +62,7 @@ A message will be automatically sent when the alert is resolved. In some cases t
 
 ```yaml
 labels:
-  namespace: <team namespace> # required
+  namespace: <MY-TEAM> # required
   severity: info
   send_resolved: "false"
 ```

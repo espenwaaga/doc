@@ -10,7 +10,7 @@ We use Prometheus to fetch metric endpoints from your application (in Prometheus
 
 ??? info "Prometheus cluster configuration"
 To see the current configuration for a prometheus instance in your cluster, e.g. `scrape_interval`, go to
-`https://prometheus.<cluster>.@@TENANT@@.cloud.nais.io/config`
+`https://prometheus.<MY-ENV>.<<tenant()>>.cloud.nais.io/config`
 
 ```mermaid
 graph LR

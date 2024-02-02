@@ -2,7 +2,7 @@
 
 ## Device-specific installation steps
 
-=== "macOS Installation"
+=== "macOS"
 
     1. [Install Homebrew](https://brew.sh/) unless you already have it.
 
@@ -31,7 +31,7 @@
 
     1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: missing)
 
-=== "Windows Installation"
+=== "Windows"
 
     #### Install using Scoop
 
@@ -55,14 +55,14 @@
     1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: fix link)
     1. Start _naisdevice_ from the _Start menu_
 
-=== "Manual installation"
+=== "Manual"
 
     1. [Download and install naisdevice-tenant.exe](https://github.com/nais/device/releases/latest)
     (you will be asked for administrator access when you run the installer)
     1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO:Fix link)
     1. Start _naisdevice_ from the _Start menu_
 
-=== "Ubuntu Installation"
+=== "Ubuntu"
 
     !!! warning
 

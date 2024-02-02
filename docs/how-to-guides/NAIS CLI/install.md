@@ -1,6 +1,6 @@
 # Install
 
-=== "macOS Installation"
+=== "macOS"
 
     1. Install [Homebrew](https://brew.sh/) (unless you already have it)
     2. Add the nais tap
@@ -12,7 +12,7 @@
      brew install nais
      ```
 
-=== "Ubuntu Installation"
+=== "Ubuntu"
 
     1. Add the nais PPA repo:
      ```
@@ -26,7 +26,7 @@
      sudo apt install nais
      ```
 
-=== "Windows Installation"
+=== "Windows"
 
     ### Install using Scoop
 
@@ -40,7 +40,7 @@
      scoop install nais-cli
      ```
 
-=== "Manual installation"
+=== "Manual"
 
     Download the archive for windows from [nais/cli](https://github.com/nais/cli/releases/latest) and unpack the tool to a directory on your `$PATH`.
     If you are unable to run nais after installing, check out our [troubleshooting guide](troubleshooting.md).

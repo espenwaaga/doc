@@ -2,18 +2,19 @@
 
 Below you'll se a minimal working example for a NAIS Application manifest.
 
-???+ note ".nais/application.yaml"
+## 1. Create dataset
+???+ note ".nais/app.yaml"
 
     ```yaml
     apiVersion: "nais.io/v1alpha1"
     kind: "Application"
     metadata:
-      name: app-a
+      name: <MY-APP>
     ...
     spec:
       ...
       gcp:
         bigQueryDatasets:
-          - name: my_bigquery_dataset
+          - name: <MY-DATASET>
             permission: READWRITE
     ```

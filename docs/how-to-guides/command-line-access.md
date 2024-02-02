@@ -39,7 +39,7 @@ A successful run will output how many clusters and where the kubeconfig file is 
 ## 5. Verify access
 
 ```shell
-kubectl --context '<cluster name>' get ns
+kubectl --context '<MY-ENV>' get ns
 ```
 
 If you are unsure about which clusters are available, you can list them with:

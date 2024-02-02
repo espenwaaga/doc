@@ -2,7 +2,7 @@
 
 This guide will show you how to expose metrics from your application, and how to configure Prometheus to scrape them.
 
-See further [explanations on metrics] (/explanation/metrics) for more details
+See further [explanations on metrics](../../../explanation/observability/metrics.md) for more details
 
 ## 1. Add metric to your application
 
