@@ -106,14 +106,9 @@
     1. Left-click the `naisdevice` icon again and click `Connect`.
     You might need to allow ~20 seconds to pass before clicking `Connect` turns your `naisdevice` icon green.
 
-### The list of "Do's and don'ts" of `naisdevice`
-
-naisdevice removes the need for full blown management of your device.
-This means that there are some do's and don'ts. You have to agree to the following set of guidelines to be admitted to the "program":
-
 ### Connecting to NAIS clusters
 
-1. Install `nais-cli` by following the [installation instructions](../cli/install.md).
+1. Install `nais-cli` by following the [installation instructions](../NAIS CLI/install.md).
 1. Install `gcloud` by following the [installation instructions](https://cloud.google.com/sdk/docs/install).
 1. Install `kubectl` by following the [installation instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 1. Login to gcloud by running `gcloud auth login --update-adc`.
