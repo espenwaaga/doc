@@ -23,9 +23,13 @@ The tree pillars of observability are:
 
 ```mermaid
 graph
-A[Application] --> B((Logs))
-A --> C((Metrics))
-A --> D((Traces))
+  A[Application] --> B((Logs))
+  A --> C((Metrics))
+  A --> D((Traces))
+
+  click B "#logs"
+  click C "#metrics"
+  click D "#traces"
 ```
 
 ## Metrics
@@ -61,23 +65,20 @@ graph LR
 [:octicons-arrow-right-24: Access Grafana here][nais-grafana]
 
 [grafana]: https://grafana.com/
-[nais-grafana]: https://grafana.nais.io/
+[nais-grafana]: https://grafana.nav.cloud.nais.io/
 
 ## Logs
 
 Logs are a way to understand what is happening in your application. They are usually text-based and are often used for debugging. Since the format of logs is usually not standardized, it can be difficult to query and aggregate logs and thus we recommend using metrics for dashboards and alerting.
 
-Logs are collected automatically by [fluentd][fluentd], stored in [Elasticsearch][elasticsearch] and made accessible via [Kibana][kibana].
-
-[fluentd]: https://www.fluentd.org/
-[elasticsearch]: https://www.elastic.co/elasticsearch/
-[kibana]: https://www.elastic.co/kibana/
+Logs that are sent to console (`stdout`) are collected automatically and can be configured for persistent storage and querying in several ways.
 
 ```mermaid
 graph LR
-  Application --stdout/stderr--> Fluentbit
-  Fluentbit --> Elasticsearch
-  Elasticsearch --> Kibana
+  Application --stdout/stderr--> Router
+  Router --> A[Secure Logs]
+  Router --> B[Grafana Loki]
+  Router --> C[Elastic / Kibana]
 ```
 
 [:octicons-arrow-right-24: Configure your logs](./logs.md)
@@ -125,6 +126,7 @@ graph LR
 Observability is a very broad topic and there is a lot more to learn. Here are some resources that you can use to learn more about observability:
 
 - [:octicons-video-24: Monitoring, the Prometheus Way][youtube-prometheus]
+- [:octicons-book-24: SRE Book - Monitoring distributed systems][sre-book-monitoring]
 - [:octicons-book-24: SRE Workbook - Monitoring][sre-workbook-monitoring]
 - [:octicons-book-24: SRE Workbook - Alerting][sre-workbook-alerting]
 
