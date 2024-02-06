@@ -3,9 +3,7 @@
 This how-to guide shows you how to create a NAIS team.
 
 ## 0. Prerequisites
-- [naisdevice installed](./naisdevice/install-naisdevice.md)
-- A GitHub Account with access to your org. (eg. navikt) 
-- A Slack channel that can receive alerts concerning your apps and workloads
+- [naisdevice installed](./naisdevice/install-naisdevice.md), to be able to access Console.
 
 ## 1. Create your team
 

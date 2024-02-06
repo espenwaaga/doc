@@ -19,4 +19,4 @@ When you [create a team](../how-to/create-team.md), the following will be provis
 
 - An isolated area for your team's workload and resources in each environment (e.g. dev and prod)
 - A GitHub team with the same name in your GitHub organization. The members of your NAIS team will be synchronized with the GitHub team.
-- Roles and permissions to access the workloads and resources in the team's area.
+- Roles and permissions to access the teams workloads and resources.
