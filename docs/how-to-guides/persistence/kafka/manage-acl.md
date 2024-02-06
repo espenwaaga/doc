@@ -4,7 +4,7 @@ This guide will show you how to manage access to your topic
 
 ## 0. Prerequisites
 
-- [An existing topic](create.md) to manage access to.
+- [An existing topic](./create.md) to manage access to.
 
 ## 1. Add ACLs to your topic
 
@@ -46,7 +46,7 @@ Example of varoius ACLs:
 
 ## 2. Apply the Topic resource
 === "Automatically"
-    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository to deploy with [NAIS github action](../../github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/topic.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>

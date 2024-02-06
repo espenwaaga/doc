@@ -4,7 +4,7 @@ This guide will show you hwo to install and use redis in your application
 (TODO: split this howto into explantion and howtos for creating and using redis)
 
 ## 0. Prerequisites
-- [Member of a NAIS team](../explanation/team.md)
+- [Member of a NAIS team](../../explanation/team.md)
 
 !!! warning
   It is not possible to share Redis instances between teams.

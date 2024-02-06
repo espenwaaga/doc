@@ -22,7 +22,7 @@ This guide will show you how to remove your application's access to a Kafka topi
 
 ## 3. Apply the application
 === "Automatically"
-    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository to deploy with [NAIS github action](../../github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/app.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>

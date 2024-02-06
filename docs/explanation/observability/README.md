@@ -81,7 +81,7 @@ graph LR
   Router --> C[Elastic / Kibana]
 ```
 
-[:octicons-arrow-right-24: Configure your logs](./logs.md)
+[:octicons-arrow-right-24: Configure your logs](./logging.md)
 
 ## Traces
 
@@ -119,7 +119,7 @@ graph LR
   Alertmanager --> Slack
 ```
 
-[:octicons-arrow-right-24: Read more about alerts](./alerts.md)
+[:octicons-arrow-right-24: Read more about alerts](./alerting.md)
 
 ## Learning more
 

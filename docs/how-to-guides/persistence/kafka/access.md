@@ -4,9 +4,9 @@ This guide shows you how to access Kafka topics from your application.
 
 ## 0. Prerequisites
 
-You need an existing topic to access. See [Create a Kafka topic](create.md) for how to create a topic.
+You need an existing topic to access. See [Create a Kafka topic](./create.md) for how to create a topic.
 
-## 1. Enable access to the relevant pool in your [manifest](/reference/nais-application/application.md)
+## 1. Enable access to the relevant pool in your workload definition
 
 ???+ note ".nais/app.yaml"
 
@@ -42,7 +42,7 @@ We recommend following the [application design guidelines](../../../explanation/
 
 ## 3. Apply the application
 === "Automatically"
-    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository to deploy with [NAIS github action](../../github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/app.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>

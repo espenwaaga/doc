@@ -20,7 +20,7 @@ When this annotation is in place, deleting the topic resource from Kubernetes wi
 
 ## 1. Apply the Topic resource
 === "Automatically"
-    Add the file to your application repository to deploy with [NAIS github action](../../cicd/github-action.md).
+    Add the file to your application repository to deploy with [NAIS github action](../../github-action.md).
 === "Manually"
     ```bash
     kubectl apply -f ./nais/topic.yaml --namespace=<MY-TEAM> --context=<MY-CLUSTER>

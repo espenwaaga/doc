@@ -67,4 +67,4 @@ labels:
   send_resolved: "false"
 ```
 
-Learn how to write good alerts [here](../../../explanation/observability/alerts.md)
+Learn how to write good alerts [here](../../../explanation/observability/alerting.md)

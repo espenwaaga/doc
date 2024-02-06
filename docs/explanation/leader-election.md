@@ -7,7 +7,7 @@ This is done by asking the [elector container](https://github.com/nais/elector) 
 The leader election configuration does not control which pod the external service requests will be routed to.
 
 ## Elector sidecar
-When you [enable leader election](../how-to/leader-election.md), NAIS will inject an elector container as a sidecar into your pod.
+When you [enable leader election](../how-to-guides/leader-election.md), NAIS will inject an elector container as a sidecar into your pod.
 
 When you have the `elector` container running in your pod,
 you can make a HTTP GET to the URL set in environment variable `$ELECTOR_PATH` to see which pod is the leader.

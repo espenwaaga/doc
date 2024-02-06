@@ -3,7 +3,7 @@
 ## Retention
 
 When using Prometheus the retention is 4 weeks.
-If you need data stored longer than what Prometheus support, we recommend using [BigQuery](../persistence/bigquery.md) or your own [Aiven Influxdb](../persistence/influxdb.md).
+If you need data stored longer than what Prometheus support, we recommend using [BigQuery](../how-to-guides/persistence/bigquery/create.md).
 Then you have full control of the database and retention.
 
 ## Prometheus Environments (TODO: per tenant)
