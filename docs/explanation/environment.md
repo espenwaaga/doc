@@ -1,8 +1,9 @@
 # The runtime environment
 
-NAIS offers multiple environments for you to run your workloads.
+NAIS provides you with multiple environments for you to run you workloads in. See the [full list of available environments](../reference/environments.md) in the reference.
 
-- i en organisasjon fins det typisk flere miljøer (f.eks dev og prod)
-- hvert miljø deles av alle teamene, og hvert team har sitt eget isolerte område / namespace der de kjører sine ting
-- teamene kan kommunisere seg i mellom innad i et miljø, gitt riktige tilganger (TODO: how-to access policy) eller zero-trust explanation
-- hvert miljø har et sett med ingresser/domener som kan benyttes for å eksponere tjenester
+Inside each environment, you and your team will have your own isolated namespace where you can run your workloads.
+
+Within a environment, you can [communicate directly](../how-to-guides/direct-communication.md) with other workloads both within your own namespace as well as others provided you have defined the necessary [access policies](../how-to-guides/access-policies.md). See the [zero trust](../explanation/zero-trust.md) explanation for more information.
+
+Each environment provides you with a set of ingress/domains that you can use to expose your services for different audiences. See the [full list of available domains](../reference/domains.md).
