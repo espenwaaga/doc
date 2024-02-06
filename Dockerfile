@@ -7,7 +7,7 @@ COPY docs ./docs-base
 COPY .git ./.git
 COPY tenants ./tenants
 RUN poetry install --no-dev --no-interaction --ansi --remove-untracked
-RUN for TENANT in nav dev-nais ssb tenant; do rm -rf ./docs; mkdir -p ./docs; cp -rf ./docs-base/* ./docs/; cp -rf ./tenants/$TENANT/* ./docs;TENANT=$TENANT poetry run mkdocs build -d out/$TENANT; done
+RUN for TENANT in nav dev-nais ci-nais ssb tenant; do rm -rf ./docs; mkdir -p ./docs; cp -rf ./docs-base/* ./docs/; cp -rf ./tenants/$TENANT/* ./docs;TENANT=$TENANT poetry run mkdocs build -d out/$TENANT; done
 
 FROM busybox:latest
 ENV PORT=8080
