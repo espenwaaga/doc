@@ -114,7 +114,7 @@
 #          - Tracing: explanation/observability/tracing.md
 #          - Alerts: explanation/observability/alerts.md
 #          - Logs: explanation/observability/logs.md
-#      - NAIS Teams: explanation/nais-teams.md
+#      - NAIS Teams: explanation/team.md
 #      - Kafka: explanation/kafka.md
 #      - Persistent Volume Storage: explanation/persistent-volume-storage.md
 #      - Database:

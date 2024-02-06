@@ -6,7 +6,7 @@ This tutorial will take you through the process of getting a simple node applica
 
 - You have a GitHub account connected to your GitHub organization (e.g. `navikt`)
 - [naisdevice installed](../../how-to-guides/naisdevice/install-naisdevice.md)
-- [Member of a NAIS team](../../explanation/nais-teams.md)
+- [Member of a NAIS team](../../explanation/team.md)
 - [GitHub CLI installed](https://cli.github.com/)
 
 ???+ note "Conventions"
