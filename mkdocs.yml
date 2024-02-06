@@ -218,6 +218,7 @@ extra_css:
   - material_theme_stylesheet_overrides/uu.css
   - material_theme_stylesheet_overrides/grid.css
 plugins:
+  - awesome-pages
   - macros:
       j2_variable_start_string: "<<"
       j2_variable_end_string: ">>"
