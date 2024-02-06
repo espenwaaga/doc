@@ -63,7 +63,7 @@ For app `<MY-APP>` to be able to receive incoming requests from `<ANOTHER-APP>` 
     ```mermaid
     graph LR
       accTitle: Receive requests from other app in the another namespace
-      accDescr: The diagram shows two applications in different namespaces, <MY-APP and ANOTHER-APP. Application MY-APP is allowing requests from ANOTHER-APP.
+      accDescr: The diagram shows two applications in different namespaces, <MY-APP> and <ANOTHER-APP>. Application <MY-APP> is allowing requests from <ANOTHER-APP>.
 
       ANOTHER-APP--"✅"-->MY-APP
 
@@ -78,7 +78,7 @@ For app `<MY-APP>` to be able to receive incoming requests from `<ANOTHER-APP>` 
 
 ## Send requests to another app in the same namespace
 
-For app `MY-APP` to be able to send requests to `<MY-OTHER-APP>` in the same namespace, this specification is needed for `<MY-APP`:
+For app `<MY-APP>` to be able to send requests to `<MY-OTHER-APP>` in the same namespace, this specification is needed for `<MY-APP>`:
 
 === "nais.yaml"
 
@@ -101,7 +101,7 @@ For app `MY-APP` to be able to send requests to `<MY-OTHER-APP>` in the same nam
     ```mermaid
     graph LR
       accTitle: Send requests to other app in the same namespace
-      accDescr: The diagram shows two applications in the same namespace, MY-APP and MY-OTHER-APP. Application MY-APP is allowed to send requests to MY-OTHER-APP.
+      accDescr: The diagram shows two applications in the same namespace, <MY-APP> and <MY-OTHER-APP>. Application <MY-APP> is allowed to send requests to <MY-OTHER-APP>.
 
       MY-APP--"✅"-->MY-OTHER-APP
 
@@ -137,7 +137,7 @@ For app `<MY-APP>` to be able to send requests to `<ANOTHER-APP>` in `<ANOTHER-N
     ```mermaid
     graph LR
       accTitle: Send requests to other app in another-namespace
-      accDescr: The diagram shows two applications in different namespaces, MY-APP and ANOTHER. Application MY-APP is allowed to send requests to ANOTHER-APP.
+      accDescr: The diagram shows two applications in different namespaces, <MY-APP> and <ANOTHER-APP>. Application <MY-APP> is allowed to send requests to <ANOTHER-APP>.
 
       MY-APP--"✅"-->ANOTHER-APP
 
