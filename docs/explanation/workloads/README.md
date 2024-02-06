@@ -1,12 +1,14 @@
 # Workloads
 
-NAIS offers several methods for running different types of workloads.
+At the core of NAIS, is the ability to run the code you write. 
+
+Below is a list of the different kinds we support.
 
 ## NAIS application
-A [NAIS application](../reference/application-example.md) is a long-running service that is expected to be available at all times. Such as a web server, a REST API, or a message queue consumer.
+A [NAIS application](../reference/application-example.md) is a used for long-running processes such as a API.
 
 ## NAIS job
-A [NAIS job](../reference/job-example.md) is a short-lived process that is expected to complete within a certain time frame. Such as a batch job, a cron job, or a one-off task.
+A [NAIS job](../reference/job-example.md) is used for tasks meant to complete and then exit. This can either run as a one-off task or on a schedule.
 
 ## NAIS CDN
-[NAIS CDN](../reference/frontend-example.md) offers a way to serve static content and single-page applications (SPA) with low latency and high availability.
+[NAIS CDN](../reference/frontend-example.md) offers a way to serve static content and single-page applications (SPA).
