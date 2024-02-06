@@ -12,10 +12,6 @@ However, alerting is only as good as the data you have available and the conditi
 
 While many metrics can be useful to gain insights into different aspects of a system, not all of them are useful for alerting. When setting up alerts, it's important to choose metrics that are relevant to the user experience and that can be used to detect problems early.
 
-## Reliability
-
-TBD
-
 ## Critical user journeys
 
 A good place to start when choosing what to monitor is to consider the most critical user journeys in your application. This is a set of interactions a user has with a service to achieve a concert end result. It is important that these journeys are modeled from the user's perspective and not a technical perspective. This is because not all technical issues are equally important, or even visible to the user.
@@ -51,7 +47,18 @@ Continuing with the case management system example, let's say you want to monito
 
 ## Alerting objectives
 
-Service Level Objectives (SLOs) are the target values or ranges of values for a service level the team aims for. They are defined based on indicators, which are the quantitative measures of some aspect of the level of service, a target value or range of values for the indicator, and a time period over which the indicator is measured.
+Service level objectives (SLOs) sets a target level of reliability for the service's users. Above this threshold, almost all users should be happy with your service (assuming they are otherwise happy with the utility of the service). Below this threshold, users are likely to start complaining.
+
+Service level objectives are defined based on indicators, as described above, which are the quantitative measures of some aspect of the application performance, a target value or range of values for the indicator, and a time period over which the indicator is measured.
+
+User happiness is a rather diffuse concept and it is very hard to measure precisely. Often we have little insight into it at all, so how do we begin? What do we use for our first objective?
+
+What we do know is that 100% reliability is not the right target for many reasons:
+
+* Even the most reliable systems have outages, and none of the components or underlying infrastructure in NAIS offer a 100% reliability guarantee.
+* Even if you could achieve 100% reliability, users would in practice not experience it as such. They would still experience outages due to network issues, client-side issues, and so on.
+* If you had complete control over the entire value chain, a 100% reliability would in practice mean that you could never make any changes to the system, as any change has the potential to introduce new bugs or outages.
+* A 100% reliability target would mean that you can only be reactive to problems, as you would never have any headroom to handle unexpected issues. This does not align with the engineering culture we want to promote.
 
 ## Alerting conditions
 
@@ -71,3 +78,4 @@ Consider the following attributes when setting up alerts:
 
 * https://cloud.google.com/blog/products/management-tools/practical-guide-to-setting-slos
 * https://cloud.google.com/blog/products/management-tools/good-relevance-and-outcomes-for-alerting-and-monitoring
+* https://sre.google/workbook/implementing-slos/
