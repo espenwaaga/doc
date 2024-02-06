@@ -4,7 +4,7 @@ description: >-
 ---
 # Alerting
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CGldVD5wR-g?si=luayvJTiZBsWK24u" title="Video about Actionable Alerting" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/CGldVD5wR-g?si=luayvJTiZBsWK24u" title="Video about Actionable Alerting" frameborder="0" allowfullscreen></iframe>
 
 You can't fix what you can't see. Alerting is a crucial part of observability, and it's the first step in knowing when something is wrong with your application.
 
