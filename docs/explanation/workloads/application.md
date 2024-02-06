@@ -1,6 +1,10 @@
 # Application
-A [NAIS application](../../reference/application-example.md) is a long-running service that is expected to be available at all times. Such as a web server, a REST API, or a message queue consumer.
 
+A [NAIS application](../../reference/application-example.md) lets you run one or more instances of a container image. 
+
+An application is defined by its [application manifest](../../reference/application-spec.md), which is a YAML file that describes how the application should be run and what resources it needs.
+
+- autoskalering
 - kontrakt mellom applikasjon og plattform
 - en eller fler kjørende instanser av en container-image
 - default isolert
