@@ -38,3 +38,5 @@ spec:
 ![access-policy-3](../assets/access-policy-3.png)
 
 Now that both applications has explicitly declared their policies, the communication is allowed.
+
+See more about [how to define access policies](../how-to-guides/access-policies.md)
