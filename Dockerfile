@@ -15,4 +15,4 @@ COPY --from=builder ./src/out /www
 HEALTHCHECK CMD nc -z localhost $PORT
 ENV TENANT=tenant
 # Create a basic webserver and run it until the container is stopped
-CMD echo "httpd started" && trap "exit 0;" TERM INT; httpd -v -p $PORT -h /www/$TENANT -f & wait
+CMD echo "httpd started" && trap "exit 0;" TERM INT; if [ -d "/www/$TENANT" ]; then  DIR=$TENANT; else DIR="tenant"; fi; httpd -v -p $PORT -h /www/$DIR -f & wait
