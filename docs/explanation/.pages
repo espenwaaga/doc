@@ -1,6 +1,6 @@
 nav:
     - nais.md
+    - team.md
     - what-is-naisdevice.md
-    - nais-teams.md
-    - workloads.md
+    - workloads
     - ...

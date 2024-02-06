@@ -1,50 +1,22 @@
-# Team
+# NAIS team
 
 Everything in NAIS is organized around the concept of a team.
+Nothing in NAIS is owned by an individual; the team as a whole owns the [workloads](./workloads.md) built by the team, as well as all provisioned resources. This is to ensure that everything can continue to operate even if someone leaves.
 
-A team is a group of people, typically working on the same set of products or services, and sharing the same set of responsibilities. 
+A NAIS team doesn't necessarily map directly to the organizational team unit, and (usually) consists of purely technical personnel developing and operating on the same set of products or services. The reason for this is that being member of a NAIS team will grant you access to all the workloads and provisioned resources that the team owns. To reduce the attack surface, it's a good idea to limit access to the people that actually need it.
 
-The team owns the workloads built by the team, as well as all provisioned resources. Nothing is owned by an individual, but by the team as a whole. This is to ensure that the team can continue to operate even if a member leaves the team.
-
-A team doesn't necessarily map directly to the organizational team unit, and usually consists of technical people involved in the actual development and operations. The reason for this is that being member of a NAIS team will grant you access to all the workloads and provisioned resources that the team owns. To reduce the attack surface, it's a good idea to limit access to the people that actually need it.
+To [become a member](../how-to-guides/team.md) of a NAIS team, you need to have a Google account that is a member of your organization's Google Workspace.
 
 ## The anatomy of a team
 
-A team has two different roles, `owner` and `member`. 
+A team has two different roles, `owner` and `member`.
 A team has at least one `owner`, and can have multiple `members`. The `owners` have permission to add and remove `members`, as well changing the roles of the `members`.
 You can be a member and owner of multiple teams.
 
-## What does NAIS provide a team?
+## What does a NAIS team provide?
 
-When you [create a team](../how-to/create-team.md), NAIS will ensure you have the following:
+When you [create a team](../how-to/create-team.md), the following will be provisioned for you:
 
-- A isolated area for your team's workload, in each environment (e.g. dev and prod)
-- A GitHub team with the same name, in your GitHub organization. The members of your NAIS team will be synchronized with the GitHub team.
-
-
-TODO:
-- Requirement: google user
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- An isolated area for your team's workload and resources in each environment (e.g. dev and prod)
+- A GitHub team with the same name in your GitHub organization. The members of your NAIS team will be synchronized with the GitHub team.
+- Roles and permissions to access the workloads and resources in the team's area.

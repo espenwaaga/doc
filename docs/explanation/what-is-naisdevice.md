@@ -1,6 +1,6 @@
 TODO: Sanity check ChatGPT translation
 
-# What is naisdevice?
+# naisdevice
 
 **naisdevice** is the mechanism that ensures the security of developers' laptops at NAV. It is a "platform-agnostic" solution that, in addition to securing laptops, aims to raise awareness about endpoint security and facilitate smoother access to runtime environments.
 
