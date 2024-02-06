@@ -2,20 +2,16 @@
 
 ## Retention
 
-When using Prometheus the retention is 4 weeks.
+When using Prometheus the retention is 30 days.
 If you need data stored longer than what Prometheus support, we recommend using [BigQuery](../how-to-guides/persistence/bigquery/create.md).
 Then you have full control of the database and retention.
 
-## Prometheus Environments (TODO: per tenant)
+## Accessing prometheus
 
-**GCP**
+You can visit the prometheus instance for your environment by visiting the following URL:
 
-- [prometheus.dev-gcp.nav.cloud.nais.io](https://prometheus.dev-gcp.nav.cloud.nais.io)
-- [prometheus.prod-gcp.nav.cloud.nais.io](https://prometheus.prod-gcp.nav.cloud.nais.io)
+```plaintext
+    https://prometheus.<MY-ENV>.<<tenant()>>.cloud.nais.io
+```
 
-**On-prem**
-
-- [prometheus.dev-fss.nav.cloud.nais.io](https://prometheus.dev-fss.nav.cloud.nais.io)
-- [prometheus.prod-fss.nav.cloud.nais.io](https://prometheus.prod-fss.nav.cloud.nais.io) :octicons-shield-lock-16:
-
-:octicons-shield-lock-16: requires `onprem-k8s-prod` gateway in `naisdevice`.
+Replace `<MY-ENV>` with the environment you want to access, e.g. `dev`, `prod` etc.
