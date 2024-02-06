@@ -1,5 +1,5 @@
-# Backup of cluster resources
+# Restoring resources
 
-Every second hour, we backup of all the Kubernetes resources in the clusters. 
+Every second hour, we backup of all the workload and resource definitions in the environments.
 
-If you mess up something in your namespace, and need something restored - please contact the nais team on Slack and we will help you out.
+If you mess up something in your namespace and need something restored, contact the NAIS team on Slack and we will help you out.
