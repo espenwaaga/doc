@@ -1,12 +1,20 @@
+---
+description: >-
+  Alerting is a crucial part of observability, and it's the first step in knowing when something is wrong with your application.
+---
 # Alerting
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CGldVD5wR-g?si=luayvJTiZBsWK24u" title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CGldVD5wR-g?si=luayvJTiZBsWK24u" title="Video about Actionable Alerting" frameborder="0" allowfullscreen></iframe>
 
 You can't fix what you can't see. Alerting is a crucial part of observability, and it's the first step in knowing when something is wrong with your application.
 
 However, alerting is only as good as the data you have available and the conditions you set. It's important to have a good understanding of what you want to monitor and how you want to be notified. We call this the _alerting strategy_.
 
-While many metrics can be useful for monitoring, not all of them are useful for alerting. When setting up alerts, it's important to choose metrics that are relevant to the user experience and that can be used to detect problems early.
+While many metrics can be useful to gain insights into different aspects of a system, not all of them are useful for alerting. When setting up alerts, it's important to choose metrics that are relevant to the user experience and that can be used to detect problems early.
+
+## Reliability
+
+TBD
 
 ## Critical user journeys
 
@@ -43,7 +51,7 @@ Continuing with the case management system example, let's say you want to monito
 
 ## Alerting objectives
 
-
+Service Level Objectives (SLOs) are the target values or ranges of values for a service level the team aims for. They are defined based on indicators, which are the quantitative measures of some aspect of the level of service, a target value or range of values for the indicator, and a time period over which the indicator is measured.
 
 ## Alerting conditions
 
@@ -59,7 +67,7 @@ Consider the following attributes when setting up alerts:
 
 * _Reset Time_. The amount of time it takes for the alerting system to resolve an alert after the problem has been fixed. Short reset times are desirable as they reduce the amount of time spent dealing with alerts for problems that have already been resolved.
 
+## Reference
 
-https://cloud.google.com/blog/products/management-tools/practical-guide-to-setting-slos
-
-https://cloud.google.com/blog/products/management-tools/good-relevance-and-outcomes-for-alerting-and-monitoring
+* https://cloud.google.com/blog/products/management-tools/practical-guide-to-setting-slos
+* https://cloud.google.com/blog/products/management-tools/good-relevance-and-outcomes-for-alerting-and-monitoring
