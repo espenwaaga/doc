@@ -1,4 +1,4 @@
-## Enabling trace collection
+# Enabling trace collection
 
 This how-to will show you how to collect trace data from your application.
 
@@ -19,10 +19,11 @@ The first step in collecting trace information is to enable it in your applicati
 
 ## 2. Select an OTLP exporter
 
-Select the appropriate [OTLP exporter](https://opentelemetry.io/ecosystem/registry/?s=otlp+exporter) for your specific application. 
+Select the appropriate [OTLP exporter](https://opentelemetry.io/ecosystem/registry/?s=otlp+exporter) for your specific application.
 Ready-made libraries can be found for Java, Rust, Python, Go, and most other popular languages.
 
 ## 3. Configure the OTLP exporter
+
 Finally, the OTLP exporter must be configured to send data to the NAIS collector.
 
 That configuration is provided by NAIS through the `$OTEL_EXPORTER_OTLP_ENDPOINT` environment variable,

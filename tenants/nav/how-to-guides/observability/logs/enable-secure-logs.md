@@ -1,4 +1,4 @@
-# Secure logs
+# Enable secure logs
 
 This guide will show you how to enable shipping of secure logs for your application
 
@@ -108,3 +108,23 @@ log.info("Non-sensitive data here") // Logging to non-secure app logs
 
 See doc on [Logback filters](https://logback.qos.ch/manual/filters.html#evaluatorFilter) and [markers](https://www.slf4j.org/api/org/slf4j/MarkerFactory.html)
 See [Example log configuration](../../../reference/logs-example.md) for further configuration examples.
+
+### Non-JSON logs
+
+If the logging framework used doesn't support JSON logging, it is also possible to use multiline logs in this format:
+
+```text
+<iso8601 timestamp> <log level> <message>
+<message cont.>
+<message cont.>
+```
+
+Files on this format must be named `*.mlog`.
+
+### Sending logs with HTTP
+
+If you do not want to have these logs as files in the pod, it is also possible to use HTTP to write logs. POST your log entry as JSON to `http://localhost:19880`
+
+```bash
+curl -X POST -d '{"log":"hello world","field1":"value1"}' -H 'Content-Type: application/json' http://localhost:19880/
+```

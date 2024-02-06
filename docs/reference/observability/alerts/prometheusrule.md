@@ -1,6 +1,8 @@
-# How to write a good alert
+# Prometheus Alertmanager Reference
 
-## Writing the `expr`
+Alertmanager is a component of the Prometheus project that handles alerts sent by client applications such as the Prometheus server. It takes care of deduplicating, grouping, and routing them to the correct receiver integration such as email, PagerDuty, or Slack.
+
+## `expr`
 
 In order to figure out what is a valid expression we suggest using [Grafana > Explore](https://grafana.nais.io/explore). It has a graphical user interface with a "builder" mode where you can select from from drop-down lists of valid values.
 
@@ -32,14 +34,3 @@ Optionally describe ahead of time to the one receiving the alert what is the bes
 ## Summary
 
 Optional longer description of the alert
-
-
-
-## Onprem (TODO)
-
-For Custom AlertmanagerConfig in the onprem clusters, calling external webhooks like Slack will require you to configure the webhook to use proxy:
-
-```
-httpConfig:
-  proxyURL: http://webproxy.nais:8088
-```
