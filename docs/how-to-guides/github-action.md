@@ -4,9 +4,9 @@ This how-to guide shows you how to build and deploy your application using [Gith
 
 ## Prerequisites
 
-- You're part of a [NAIS team](./create-team.md)
+- You're part of a [NAIS team](./team.md)
 - A Github repository where the NAIS team has access
-- The repository contains a valid [workload manifest](../explanation/workloads.md)
+- The repository contains a valid [workload manifest](../explanation/workloads/README.md)
 
 ### 1. Authorize your Github repository for deployment
 

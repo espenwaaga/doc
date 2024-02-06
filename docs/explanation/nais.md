@@ -8,7 +8,7 @@ In order to support this idea, we aim to provide you with functionality that jus
 
 You can think of the provided functionality as building blocks, where you as a developer can select the ones that fit your specific needs. 
 
-The fundamental building block provided by NAIS is a robust and secure runtime environment for your [workloads](./workloads.md). 
+The fundamental building block provided by NAIS is a robust and secure runtime environment for your [workloads](./workloads/README.md). 
 
 When your workload is up and running, it’s crucial to be able to observe how it’s doing. Here the platform provides you with the tooling you need to log, emit metrics and run traces. 
 
