@@ -1,4 +1,4 @@
-# About Kafka
+# Kafka
 
 ## What happens on deploy?
 

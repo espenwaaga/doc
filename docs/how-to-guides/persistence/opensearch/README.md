@@ -1,11 +1,3 @@
----
----
-description: >-
-  NAIS provides managed search index services through OpenSearch as a drop-in
-  replacement for Elasticsearch. This page gives an introduction to
-  OpenSearch.
----
-
 # OpenSearch
 
 OpenSearch is a fork of Elasticsearch that is maintained by Amazon. It is a drop-in replacement for Elasticsearch, and is fully compatible with the Elasticsearch API. It is a community-driven project that is open source and free to use.

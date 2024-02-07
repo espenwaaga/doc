@@ -2,6 +2,7 @@
 hide:
   - feedback
   - footer
+  - edit
 ---
 
 # NAIS Documentation
