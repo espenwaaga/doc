@@ -1,16 +1,5 @@
 # How to migrate from GitHub Container Registry (GHCR) to Google Artifact Registry (GAR)
 
-## Why migrate?
-
-GHCR serves as a OCI registry hosted by GitHub, but it has certain limitations, such as imposing strict rate
-limits on the number of requests. We've encountered challenges with these rate limits, particularly when upgrading a
-cluster or restoring from a backup. In such instances, we've had to patiently wait for the rate limits to reset before
-deploying / restoring our applications.
-
-On the other hand, GAR is a OCI registry hosted by Google, and we find it to be a more favorable solution for our
-needs. Additionally, as we transition to the cloud, the seamless integration with the Google Cloud Platform further
-enhances its appeal as a beneficial option for our operations.
-
 ## Migrate
 
 You can switch from GHCR to GAR by following these steps
