@@ -1,5 +1,4 @@
 nav:
-  - postgres
   - buckets
   - kafka
   - ...

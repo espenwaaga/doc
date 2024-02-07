@@ -1,21 +1,12 @@
----
-description: >-
-  NAIS offers a managed PostgreSQL database as a service through Google Cloud
-  SQL. This page describes how to use it.
----
-
-# Google Cloud SQL PostgreSQL
+# Google Cloud SQL / PostgreSQL
 
 !!! info
     Postgres 15 has changed the security model around the public schema and it is no longer world writeable. If you and your team
     make use of the public schema for interactive sessions and experimentation you will have to create separate schemas for separate users and share these role or user grants. Normal app usage will function normally.
 
-!!! info
-    This feature is only available in GCP clusters. If you need on-prem databases, head over to [navikt/database-iac](https://github.com/navikt/database-iac).
-
 PostgreSQL is a relational database service that is provided by Google Cloud Platform. It is a good choice for storing data that is relational in nature.
 
-You can provision and configure [Postgres](https://www.postgresql.org/) through [`nais.yaml`](../nais-application/application.md).
+You can provision and configure [Postgres](https://www.postgresql.org/) through your [`application manifest`](../../reference/application-spec.md).
 
 The database is provisioned into the teams own project in GCP. Here the team has full access to view logs, create and restore backups and other administrative database tasks.
 
@@ -23,7 +14,7 @@ When you deploy your application with database config, NAIS will ensure the data
 
 The Database instance takes a few minutes to be created, so your app will not be able to connect to right away. This only applies to the first time deploy.
 
-Below is an example of the minimal configuration needed. See all configuration options in the [nais.yaml reference](../nais-application/application.md#gcpsqlinstances).
+Below is an example of the minimal configuration needed. See all configuration options in the [application manifest reference](../../reference/application-spec.md#gcpsqlinstances).
 
 ```yaml
 ...
@@ -42,7 +33,7 @@ spec:
 ```
 
 !!! important "Choosing the right tier for production"
-    By default, the database server is `db-f1-micro` which has 1 vCPU, 614 MB RAM and 10GB of SSD storage with no automatic storage increase. Shared CPU machine types (`db-f1-micro` and `db-g1-small`) are **NOT** covered by the [Cloud SQL SLA](https://cloud.google.com/sql/sla). Consider [changing](../nais-application/application.md#gcpsqlinstancestier) to the `db-custom-CPU-RAM` tier for your production databases. Please also note that exhausting disk and/or CPU with automatic increase disabled is [not](https://cloud.google.com/sql/docs/postgres/operational-guidelines) covered by the SLA.
+    By default, the database server is `db-f1-micro` which has 1 vCPU, 614 MB RAM and 10GB of SSD storage with no automatic storage increase. Shared CPU machine types (`db-f1-micro` and `db-g1-small`) are **NOT** covered by the [Cloud SQL SLA](https://cloud.google.com/sql/sla). Consider [changing](../../reference/application-spec.md#gcpsqlinstancestier) to the `db-custom-CPU-RAM` tier for your production databases. Please also note that exhausting disk and/or CPU with automatic increase disabled is [not](https://cloud.google.com/sql/docs/postgres/operational-guidelines) covered by the SLA.
 
 ## Configuration
 
@@ -77,7 +68,7 @@ the flags available are listed here: [Google Cloud SQL supported flags](https://
 This listing specifies what value types are expected, which ranges are allowed and if a restart is required.
 
 !!! info
-    The value is always required to be a string in [`nais.yaml`](../nais-application/application.md).
+    The value is always required to be a string in [`nais.yaml`](../../reference/application-spec.md).
 
 Example of setting database flags:
 ```yaml
@@ -110,11 +101,11 @@ For further reading see [Google Cloud SQL Query Insights](https://cloud.google.c
     Data is available for seven days, increasing this will incur extra cost.
 
 ### Maintenance window
-Google will automatically perform upgrades, fix bugs and apply security patches to prevent exploits. Your application should be able to handle occasional downtime as this maintenance is performed. [Read more on maintenance windows](https://cloud.google.com/sql/docs/postgres/maintenance). NAIS does not configure the maintenance window, but this can be set up in the application spec: [`nais.yaml`](../nais-application/application.md#gcpsqlinstances).
+Google will automatically perform upgrades, fix bugs and apply security patches to prevent exploits. Your application should be able to handle occasional downtime as this maintenance is performed. [Read more on maintenance windows](https://cloud.google.com/sql/docs/postgres/maintenance). NAIS does not configure the maintenance window, but this can be set up in the application spec: [`nais.yaml`](../../reference/application-spec.md#gcpsqlinstances).
 If you wish to be notified about upcoming maintenance, you can opt-in for this on the [Communications page](https://console.cloud.google.com/user-preferences/communication) in the GCP console.
 
 ### Automated backup
-The database is backed up nightly at 3 AM \(GMT+1\) by default, but can be overridden in [`nais.yaml`](../nais-application/application.md#gcpsqlinstancesautobackuptime) by setting `spec.gcp.sqlInstances[].autoBackupTime`.
+The database is backed up nightly at 3 AM \(GMT+1\) by default, but can be overridden in [`nais.yaml`](../../reference/application-spec.md#gcpsqlinstancesautobackuptime) by setting `spec.gcp.sqlInstances[].autoBackupTime`.
 By default, seven backups will be kept. More info [about Cloud SQL backups](https://cloud.google.com/sql/docs/postgres/backup-recovery/backups).
 
 The backups can be found in the [Google Cloud SQL instance](https://cloud.google.com/sql) dashboard.
@@ -135,9 +126,6 @@ For further reading see [google Cloud SQL PIT recovery](https://cloud.google.com
 #### Disaster backup
 In case of catastrophic failure in GCP we are running a daily complete backup of the postgresql databases in GCP to an on-prem location. This backup currently runs at 5 am. This is in addition to the regular backups in GCP.
 
-## Metrics
-Metrics for each Postgres can be found in [Grafana](https://grafana.nais.io/d/AVwFIm0Mz/cloudsql-gcp?orgId=1).
-
 ## Cloud SQL credentials
 Cloud SQL uses ConfigConnector/CNRM to create and manage all relevant resources (sqldatabase, sqlinstance, sqluser, credentials) for postgreSQL.
 When creating an application via your nais.yaml the database in your google project, along with other necessary resources, are created.
@@ -149,7 +137,7 @@ The creation of the database takes about ten minutes, and the credential setting
 
 ### Workaround for password synchronization issues
 
-We recommend using [nais-cli](../cli/README.md) for rotating password for your Postgres database user.
+We recommend using [nais-cli](../nais-cli/install.md) for rotating password for your Postgres database user.
 
 ```bash
 nais postgres password rotate appname
@@ -190,7 +178,7 @@ The application will connect to the database using [Cloud SQL Proxy](https://clo
 
 NAIS will add and configure the proxy client container as a sidecar in the pod, making it available on `localhost` for the application. The application will then connect to the proxy using standard database protocol just as if it was the actual database.
 
-![The diagram shows how the application connects to the database using Cloud SQL Proxy. Cloud SQL connects to an instance, the proxy server communicates with the proxy client using a TCP secure tunnel. The proxy client is a sidecar in the pod,  available on the localhost for the application on the client machine.](../assets/sqlproxy.svg)
+![The diagram shows how the application connects to the database using Cloud SQL Proxy. Cloud SQL connects to an instance, the proxy server communicates with the proxy client using a TCP secure tunnel. The proxy client is a sidecar in the pod,  available on the localhost for the application on the client machine.](../../assets/sqlproxy.svg)
 
 For more detailed information, check out the [Cloud SQL Proxy documentation](https://cloud.google.com/sql/docs/postgres/sql-proxy)
 
@@ -204,8 +192,6 @@ Names added must match regex: `^[_a-zA-Z][_a-zA-Z0-9]+$`. Secrets is generated a
 
 With `.spec.gcp.sqlInstances[].databases[].envVarPrefix` set to `DB` and additional username to `_user2` you will get environment variables in format `DB_USER2_MYDB_USERNAME` etc.
 
-Details about environment variables is specified her: [`configuration`](../persistence/postgres.md#configuration)
-
 !!! info
     If you've deployed your application with an additional users, and then change name or remove the user from configuration, you need to _manually_ delete the `google-sql-<MYAPP>-<USER>` secret:
     ```bash
@@ -217,7 +203,7 @@ Details about environment variables is specified her: [`configuration`](../persi
 Databases should always be accessed using a personal account, and the access should ideally be temporary.
 
 !!! info
-    [Personal database access can also be configured using the nais-cli](../cli/commands/postgres.md).
+    [Personal database access can also be configured using the nais-cli](../nais-cli/install.md).
 
 ### Prerequisites
 
@@ -319,7 +305,7 @@ First then can you change your `nais.yaml`-file and redeploy.
 
 ## Deleting the database
 
-The database is not automatically removed when deleting your NAIS application. Remove unused databases to avoid incurring unnecessary costs. This is done by setting [cascadingDelete](../nais-application/application.md#gcpsqlinstancescascadingdelete) in your `nais.yaml`-specification.
+The database is not automatically removed when deleting your NAIS application. Remove unused databases to avoid incurring unnecessary costs. This is done by setting [cascadingDelete](../../reference/application-spec.md#gcpsqlinstancescascadingdelete) in your `nais.yaml`-specification.
 
 !!! danger
     When you delete an Cloud SQL instance, you cannot reuse the name of the deleted instance until one week from the deletion date.
@@ -342,7 +328,7 @@ $ kubectl logs <pod> -c cloudsql-proxy
 
 ## Example with all configuration options
 
-See [full example](../nais-application/example.md).
+See [full example](../../reference/application-example.md).
 
 ## FAQ
 
