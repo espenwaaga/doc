@@ -23,3 +23,4 @@ Application logs in nais is first and foremost a tool for developers to debug th
 - [ ] **Do not use rely on logs for monitoring**. Use metrics for monitoring, visualization, and alerting as your first line of defense and use logs for debugging when something goes wrong.
 
 ## Log destinations
+
