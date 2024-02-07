@@ -13,23 +13,9 @@
 * The team needs to update their ROS and PVK analysis to migrate to GCP. Refer to [Google Cloud Platform's ROS and PVK section](./gcp.md#ros-and-pvk).
 * Read this [roles and responsibilites](../legal/roles-responsibilities.md)
 
-### Basic setup
-
-Follow the Getting started's [Access from laptop](../basics/access.md) instructions, and make sure to pay attention to the [GCP](../basics/access.md#google-cloud-platform-gcp) section.
-
 ### Security
 
 Our GCP clusters use a zero trust security model, implying that the application must specify both incoming and outgoing connections in order to receive or send traffic at all. This is expressed using the [access policy spec](../nais-application/access-policy.md).
-
-The access policy also enables zone traversal and cross-cluster communication. This must be implemented in both applications, by using and accepting tokens from [TokenX](../security/auth/tokenx.md) or [AAD](../security/auth/azure-ad/README.md).
-
-### Deploy
-
-The same deployment mechanism is leveraged for both on-premise and GCP K8s clusters. See [deployment section](../deployment/README.md) of the documentation for how to leverage the _NAIS deploy tool_.
-
-### Ingress
-
-See [GCP clusters](gcp.md).
 
 ### Privacy
 
@@ -41,12 +27,6 @@ Google is cleared to be a data processor for personally identifiable information
 ### ROS
 
 The ROS analysis for the team's applications need to be updated to reflect any changes in platform components used. For example, if your team has any specific measures implemented to mitigate risks related to "Kode 6 / 7 users", you should consider if these measures still apply on the new infrastructure or if you want to initiate any additional measures. When updating the ROS, please be aware that the GCP components you are most likely to use have already undergone [risk assessment by the nais team](../legal/nais-ros.md) and that you can refer to these ROS documents in your own risk assessment process.
-
-### Roles and responsibilites
-
-As with applications in our on-premises clusters, the operation, security and integrity of any application is the responsibility of the team that owns that particular application. Conversely, it is the responsiblity of the nais platform team to handle the operation, security and integrity of the nais application platform and associated components. At GCP, Google is responsible for operating infrastructure underlying the nais platform, as well as any cloud services not consumed through the nais abstraction layer. Service exceptions reported by either Google or the nais team will be announced in the \#nais slack channel.
-
-If your application stores personally identifiable information in any GCP data store, Google is effectively a data processor \("databehandler"\) for this data, and your documentation needs to reflect this fact.
 
 ## FAQ
 
