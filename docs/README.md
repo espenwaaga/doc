@@ -6,8 +6,22 @@ hide:
 
 # NAIS Documentation
 
+<<if_tenant()>>
+
 <div class="grid cards" markdown>
--   :octicons-rocket-24:{ .lg .middle } **Tutorials**
+-   :seedling: **Getting Started**
+
+    ---
+    If you're new to NAIS, start here. 
+
+    - You can start reading about [what NAIS is](./explanation/nais.md) to get an idea of the fundamentals.
+    - Once you're familiar with the basics, you can move on to the [Hello Nais](./tutorial/hello-nais/hello-nais-1.md) tutorial where you will create your first NAIS application.
+
+
+</div>
+
+<div class="grid cards" markdown>
+-   :rocket: **Tutorials**
 
     ---
 
@@ -15,7 +29,7 @@ hide:
 
     [:octicons-arrow-right-24: Tutorials](tutorial/README.md)
 
-- :octicons-repo-24:{ .lg .middle } **How-to guides**
+- :bookmark_tabs: **How-to guides**
 
     ---
 
@@ -23,7 +37,7 @@ hide:
 
     [:octicons-arrow-right-24: How-to guides](how-to-guides/README.md)
 
-- :octicons-light-bulb-24:{ .lg .middle } **Explanation**
+- :bulb: **Explanation**
 
     ---
 
@@ -31,7 +45,7 @@ hide:
 
     [:octicons-arrow-right-24: Explanations](explanation/README.md)
 
-- :octicons-code-square-24:{ .lg .middle } **Reference**
+- :computer: **Reference**
 
     ---
 
