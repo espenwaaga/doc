@@ -1,6 +1,6 @@
 # Metrics
 
-See [how to](../../how-to/observability/metrics/) set up metrics.
+See [how to](../../how-to-guides/observability/metrics/expose.md) set up metrics.
 
 Metrics are a way to measure the state of your application from within and something that is built into a microservice architecture from the very beginning. We suggest you start with the basics, that is defining what is fascinating to your team to track in terms of service health and level of service quality.
 
