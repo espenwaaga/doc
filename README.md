@@ -18,7 +18,7 @@ These variables are written in uppercase, with words separated by hyphens, surro
 
 ### Tenant variables
 
-We template the tenant name in the documentation using <<tenant()>>
+We template the tenant name in the documentation using `\<<tenant()>>`
 When the documentation is built, this will be replaced with the relevant tenant name.
 
 ### Code blocks
@@ -26,7 +26,7 @@ When the documentation is built, this will be replaced with the relevant tenant 
 We want to use expanded notes with the filename in the title and the code block inside the note. Preferably with syntax highlighting where applicable.
 This will give the reader a copy button with the relevant code and the filename will be visible in the navigation menu.
 
-````
+```git
 ???+ note ".nais/app.yaml"
 
     ```yaml hl_lines="6-8 11"
@@ -34,13 +34,13 @@ This will give the reader a copy button with the relevant code and the filename 
     kind: Application
     ...
     ```
-````
+```
 
 ### Alternate paths
 
 When the user is given a choice, we want to show both paths in the documentation. For example programming language, OS or different methods
 
-```
+```md
   === "Linux"
     linux specific stuff
   === "macOS"
