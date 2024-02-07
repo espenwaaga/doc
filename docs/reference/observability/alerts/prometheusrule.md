@@ -66,7 +66,7 @@ The expression that defines when the alert should fire. This is a [PromQL](../me
 
 We suggest using the Explore page in Grafana to build and test your PromQL expressions before creating a `PrometheusRule`.
 
-## `groups[].rules[].for`
+##### `groups[].rules[].for`
 
 For how long time the `expr` must evaluate to `true` before firing the alert. This is used to prevent flapping alerts and alerting on temporary spikes in metrics.
 
@@ -74,24 +74,24 @@ When the `expr` first evaluates to `true` the alert will be in `pending` state f
 
 Example values: `30s`, `5m`, `1h`.
 
-## `groups[].rules[].labels`
+##### `groups[].rules[].labels`
 
 Labels to attach to the alert. These are used to group and filter alerts in the Alertmanager.
 
-### `groups[].rules[].labels.severity`
+###### `groups[].rules[].labels.severity`
 
 This will affect what color the notification gets. Possible values are `critical` (🔴), `warning` (🟡) and `notice` (🟢).
 
-## `groups[].rules[].annotations`
+#### `groups[].rules[].annotations`
 
-### `groups[].rules[].annotations.consequence` (optional)
+##### `groups[].rules[].annotations.consequence` (optional)
 
 The consequence annotation is used to describe what happens in the world when this alert fires. This is useful for the one receiving the alert to understand the impact of the alert.
 
-### `groups[].rules[].annotations.action` (optional)
+##### `groups[].rules[].annotations.action` (optional)
 
 The action annotation is used to describe what the best course of action is to resolve the issue. Good alerts should have a clear action that can be taken to resolve the issue.
 
-### `groups[].rules[].annotations.summary` (optional)
+##### `groups[].rules[].annotations.summary` (optional)
 
 The summary annotation is used to give a short description of the alert. This is useful for the one receiving the alert to understand what the alert is about.
