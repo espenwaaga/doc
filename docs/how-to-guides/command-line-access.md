@@ -1,11 +1,11 @@
 # Command line access
-This guide shows you how to set up command line tools for accessing NAIS clusters
 
+This guide shows you how to set up command line tools for accessing NAIS clusters
 
 ## 0. Prerequisites
 
-- [naisdevice](../naisdevice/install-naisdevice) installed
-- [nais-cli](cli/install.md) installed
+- [naisdevice](/naisdevice/install-naisdevice.md) installed
+- [nais-cli](./nais-cli/install.md) installed
 
 ## 1. Install gcloud
 

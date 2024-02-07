@@ -108,7 +108,7 @@
 
 ### Connecting to NAIS clusters
 
-1. Install `nais-cli` by following the [installation instructions](../NAIS CLI/install.md).
+1. Install `nais-cli` by following the [installation instructions](../nais-cli/install.md).
 1. Install `gcloud` by following the [installation instructions](https://cloud.google.com/sdk/docs/install).
 1. Install `kubectl` by following the [installation instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 1. Login to gcloud by running `gcloud auth login --update-adc`.
