@@ -1,4 +1,4 @@
-# NAIS team
+# What is a team?
 
 Everything in NAIS is organized around the concept of a team.
 Nothing in NAIS is owned by an individual; the team as a whole owns the [workloads](./workloads/README.md) built by the team, as well as all provisioned resources. This is to ensure that everything can continue to operate even if someone leaves.
