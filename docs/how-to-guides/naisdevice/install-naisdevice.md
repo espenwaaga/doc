@@ -29,8 +29,6 @@
     1. Use `<Command> + <Space>` to find your `naisdevice.app` and press `<Enter>`.
     1. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
 
-    1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: missing)
-
 === "Windows"
 
     #### Install using Scoop
@@ -52,14 +50,12 @@
     ```
 
     (you will be asked for administrator access to run the installer)
-    1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO: fix link)
     1. Start _naisdevice_ from the _Start menu_
 
 === "Manual"
 
     1. [Download and install naisdevice-tenant.exe](https://github.com/nais/device/releases/latest)
     (you will be asked for administrator access when you run the installer)
-    1. If you need to connect to anything running in K8s cluster, remember to [update your kubeconfig](TODO:Fix link)
     1. Start _naisdevice_ from the _Start menu_
 
 === "Ubuntu"
@@ -92,7 +88,6 @@
     1. Turn on your freshly installed `naisdevice` application.
     1. Find `naisdevice` in your application menu, or use the `naisdevice` command in a terminal to start the application.
     2. Follow the [instructions to connect your _nais_ device](#connect-naisdevice-through-tasksys-tray-icon).
-    1. Remember to [update your kubeconfig](install-tenant.md#connecting-to-nais-clusters).
 
     ### Connect naisdevice through task/sys -tray icon
 
@@ -105,12 +100,3 @@
     1. Left-click it and select `Connect`.
     1. Left-click the `naisdevice` icon again and click `Connect`.
     You might need to allow ~20 seconds to pass before clicking `Connect` turns your `naisdevice` icon green.
-
-### Connecting to NAIS clusters
-
-1. Install `nais-cli` by following the [installation instructions](../nais-cli/install.md).
-1. Install `gcloud` by following the [installation instructions](https://cloud.google.com/sdk/docs/install).
-1. Install `kubectl` by following the [installation instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
-1. Login to gcloud by running `gcloud auth login --update-adc`.
-1. Run `nais naas kubeconfig` to generate a kubeconfig for all NAIS clusters in the default directory (`~/.kube/config`).
-   - If you want to generate the kubeconfig in a different directory, you can specify the environment variable `KUBECONFIG` to point to the desired location.

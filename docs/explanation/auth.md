@@ -1,3 +1,0 @@
-# Authentication mechanisms
-
-TODO Trong
