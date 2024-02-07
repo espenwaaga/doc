@@ -1,6 +1,8 @@
 nav:
     - nais.md
     - team.md
-    - naisdevice.md
     - workloads
+    - zero-trust.md
+    - under-the-hood.md
+    - naisdevice.md
     - ...
