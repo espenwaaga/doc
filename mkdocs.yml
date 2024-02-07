@@ -21,7 +21,7 @@
 #          - Troubleshoot naisdevice: how-to/naisdevice/uninstall-naisdevice.md
 #      - NAIS team: how-to/create-team.md
 #      - Command line access: how-to/command-line-access.md
-#      - CLI: 
+#      - CLI:
 #        - Install: how-to/cli/install.md
 #        - Troubleshooting: how-to/cli/troubleshooting.md
 #      - CI/CD:
@@ -156,8 +156,8 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: "en"
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/logo-white.png
+  favicon: assets/logo-white.png
   custom_dir: custom_theme_overrides
   palette:
     - media: "(prefers-color-scheme: light)"
