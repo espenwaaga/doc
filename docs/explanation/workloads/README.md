@@ -1,6 +1,6 @@
 # Workloads
 
-At the core of NAIS, is the ability to run the code you write. 
+The main purpose of NAIS is enabling the developer to run the code they write. 
 
 Below is a list of the different kinds we support.
 
